@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>J&J - Contacto</title>
-    <link rel="icon" href="assets/images/favicon.jpg">
+    <title>CJC - Contacto</title>
+    <link rel="icon" href="/cjcrent/public/images/favicon.jpg">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/cjcrent/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="/cjcrent/public/css/fontawesome.css">
+    <link rel="stylesheet" href="/cjcrent/public/css/style.css">
+    <link rel="stylesheet" href="/cjcrent/public/css/owl.css">
 
   </head>
 
@@ -38,14 +38,14 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>J&J <em>Rent a Car</em></h2></a>
+          <a class="navbar-brand" href="index.blade.php"><h2>CJC <em>Rent a Car</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio
+                    <a class="nav-link" href="index.blade.php">Inicio
                       <span class="sr-only">(current)</span>
                     </a>
                 </li> 
@@ -61,8 +61,8 @@
                   </div>
               </li>
 
-                <li class="nav-item active"><a class="nav-link" href="contact.php">Contactanos</a></li>
-                <li class="nav-item"><a class="nav-link" href="Login.php">LogIn</a></li>
+                <li class="nav-item active"><a class="nav-link" href="contact.blade.php">Contactanos</a></li>
+                <li class="nav-item"><a class="nav-link" href="Login.blade.php">LogIn</a></li>
             </ul>
           </div>
         </div>
@@ -70,7 +70,7 @@
     </header>
 
     <!-- Page Content -->
-    <div class="page-heading contact-heading header-text" style="background-image: url(assets/images/Header7.jpg);">
+    <div class="page-heading contact-heading header-text" style="background-image: url(/cjcrent/public/images/Header7.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -100,7 +100,7 @@
           <div class="col-md-4">
             <div class="left-content">
               <h4>Sobre nuestro oficio</h4>
-              <p>J&J Es un rent a car de alto prestigio en el país, nosotros estamos ubicados en santiago y en nuestro local podrás ver toda una gama de vehiculos de todo tipo.</p>
+              <p>CJC Es un rent a car de alto prestigio en el país, nosotros estamos ubicados en santiago y en nuestro local podrás ver toda una gama de vehiculos de todo tipo.</p>
               <ul class="social-icons">
                 <li><a target="_blank" href="https://www.facebook.com/profile.php?id=100089339351495&mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
                 <li><a target="_blank" href="https://twitter.com/j_jrentacar4"><i class="fa fa-twitter"></i></a></li>
@@ -173,13 +173,13 @@
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/cjcrent/public/vendor/jquery/jquery.min.js"></script>
+    <script src="/cjcrent/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
+    <script src="/cjcrent/public/js/custom.js"></script>
+    <script src="/cjcrent/public/js/owl.js"></script>
   </body>
 
 </html>

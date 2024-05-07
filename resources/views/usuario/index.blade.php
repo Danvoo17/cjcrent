@@ -42,14 +42,14 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>CJC <em>Rent a Car</em></h2></a>
+          <a class="navbar-brand" href="index.blade.pho"><h2>CJC <em>Rent a Car</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Inicio
+                    <a class="nav-link" href="index.blade.php">Inicio
                       <span class="sr-only">(current)</span>
                     </a>
                 </li> 
@@ -65,8 +65,8 @@
                   </div>
               </li>
 
-                <li class="nav-item"><a class="nav-link" href="contact.php">Contactanos</a></li>
-                <li class="nav-item"><a class="nav-link" href="Login.php">LogIn</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.blade.php">Contactanos</a></li>
+                <li class="nav-item"><a class="nav-link" href="Login.blade.php">LogIn</a></li>
             </ul>
           </div>
         </div>
@@ -341,4 +341,4 @@
     <script src="/cjcrent/public/js/custom.js"></script>
     <script src="/cjcrent/public/js/owl.js"></script>
   </body>
-</html>
+</html> 
