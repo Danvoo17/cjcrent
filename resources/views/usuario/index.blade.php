@@ -54,14 +54,14 @@
                     </a>
                 </li> 
 
-                <li class="nav-item"><a class="nav-link" href="/cjcrent/resources/views/fleet.blade.php">Autos</a></li>
+                <li class="nav-item"><a class="nav-link" href="fleet.blade.php">Autos</a></li>
 
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Más</a>
                   
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="team.html">Equipo</a>
-                    <a class="dropdown-item" href="about-us.html">Sobre nosotros</a>
+                    <a class="dropdown-item" href="team.blade.php">Equipo</a>
+                    <a class="dropdown-item" href="aboutus.blade.php">Sobre nosotros</a>
                   </div>
               </li>
 

@@ -156,8 +156,8 @@
 
 
     <!-- Additional Scripts -->
-    <script src="/cjcrent\public\js\custom.js"></script>
-    <script src="/cjcrent\public\js\owl.js"></script>
+    <script src="/cjcrent/public/js/custom.js"></script>
+    <script src="/cjcrent/public/js/owl.js"></script>
   </body>
 
 </html>

@@ -8,18 +8,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>J&J - Vehiculos</title>
-    <link rel="icon" href="assets/images/favicon.jpg">
+    <link rel="icon" href="/cjcrent/public/images/favicon.jpg">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/cjcrent/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="/cjcrent/public/css/fontawesome.css">
+    <link rel="stylesheet" href="/cjcrent/public/css/style.css">
+    <link rel="stylesheet" href="/cjcrent/public/css/owl.css">
 
   </head>
 
@@ -46,24 +46,24 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio
+                    <a class="nav-link" href="index.blade.php">Inicio
                       <span class="sr-only">(current)</span>
                     </a>
                 </li> 
 
-                <li class="nav-item active"><a class="nav-link" href="fleet.php">Autos</a></li>
+                <li class="nav-item active"><a class="nav-link" href="fleet.blade.php">Autos</a></li>
 
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Más</a>
                   
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="team.html">Equipo</a>
-                    <a class="dropdown-item" href="about-us.html">Sobre nosotros</a>
+                    <a class="dropdown-item" href="team.blade.php">Equipo</a>
+                    <a class="dropdown-item" href="aboutus.blade.php">Sobre nosotros</a>
                   </div>
               </li>
-
-                <li class="nav-item"><a class="nav-link" href="contact.php">Contactanos</a></li>
-                <li class="nav-item"><a class="nav-link" href="Login.php">LogIn</a></li>
+ 
+                <li class="nav-item"><a class="nav-link" href="contact.blade.php">Contactanos</a></li>
+                <li class="nav-item"><a class="nav-link" href="Login.blade.php">LogIn</a></li>
             </ul>
           </div>
         </div>
@@ -71,7 +71,7 @@
     </header>
 
     <!-- Page Content -->
-    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/Header2.jpg);">
+    <div class="page-heading about-heading header-text" style="background-image: url(/cjcrent/public/images/Header2.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -89,7 +89,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="product-item">
-              <img src="assets/images/producto7.png" alt="">
+              <img src="/cjcrent/public/images/producto7.png" alt="">
 
               <div class="down-content">
                 <h4>Hyundai Sonata</h4>
@@ -114,7 +114,7 @@
 
           <div class="col-md-4">
             <div class="product-item">
-              <img src="assets/images/producto8.jpg" alt="">
+              <img src="/cjcrent/public/images/producto8.jpg" alt="">
 
               <div class="down-content">
                 <h4>Toyota Rav4</h4>
@@ -139,7 +139,7 @@
 
           <div class="col-md-4">
             <div class="product-item">
-              <img src="assets/images/producto9.jpg" alt="">
+              <img src="/cjcrent/public/images/producto9.jpg" alt="">
 
               <div class="down-content">
                 <h4>Hyundai Accent</h4>
@@ -164,7 +164,7 @@
 
           <div class="col-md-4">
             <div class="product-item">
-              <img src="assets/images/producto10.jpg" alt="">
+              <img src="/cjcrent/public/images/producto10.jpg" alt="">
 
               <div class="down-content">
                 <h4>Mercedes-AMG c63</h4>
@@ -189,7 +189,7 @@
 
           <div class="col-md-4">
             <div class="product-item">
-              <img src="assets/images/producto11.jpg" alt="">
+              <img src="/cjcrent/public/images/producto11.jpg" alt="">
 
               <div class="down-content">
                 <h4>Honda Civic</h4>
@@ -214,7 +214,7 @@
 
           <div class="col-md-4">
             <div class="product-item">
-              <img src="assets/images/producto12.jpg" alt="">
+              <img src="/cjcrent/public/images/producto12.jpg" alt="">
 
               <div class="down-content">
                 <h4>Ford Mustang</h4>
@@ -330,13 +330,13 @@
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/cjcrent/public/vendor/jquery/jquery.min.js"></script>
+    <script src="/cjcrent/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
+    <script src="/cjcrent/public/js/custom.js"></script>
+    <script src="/cjcrent/public/js/owl.js"></script>
   </body>
 
 </html>
