@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/usuario', function () {
+    return view('index');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/usuario', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
