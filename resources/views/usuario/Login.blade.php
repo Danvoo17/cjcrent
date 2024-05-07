@@ -5,28 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CJC - Login</title>
-    <link rel="icon" href="assets/images/favicon.jpg">
-    <link rel="stylesheet" href="assets/css/Login.css">
+    <link rel="icon" href="/cjcrent/public/images/favicon.jpg">
+    <link rel="stylesheet" href="/cjcrent/public/css/Login.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/cjcrent/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="/cjcrent/public/css/fontawesome.css">
+    <link rel="stylesheet" href="/cjcrent/public/css/style.css">
+    <link rel="stylesheet" href="/cjcrent/public/css/owl.css">
 </head>
 <body>
 
     <header class="">
         <nav class="navbar navbar-expand-lg">
           <div class="container">
-            <a class="navbar-brand" href="index.html"><h2>CJC <em>Rent a Car</em></h2></a>
+            <a class="navbar-brand" href="index.blade.php"><h2>CJC <em>Rent a Car</em></h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link" href="index.html">Inicio
+                      <a class="nav-link" href="index.blade.php">Inicio
                         <span class="sr-only">(current)</span>
                       </a>
                   </li> 
@@ -42,7 +42,7 @@
                     </div>
                 </li>
   
-                  <li class="nav-item"><a class="nav-link" href="contact.php">Contactanos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.blade.php">Contactanos</a></li>
                   <li class="nav-item active"><a class="nav-link" href="Login.php">LogIn</a></li>
               </ul>
             </div>
@@ -51,7 +51,7 @@
       </header>
        
       <div class="Fondo">
-      <img src="assets/images/LoginFondo.jpg" alt="">
+      <img src="/cjcrent/public/images/LoginFondo.jpg" alt="">
       </div>
 
 
@@ -149,8 +149,8 @@
 
 
     <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
+    <script src="/cjcrent/public/js/custom.js"></script>
+    <script src="/cjcrent/public/js/owl.js"></script>
   </body>
 
 </html>
