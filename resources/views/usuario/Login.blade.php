@@ -16,6 +16,16 @@
 </head>
 <body>
 
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
     <header class="">
         <nav class="navbar navbar-expand-lg">
           <div class="container">
@@ -31,19 +41,19 @@
                       </a>
                   </li> 
   
-                  <li class="nav-item"><a class="nav-link" href="fleet.php">Autos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="fleet.blade.php">Autos</a></li>
   
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Más</a>
                     
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="team.html">Equipo</a>
-                      <a class="dropdown-item" href="about-us.html">Sobre nosotros</a>
+                      <a class="dropdown-item" href="team.blade.php">Equipo</a>
+                      <a class="dropdown-item" href="aboutus.blade.php">Sobre nosotros</a>
                     </div>
                 </li>
   
                   <li class="nav-item"><a class="nav-link" href="contact.blade.php">Contactanos</a></li>
-                  <li class="nav-item active"><a class="nav-link" href="Login.php">LogIn</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="Login.blade.php">LogIn</a></li>
               </ul>
             </div>
           </div>
@@ -140,17 +150,17 @@
 
 
 
-
-
-</body>
-
-<script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/cjcrent/public/vendor/jquery/jquery.min.js"></script>
+    <script src="/cjcrent/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional Scripts -->
     <script src="/cjcrent/public/js/custom.js"></script>
     <script src="/cjcrent/public/js/owl.js"></script>
   </body>
+
+</body>
+
+
 
 </html>

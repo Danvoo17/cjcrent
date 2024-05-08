@@ -51,19 +51,19 @@
                     </a>
                 </li> 
 
-                <li class="nav-item"><a class="nav-link" href="fleet.php">Autos</a></li>
+                <li class="nav-item"><a class="nav-link" href="fleet.blade.php">Autos</a></li>
 
                 <li class="nav-item dropdown active">
                   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Más</a>
                   
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="team.html">Equipo</a>
-                    <a class="dropdown-item" href="about-us.html">Sobre nosotros</a>
+                    <a class="dropdown-item" href="team.blade.php">Equipo</a>
+                    <a class="dropdown-item" href="aboutus.blade.php">Sobre nosotros</a>
                   </div>
               </li>
 
-                <li class="nav-item"><a class="nav-link" href="contact.php">Contactanos</a></li>
-                <li class="nav-item"><a class="nav-link" href="Login.php">LogIn</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.blade.php">Contactanos</a></li>
+                <li class="nav-item"><a class="nav-link" href="Login.blade.php">LogIn</a></li>
             </ul>
           </div>
         </div>
