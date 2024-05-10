@@ -3,24 +3,14 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('usuario.index');
+})->name('index');
 
-Route::get('/', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/index', function () {
+    return view('usuario.index');
+})->middleware(['auth', 'verified'])->name('index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -29,3 +19,21 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+
+Route::get('/Flota', function () {
+    return view('usuario.fleet');
+})->name('fleet');
+
+Route::get('/Equi´po', function () {
+    return view('usuario.tema');
+})->name('team');
+
+Route::get('/Sobre_nosotros', function () {
+    return view('usuario.aboutus');
+})->name('about');
+
+Route::get('/Contactanos', function () {
+    return view('usuario.contact');
+})->name('contact');

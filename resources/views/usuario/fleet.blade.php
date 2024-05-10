@@ -1,3 +1,4 @@
+<x-app-layout>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -272,33 +273,52 @@
           </div>
           <div class="modal-body">
             <div class="contact-form">
-            <form action="renta.php" method="POST" id="contact">
+            <form method="POST" id="contact">
+              
+                  <label for="">Ubicaciones</label>
                   <div class="row">
                        <div class="col-md-6">
                           <fieldset>
-                            <input name="ub_recogida" type="text" class="form-control" placeholder="Ubicacion de recogida" required="">
+                            <input name="ub_rec" type="text" class="form-control" placeholder="Ubicacion de recogida" required="">
                           </fieldset>
                        </div>
 
                        <div class="col-md-6">
                           <fieldset>
-                            <input name="ub_devuelta" type="text" class="form-control" placeholder="Ubicacion de devuelta" required="">
+                            <input name="ub_dev" type="text" class="form-control" placeholder="Ubicacion de devuelta" required="">
                           </fieldset>
                        </div>
                   </div>
+                  <label for="">Fecha de recogida</label>
                   <div class="row">
                        <div class="col-md-6">
                           <fieldset>
-                            <input name="fe_recogida" type="text" class="form-control" placeholder="fecha de recogida" required="">
+                            <input name="fe_rec" type="date" class="form-control" placeholder="fecha de recogida" required="">
                           </fieldset>
                        </div>
 
                        <div class="col-md-6">
                           <fieldset>
-                            <input name="fe_devuelta" type="text" class="form-control" placeholder="fecha de devuelta" required="">
+                            <input name="ho_rec" type="time" class="form-control" placeholder="fecha de recogida" required="">
                           </fieldset>
                        </div>
                   </div>
+                  <label for="">Fecha de devuelta</label>
+                  <div class="row">
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input name="fe_dev" type="date" class="form-control" placeholder="fecha de devuelta" required="">
+                          </fieldset>
+                       </div>
+
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input name="ho_dev" type="time" class="form-control" placeholder="fecha de recogida" required="">
+                          </fieldset>
+                       </div>
+                  </div>
+
+                  <label for="">Usuario</label>
                   <input name="nombre" type="text" class="form-control" placeholder="Nombre completo" required="">
 
                   <div class="row">
@@ -337,3 +357,4 @@
   </body>
 
 </html>
+</x-app-layout>

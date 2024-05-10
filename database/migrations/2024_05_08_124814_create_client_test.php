@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('email', 40);
             $table->string('cedula', 12);
             $table->string('licencia', 16)->unique();
+            $table->foreignid('id_user')->references('id')->on('users');
             $table->timestamps();
         });
     }

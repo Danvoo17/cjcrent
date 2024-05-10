@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('estado', 20);
             $table->string('traccion', 20);
             $table->string('pasajeros', 2);
+            $table->string('transmision', 10);
+            $table->binary('imagen');
             $table->foreignid('id_modelo')->references('id_modelo')->on('modelo');
             $table->foreignid('id_seguro')->references('id_seguro')->on('seguro');
             $table->timestamps();
