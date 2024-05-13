@@ -39,30 +39,55 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="index.blade.php"><h2>CJC <em>Rent a Car</em></h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <button id="resbut" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.blade.php">Inicio
+                    <a class="nav-link" href="{{ route('index') }}">Inicio
                       <span class="sr-only">(current)</span>
                     </a>
                 </li> 
 
-                <li class="nav-item"><a class="nav-link" href="fleet.blade.php">Autos</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('fleet') }}">Flota</a></li>
 
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Más</a>
                   
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="team.blade.php">Equipo</a>
-                    <a class="dropdown-item" href="aboutus.blade.php">Sobre nosotros</a>
+                    <a class="dropdown-item" href="{{ route('team') }}">Equipo</a>
+                    <a class="dropdown-item" href="{{ route('about') }}">Sobre nosotros</a>
                   </div>
-              </li>
+                </li>
 
-                <li class="nav-item active"><a class="nav-link" href="contact.blade.php">Contactanos</a></li>
-                <li class="nav-item"><a class="nav-link" href="Login.blade.php">LogIn</a></li>
+                <li class="nav-item active"><a class="nav-link" href="{{ route('contact') }}">Contactanos</a></li>
+
+                <!-- perfil de usuario -->
+
+                @auth
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    {{ Auth::user()->name }}
+                    </a>
+
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ route('profile.edit') }}">Perfil</a>
+                    
+                    <form method="POST" action="{{ route('logout') }}">
+                      @csrf
+                        <a class="dropdown-item" :href="route('logout')" 
+                          onclick="event.preventDefault();
+                          this.closest('form').submit();" style="cursor:pointer">Cerrar sesión
+                        </a>
+                    </form>
+                  </div>
+                </li>
+                @else
+
+                  <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Inicia sesión</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ route('register') }}" style="cursor: pointer">Registrate</a></li>
+                @endauth
             </ul>
           </div>
         </div>

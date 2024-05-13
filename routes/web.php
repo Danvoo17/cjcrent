@@ -2,13 +2,18 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use app\http\controllers\HomeController;
 
+use App\Http\Controllers\VehiculoController;
+use App\Http\Controllers\ClienteController;
+
+use app\models\renta;
 
 Route::get('/', function () {
     return view('usuario.index');
 })->name('index');
 
-Route::get('/index', function () {
+Route::get('/', function () {
     return view('usuario.index');
 })->middleware(['auth', 'verified'])->name('index');
 
@@ -26,11 +31,19 @@ Route::get('/Flota', function () {
     return view('usuario.fleet');
 })->name('fleet');
 
-Route::get('/Equi´po', function () {
-    return view('usuario.tema');
+Route::post('/Flota', function () {
+    return request(message);
+})->name('fleet');
+
+Route::get('/Flota', [VehiculoController::class, 'mostrarFlota'])->name('fleet');
+
+
+
+Route::get('/Equipo', function () {
+    return view('usuario.team');
 })->name('team');
 
-Route::get('/Sobre_nosotros', function () {
+Route::get('/Sobre-nosotros', function () {
     return view('usuario.aboutus');
 })->name('about');
 

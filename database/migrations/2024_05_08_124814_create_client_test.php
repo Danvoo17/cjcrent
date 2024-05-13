@@ -15,10 +15,9 @@ return new class extends Migration
             $table->id('id_cliente');
             $table->string('nombre', 40);
             $table->string('apellido', 40);
-            $table->date('fecha_nac');
+            $table->date('fecha_nac')->nullable();
             $table->string('telefono', 12);
-            $table->string('email', 40);
-            $table->string('cedula', 12);
+            $table->string('cedula', 13)->nullable();
             $table->string('licencia', 16)->unique();
             $table->foreignid('id_user')->references('id')->on('users');
             $table->timestamps();

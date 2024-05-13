@@ -1,4 +1,9 @@
 <x-guest-layout>
+
+    <head>
+        <title>CJC - LogIn</title>
+    </head>
+
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 

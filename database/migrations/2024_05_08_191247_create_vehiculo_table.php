@@ -17,10 +17,15 @@ return new class extends Migration
             $table->float('precio');
             $table->string('color', 20);
             $table->string('estado', 20);
-            $table->string('traccion', 20);
             $table->string('pasajeros', 2);
+            $table->string('puertas', 2);
+            $table->string('maletas', 2);
+            $table->string('tipo', 20);
+            $table->string('traccion', 20);
             $table->string('transmision', 10);
-            $table->binary('imagen');
+            $table->string('motor', 16);
+            $table->text('opciones');
+            $table->binary('imagen')->nullable();
             $table->foreignid('id_modelo')->references('id_modelo')->on('modelo');
             $table->foreignid('id_seguro')->references('id_seguro')->on('seguro');
             $table->timestamps();
