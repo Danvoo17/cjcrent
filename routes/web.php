@@ -26,7 +26,7 @@ Route::get('/Flota', function () {
     return view('usuario.fleet');
 })->name('fleet');
 
-Route::get('/Equi´po', function () {
+Route::get('/Equipo', function () {
     return view('usuario.tema');
 })->name('team');
 
