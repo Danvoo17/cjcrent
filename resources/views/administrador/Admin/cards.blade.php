@@ -84,10 +84,10 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colores</a>
-                        <a class="collapse-item" href="utilities-border.html">Bordes</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animaciones</a>
-                        <a class="collapse-item" href="utilities-other.html">Otros</a>
+                        <a class="collapse-item" href="utilities-color.blade.php">Colores</a>
+                        <a class="collapse-item" href="utilities-border.blade.php">Bordes</a>
+                        <a class="collapse-item" href="utilities-animation.blade.php">Animaciones</a>
+                        <a class="collapse-item" href="utilities-other.blade.php">Otros</a>
                     </div>
                 </div>
             </li>
