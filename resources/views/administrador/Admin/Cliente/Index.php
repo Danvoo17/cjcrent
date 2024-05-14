@@ -69,7 +69,6 @@
             <th>apellido</th>
             <th>fecha_nac</th>
             <th>telefono</th>
-            <th>email</th>
             <th>cedula</th>
             <th>licencia</th>
             <th>id_user</th>
@@ -87,7 +86,6 @@
                 <td>" . $row['apellido'] . "</td>
                 <td>" . $row['fecha_nac'] . "</td>
                 <td>" . $row['telefono'] . "</td>
-                <td>" . $row['email'] . "</td>
                 <td>" . $row['cedula'] . "</td>
                 <td>" . $row['licencia'] . "</td>
                 <td>" . $row['id_user'] . "</td>
@@ -103,7 +101,6 @@
         <input type="text" name="apellido" placeholder="Apellido" required>
         <input type="date" name="fecha_nac" placeholder="fecha_nac" step="0.01" required>
         <input type="text" name="telefono" placeholder="Telefono">
-        <input type="text" name="email" placeholder="Correo Electronico">
         <input type="number" name="cedula" placeholder="Cedula">
         <input type="number" name="licencia" placeholder="Licencia de conducir"required>
         <input type="number" name="id_user" placeholder="id_user" step="0.01" required>
@@ -116,7 +113,6 @@
         <input type="text" name="apellido" placeholder="Apellido" required>
         <input type="date" name="fecha_nac" placeholder="fecha_nac" required>
         <input type="text" name="telefono" placeholder="telefono">
-        <input type="text" name="email" placeholder="Correo electronico">
         <input type="number" name="cedula" placeholder="Cedula">
         <input type="number" name="licencia"placeholder="Licencia de conducir" required>
         <input type="number" name="id_user" placeholder="id_user" required>
