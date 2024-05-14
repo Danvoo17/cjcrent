@@ -110,7 +110,10 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pantallas:</h6>
-                        
+                        <a class="collapse-item" href="/cjcrent/resources/views/administrador/Admin/cliente/index.php">Cliente</a>
+                        <a class="collapse-item" href="/cjcrent/resources/views/administrador/Admin/Users/index.php">Usuario</a>
+                        <a class="collapse-item" href="/cjcrent/resources/views/administrador/Admin/PHP/Vehiculo/index.php">Vehiculo</a>
+
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Otras Pantallas:</h6>
                         <a class="collapse-item" href="404.blade.php">404 Page</a>
@@ -708,7 +711,7 @@
                 <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su sesión actual.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="{{ asset('login') }}">Cerrar sesion</a>
+                    <a class="btn btn-primary" href="Login.blade.php">Cerrar sesion</a>
                 </div>
             </div>
         </div>
