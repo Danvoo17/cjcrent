@@ -38,7 +38,6 @@ Route::post('/Flota', function () {
 Route::get('/Flota', [VehiculoController::class, 'mostrarFlota'])->name('fleet');
 
 
-
 Route::get('/Equipo', function () {
     return view('usuario.team');
 })->name('team');

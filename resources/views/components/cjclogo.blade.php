@@ -1,0 +1,1 @@
+<img src="/cjcrent/public/images/app/cjclogo.png" alt="cjc" style="width: 130px">
