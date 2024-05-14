@@ -72,17 +72,16 @@ if(isset($_POST['Update'])) {
     $apellido = $_POST['apellido'];
     $fecha_nac = $_POST['fecha_nac'];
     $telefono = $_POST['telefono'];
-    $email = $_POST['email'];
     $cedula = $_POST['cedula'];
     $licencia = $_POST['licencia'];
     $id_user = $_POST['id_user'];
 
-    $sqlupdate = "UPDATE cliente SET nombre='$nombre', apellido='$apellido', fecha_nac='$fecha_nac', telefono='$telefono', emai='$email', cedula='$cedula', licencia='$licencia', id_user='$id_user' WHERE id_cliente='$id_cliente'";
+    $sqlupdate = "UPDATE cliente SET nombre='$nombre', apellido='$apellido', fecha_nac='$fecha_nac', telefono='$telefono', cedula='$cedula', licencia='$licencia', id_user='$id_user' WHERE id_cliente='$id_cliente'";
 
     mysqli_query($mysqli, $sqlupdate);
 
     // Redirigir de vuelta al index.php con los valores actualizados en la URL
-    header("location: ./index.php?update=success&&id_cliente=$id_cliente&nombre=$nombre&apellido=$apellido&fecha_nac=$fecha_nac&telefono=$telefono&emai=$email&cedula=$cedula&licencia=$licencia&id_user=$id_user");
+    header("location: ./index.php?update=success&&id_cliente=$id_cliente&nombre=$nombre&apellido=$apellido&fecha_nac=$fecha_nac&telefono=$telefono&cedula=$cedula&licencia=$licencia&id_user=$id_user");
     exit(); // Asegura que no se ejecute más código después de la redirección
 }
 ?>

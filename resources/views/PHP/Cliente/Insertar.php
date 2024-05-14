@@ -71,12 +71,11 @@ $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $fecha_nac = $_POST['fecha_nac'];
 $telefono = $_POST['telefono'];
-$email = $_POST['email'];
 $cedula = $_POST['cedula'];
 $licencia = $_POST['licencia'];
 $id_user= $_POST['id_user'];
 
-$sqlinsert = "INSERT INTO cliente (nombre, apellido, fecha_nac, telefono, email, cedula, licencia, id_user) VALUES ('$nombre', '$apellido', '$fecha_nac', '$telefono', '$email','$cedula','$licencia','$id_user')";
+$sqlinsert = "INSERT INTO cliente (nombre, apellido, fecha_nac, telefono, cedula, licencia, id_user) VALUES ('$nombre', '$apellido', '$fecha_nac', '$telefono','$cedula','$licencia','$id_user')";
 
 
 mysqli_query($mysqli, $sqlinsert);
