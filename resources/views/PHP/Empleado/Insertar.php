@@ -66,9 +66,21 @@
 <?php
 include_once 'Conectar.php';
 
-$id = $_GET['rn'];
-$query = "DELETE FROM users WHERE id = '$id'";
+$id_emp = $_POST['id_emp'];
+$nombre = $_POST['nombre'];
+$apellido = $_POST['apellido'];
+$telefono = $_POST['telefono'];
+$cedula = $_POST['cedula'];
+$email = $_POST['email'];
+$direccion = $_POST['direccion'];
+$saldo= $_POST['saldo'];
+$id_cargo = $_POST['id_cargo'];
+$id_user = $_POST['id_user'];
 
-$data = mysqli_query($mysqli, $query);
-header("location: ./index.php?insert=success");
+$sqlinsert = "INSERT INTO empleado (nombre, apellido, telefono, cedula, email, direccion, saldo, id_cargo, id_user) VALUES ('$nombre', '$apellido', '$telefono', '$cedula','$email','$direccion','$saldo','id_cargo','id_user')";
+
+
+mysqli_query($mysqli, $sqlinsert);
+
+header("location:./index.php?insert=success");
 ?>

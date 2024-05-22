@@ -66,9 +66,24 @@
 <?php
 include_once 'Conectar.php';
 
-$id = $_GET['rn'];
-$query = "DELETE FROM users WHERE id = '$id'";
+if(isset($_POST['Update'])) {
+    $id_emp = $_POST['id_emp'];
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $telefono = $_POST['telefono'];
+    $cedula = $_POST['cedula'];
+    $email = $_POST['email'];
+    $direccion = $_POST['direccion'];
+    $saldo = $_POST['saldo'];
+    $id_cargo = $_POST['id_cargo'];
+    $id_user = $_POST['id_user'];
 
-$data = mysqli_query($mysqli, $query);
-header("location: ./index.php?insert=success");
+    $sqlupdate = "UPDATE empleado SET nombre='$nombre', apellido='$apellido', telefono='$telefono', cedula='$cedula', email='$email', direccion='$direccion', saldo='$saldo', id_cargo='$id_cargo', id_user='$id_user' WHERE id_emp='$id_emp'";
+
+    mysqli_query($mysqli, $sqlupdate);
+
+    // Redirigir de vuelta al index.php con los valores actualizados en la URL
+    header("location: ./index.php?update=success&&id_emp=$id_emp&nombre=$nombre&apellido=$apellido&telefono=$telefono&cedula=$cedula&email=$email&direccion=$direccion&saldo=$saldo&id_cargo=$id_cargo&id_user=id_user");
+    exit(); // Asegura que no se ejecute más código después de la redirección
+}
 ?>

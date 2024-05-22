@@ -66,8 +66,8 @@
 <?php
 include_once 'Conectar.php';
 
-$id = $_GET['rn'];
-$query = "DELETE FROM users WHERE id = '$id'";
+$id_cargo = $_GET['rn'];
+$query = "DELETE FROM cargo WHERE id_cargo = '$id_cargo'";
 
 $data = mysqli_query($mysqli, $query);
 header("location: ./index.php?insert=success");

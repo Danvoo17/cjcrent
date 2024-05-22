@@ -68,15 +68,14 @@
             background-color: #45a049;
         }
     </style>
-    <title>Consulta de vehiculo</title>
+    <title>Consulta de empleado</title>
 </head>
 <body>
-    <h1>Consulta de vehiculo</h1>
+    <h1>Consulta de empleado</h1>
     <a href="index.php">Volver al inicio</a>
     <form action="" method="post">
-        <label for="id_vehiculo">ID de vehiculo:</label>
-        <input type="text" name="id_vehiculo" placeholder="Ingrese el ID del vehiculo">
-        <input type="submit" name="buscar" value="Buscar">
+        <label for="id_emp">ID del empleado:</label>
+        <input type="submit" name="buscar" value="Buscar id del empleado">
     </form>
 
     <?php
@@ -84,61 +83,49 @@
 
     // Verificar si se envió el formulario de búsqueda
     if(isset($_POST['buscar'])) {
-        // Obtener el ID de vehiculo ingresado 
-        $id_vehiculo = $_POST['id_vehiculo'];
+        // Obtener el ID del empleado ingresado por el usuario
+        $id_emp = $_POST['id_emp'];
 
-        // Consulta SQL para obtener los detalles del vehiculo con el ID proporcionado
-        $query = "SELECT * FROM vehiculo WHERE id_vehiculo = '$id_vehiculo'";
+        // Consulta SQL para obtener los detalles del empleado con el ID proporcionado
+        $query = "SELECT * FROM empleado WHERE id_emp = '$id_emp'";
         $result = mysqli_query($mysqli, $query);
 
         // Verificar si se encontraron resultados
         if(mysqli_num_rows($result) > 0) {
-            echo "<h2>Detalles del Vehiculo</h2>";
+            echo "<h2>Detalles del empleado</h2>";
             echo "<table border='1'>
                     <tr>
-                    <th>id_vehiculo</th>
-                    <th>matricula</th>
-                    <th>precio</th>
-                    <th>color</th>
-                    <th>estado</th>
-                    <th>pasajeros</th>
-                    <th>puertas</th>
-                    <th>maletas</th>
-                    <th>tipo</th>
-                    <th>traccion</th>
-                    <th>transmision</th>
-                    <th>motor</th>
-                    <th>opciones</th>
-                    <th>imagen</th>
-                    <th>id_modelo</th>
-                    <th>id_seguro</th>
+                        <th>ID_emp</th>
+                        <th>nombre</th>
+                        <th>apellido</th>
+                        <th>telefono</th>
+                        <th>cedula</th>
+                        <th>email</th>
+                        <th>direccion</th>
+                        <th>saldo</th>
+                        <th>id_cargo</th>
+                        <th>id_user</th>
                     </tr>";
 
-            // Mostrar los detalles del vehiculo encontrado
+            // Mostrar los detalles del empleado encontrado
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>
-                        <td>{$row['id_vehiculo']}</td>
-                        <td>{$row['matricula']}</td>
-                        <td>{$row['precio']}</td>
-                        <td>{$row['color']}</td>
-                        <td>{$row['estado']}</td>
-                        <td>{$row['pasajeros']}</td>
-                        <td>{$row['puertas']}</td>
-                        <td>{$row['maletas']}</td>
-                        <td>{$row['tipo']}</td>
-                        <td>{$row['traccion']}</td>
-                        <td>{$row['transmision']}</td>
-                        <td>{$row['motor']}</td>
-                        <td>{$row['opciones']}</td>
-                        <td>{$row['imagen']}</td>
-                        <td>{$row['id_modelo']}</td>
-                        <td>{$row['id_seguro']}</td>
+                        <td>{$row['id_emp']}</td>
+                        <td>{$row['nombre']}</td>
+                        <td>{$row['apellido']}</td>
+                        <td>{$row['telefono']}</td>
+                        <td>{$row['cedula']}</td>
+                        <td>{$row['email']}</td>
+                        <td>{$row['direccion']}</td>
+                        <td>{$row['saldo']}</td>
+                        <td>{$row['id_cargo']}</td>
+                        <td>{$row['id_user']}</td>
                       </tr>";
             }
 
             echo "</table>";
         } else {
-            echo "<p>No se encontraron resultados para el ID del vehiculo ingresado.</p>";
+            echo "<p>No se encontraron resultados para el ID del empleado ingresado.</p>";
         }
     }
     ?>

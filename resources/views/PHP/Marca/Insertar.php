@@ -66,9 +66,15 @@
 <?php
 include_once 'Conectar.php';
 
-$id = $_GET['rn'];
-$query = "DELETE FROM users WHERE id = '$id'";
+$id_marca = $_POST['id_marca'];
+$nombre = $_POST['nombre'];
+$pais = $_POST['pais'];
 
-$data = mysqli_query($mysqli, $query);
-header("location: ./index.php?insert=success");
+
+$sqlinsert = "INSERT INTO marca (nombre, pais) VALUES ('$nombre', '$pais')";
+
+
+mysqli_query($mysqli, $sqlinsert);
+
+header("location:./index.php?insert=success");
 ?>

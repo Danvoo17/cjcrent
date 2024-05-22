@@ -66,7 +66,7 @@
 <?php
 include_once 'Conectar.php';
 
-$id_mantenimiento = $_GET['rn'];
+$id_cliente = $_GET['rn'];
 $query = "DELETE FROM cliente WHERE id_cliente = '$id_cliente'";
 
 $data = mysqli_query($mysqli, $query);

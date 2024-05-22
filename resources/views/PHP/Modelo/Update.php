@@ -66,9 +66,18 @@
 <?php
 include_once 'Conectar.php';
 
-$id = $_GET['rn'];
-$query = "DELETE FROM users WHERE id = '$id'";
+if(isset($_POST['Update'])) {
+    $id_modelo = $_POST['id_modelo'];
+    $nombre = $_POST['nombre'];
+    $trim = $_POST['trim'];
+    $id_marca = $_POST['id_marca'];
+    
+    $sqlupdate = "UPDATE modelo SET nombre='$nombre', trim='$trim', id_marca='$id_marca' WHERE id_modelo='$id_modelo'";
 
-$data = mysqli_query($mysqli, $query);
-header("location: ./index.php?insert=success");
+    mysqli_query($mysqli, $sqlupdate);
+
+    // Redirigir de vuelta al index.php con los valores actualizados en la URL
+    header("location: ./index.php?update=success&&id_modelo=$id_modelo&nombre=$nombre&trim=$trim&id_marca=$id_marca");
+    exit(); // Asegura que no se ejecute más código después de la redirección
+}
 ?>

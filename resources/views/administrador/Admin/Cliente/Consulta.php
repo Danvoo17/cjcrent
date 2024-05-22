@@ -85,7 +85,7 @@
     // Verificar si se envió el formulario de búsqueda
     if(isset($_POST['buscar'])) {
         // Obtener el ID de cliente ingresado por el usuario
-        $id_mantenimiento = $_POST['id_cliente'];
+        $id_cliente = $_POST['id_cliente'];
 
         // Consulta SQL para obtener los detalles del cliente con el ID proporcionado
         $query = "SELECT * FROM cliente WHERE id_cliente = '$id_cliente'";
