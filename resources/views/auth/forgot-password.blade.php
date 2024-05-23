@@ -1,6 +1,11 @@
 <x-guest-layout>
+
+    <head>
+        <title>CJC - Contraseña</title>
+    </head>
+
     <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+        {{ __('Olvidaste tu contraseña? No hay problema! te enviaremos un correo con el cual podras reiniciar tu contraseña y cambiarla por una nueva.') }}
     </div>
 
     <!-- Session Status -->
@@ -18,7 +23,7 @@
 
         <div class="flex items-center justify-end mt-4">
             <x-primary-button>
-                {{ __('Email Password Reset Link') }}
+                {{ __('Enviar') }}
             </x-primary-button>
         </div>
     </form>

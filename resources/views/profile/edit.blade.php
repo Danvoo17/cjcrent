@@ -1,12 +1,12 @@
 
+    
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>CJC - Perfil</title>
-    <link rel="icon" href="\cjcrent\public\images\favicon.jpg">
-
+    <link rel="icon" href="\cjcrent\public\favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
 
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="\cjcrent\public\css\owl.css">
     </head>
 
-    <style>
+    <!--<style>
       /* Estilos personalizados para la vista de edición */
 
 /* Ajustar el ancho de los formularios */
@@ -110,12 +110,12 @@ label {
     background-color: #c82333;
 }
 
-    </style>
+    </style> -->
 
 <body>
 
-<!-- ***** Preloader Start ***** -->
-<div id="preloader">
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
         <div class="jumper">
             <div></div>
             <div></div>
@@ -128,7 +128,7 @@ label {
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.blade.php"><h2>CJC <em>Rent a Car</em></h2></a>
+          <a class="navbar-brand" href="{{ route('index') }}"><h2>CJC <em>Rent a Car</em></h2></a>
           <button id="resbut" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -142,20 +142,13 @@ label {
 
                 <li class="nav-item"><a class="nav-link" href="{{ route('fleet') }}">Flota</a></li>
 
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Más</a>
-                  
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{ route('team') }}">Equipo</a>
-                    <a class="dropdown-item" href="{{ route('about') }}">Sobre nosotros</a>
-                  </div>
-                </li>
+                @auth
 
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contactanos</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">Sobre Nosotros</a></li>
 
                 <!-- perfil de usuario -->
 
-                @auth
                 <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     {{ Auth::user()->name }}
@@ -175,6 +168,16 @@ label {
                 </li>
                 @else
 
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Más</a>
+                  
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ route('contact') }}">Contactanos</a>
+                    <a class="dropdown-item" href="{{ route('about') }}">Sobre nosotros</a>
+                  </div>
+                </li>
+
+
                   <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Inicia sesión</a></li>
                   <li class="nav-item"><a class="nav-link" href="{{ route('register') }}" style="cursor: pointer">Registrate</a></li>
                 @endauth
@@ -183,6 +186,8 @@ label {
         </div>
       </nav>
     </header>
+
+    <x-app-layout>
     
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
@@ -229,4 +234,4 @@ label {
     <script src="/cjcrent/public/js/owl.js"></script>
 
     </body>
-
+</x-app-layout>

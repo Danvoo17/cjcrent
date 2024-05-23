@@ -1,4 +1,9 @@
 <x-guest-layout>
+
+    <head>
+        <title>CJC - Contraseña</title>
+    </head>
+
     <form method="POST" action="{{ route('password.store') }}">
         @csrf
 

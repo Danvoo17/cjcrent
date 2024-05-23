@@ -13,18 +13,17 @@ Route::get('/', function () {
     return view('usuario.index');
 })->name('index');
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('usuario.index');
-})->middleware(['auth', 'verified'])->name('index');
+})->middleware(['auth', 'verified'])->name('index');*/
+Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 require __DIR__.'/auth.php';
-
 
 
 Route::get('/Flota', function () {
@@ -38,13 +37,12 @@ Route::post('/Flota', function () {
 Route::get('/Flota', [VehiculoController::class, 'mostrarFlota'])->name('fleet');
 
 
-Route::get('/Equipo', function () {
-    return view('usuario.team');
-})->name('team');
+
 
 Route::get('/Sobre-nosotros', function () {
     return view('usuario.aboutus');
 })->name('about');
+
 
 Route::get('/Contactanos', function () {
     return view('usuario.contact');

@@ -8,8 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>CJC - Inicio</title>
-    <link href="/cjcrent/public/css/style.css" rel="stylesheet" >
-    <link rel="shortcut icon" href="/cjcrent/public/favicon.jpg" type="image/x-icon">
+    <link rel="icon" href="\cjcrent\public\favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
 
@@ -18,6 +17,7 @@
 
     <!--Additional CSS Files -->
     <link rel="stylesheet" href="/cjcrent/public/css/fontawesome.css">
+    <link href="/cjcrent/public/css/style.css" rel="stylesheet" >
     <link rel="stylesheet" href="/cjcrent/public/css/owl.css">
 
   </head>
@@ -38,7 +38,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.blade.php"><h2>CJC <em>Rent a Car</em></h2></a>
+          <a class="navbar-brand" href="{{ route('index') }}"><h2>CJC <em>Rent a Car</em></h2></a>
           <button id="resbut" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -52,20 +52,13 @@
 
                 <li class="nav-item"><a class="nav-link" href="{{ route('fleet') }}">Flota</a></li>
 
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Más</a>
-                  
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{ route('team') }}">Equipo</a>
-                    <a class="dropdown-item" href="{{ route('about') }}">Sobre nosotros</a>
-                  </div>
-                </li>
+                @auth
 
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contactanos</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">Sobre Nosotros</a></li>
 
                 <!-- perfil de usuario -->
 
-                @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     {{ Auth::user()->name }}
@@ -84,6 +77,16 @@
                   </div>
                 </li>
                 @else
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Más</a>
+                  
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ route('contact') }}">Contactanos</a>
+                    <a class="dropdown-item" href="{{ route('about') }}">Sobre nosotros</a>
+                  </div>
+                </li>
+
 
                   <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Inicia sesión</a></li>
                   <li class="nav-item"><a class="nav-link" href="{{ route('register') }}" style="cursor: pointer">Registrate</a></li>
