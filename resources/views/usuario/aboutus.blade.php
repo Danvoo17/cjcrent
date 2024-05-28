@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>J&J - Sobre nosotros</title>
+    <title>CJC - Sobre nosotros</title>
     <link rel="icon" href="\cjcrent\public\favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
@@ -127,7 +127,7 @@
           <div class="col-md-6">
             <div class="left-content">
               <h4>¿Quienes somos?</h4>
-              <p>J&J Rent a car, tal como indica el nombre es un negocio de <a target="_blank" href="https://es.wikipedia.org/wiki/Alquiler_de_autom%C3%B3viles">Alquiler de vehiculos</a> de gran prestigio en republica dominicana, esto por la confiabilidad y calidad de los coches, y por sus buenos precios. Y tambien nos hemos ganado un buen respeto por nuestros valores y la amibilidad de nuestros empleados. <br><br> Nuestra empresa se llama J&J porque los fundadores se llaman Joel y Joseph, decidimos establecer este rent a car por nuestro amor a los autos, y queriamos mostrarle a las personas algo diferente del resto de rent a cars con la calidad y los increibles precios que tenemos.</p>
+              <p>CJC Rent a car, tal como indica el nombre es un negocio de <a target="_blank" href="https://es.wikipedia.org/wiki/Alquiler_de_autom%C3%B3viles">Alquiler de vehiculos</a> de gran prestigio en republica dominicana, esto por la confiabilidad y calidad de los coches, y por sus buenos precios. Y tambien nos hemos ganado un buen respeto por nuestros valores y la amibilidad de nuestros empleados. <br><br> Decidimos establecer este rent a car por nuestro amor a los autos, y queriamos mostrarle a las personas algo diferente del resto de rent a cars con la calidad y los increibles precios que tenemos.</p>
               <ul class="social-icons">
                 <li><a target="_blank" href="https://www.facebook.com/profile.php?id=100089339351495&mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
                 <li><a target="_blank" href="https://twitter.com/j_jrentacar4"><i class="fa fa-twitter"></i></a></li>
@@ -148,29 +148,19 @@
               <h2>Nuestra historia</h2>
             </div>
 
-            <h5>Como surgió J&J</h5>
+            <h5>Como surgió CJC</h5>
             <br>
 
-            <p>J&J es de los mejores rent a car, este fué fundado por Joel Castaños y Joseph Cruz, ellos 2 eran amigos cuando estudiaban en sus años de juventud, los dos compartian algo en común, les gustaban los autos, luego de terminar la universidad los dos coincidieron con la misma idea, tener un rent a car. <br><br> Asi que los 2 se pusieron de acuerdo y establecieron un rent a car el cual se llamaba JayCee (esto por sus iniciales, joel castaños, joseph cruz), luego le cambiaron el nombre ya que se parecia mucho al del rapero Jay Z. Luego de hacer este cambio, el negocio empezó a llamarse J&J Rent a Car, el cual se ha mantenido hasta el dia de hoy.</p>
+            <p>CJC es de los mejores rent a car, este fué fundado por Joel Castaños, Joseph Cruz y Steven jimenez, ellos 3 eran amigos cuando estudiaban en sus años de juventud, los tres compartian algo en común, les gustaban los autos, luego de terminar la universidad los tres coincidieron con la misma idea, tener un rent a car. <br><br> Asi que se pusieron de acuerdo y establecieron un rent a car el cual se llamaba JayCees (esto por sus iniciales, joel castaños, joseph cruz, y la S de steven), luego le cambiaron el nombre ya que se parecia mucho al del rapero Jay Z. Luego de hacer este cambio, el negocio empezó a llamarse CJC Rent a Car, el cual se ha mantenido hasta el dia de hoy.</p>
             <br>
-            <p>El lugar empezó siendo pequeño y sin mucho espacio para vehiculos, pero la amabilidad de los trabajadores y los buenos precios siguieron atrayendo a mas clientes, esto ayudó a avanzar mucho al negocio, y poco a poco J&J se fué convirtiendo en uno de los rent a car mejor valorados del país, y conforme pasaba el tiempo seguia mejorando hasta llegar a lo que es hoy.</p>
+            <p>El lugar empezó siendo pequeño y sin mucho espacio para vehiculos, pero la amabilidad de los trabajadores y los buenos precios siguieron atrayendo a mas clientes, esto ayudó a avanzar mucho al negocio, y poco a poco CJC se fué convirtiendo en uno de los rent a car mejor valorados del país, y conforme pasaba el tiempo seguia mejorando hasta llegar a lo que es hoy.</p>
             <p></p>
           </div>
         </div>
       </div>
     </div>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
-              <p>Copyright © 2023 J&J Rent a car. <br> <a href="contact.php">Contactanos!</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <x-footer></x-footer>
 
 
     <!-- Bootstrap core JavaScript -->

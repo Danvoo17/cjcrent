@@ -144,17 +144,7 @@
     </div>
     </div>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
-              <p>Copyright © 2023 J&J Rent a car. <br> <a href="contact.php">Contactanos!</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <x-footer></x-footer>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -187,17 +187,7 @@
       </div>
     </div>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
-              <p>Copyright © 2023 J&J Rent a car.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <x-footer></x-footer>
 
 
     <!-- Bootstrap core JavaScript -->

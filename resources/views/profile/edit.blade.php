@@ -19,99 +19,6 @@
     <link rel="stylesheet" href="\cjcrent\public\css\owl.css">
     </head>
 
-    <!--<style>
-      /* Estilos personalizados para la vista de edición */
-
-/* Ajustar el ancho de los formularios */
-section {
-    max-width: 600px; /* Ajusta el ancho máximo de los formularios */
-    margin: auto; /* Centra los formularios */
-    padding: 20px; /* Añade espacio alrededor de los formularios */
-}
-
-/* Estilos para los botones */
-button {
-    cursor: pointer;
-}
-
-/* Estilos para los mensajes de éxito */
-.message-success {
-    color: green;
-    margin-top: 10px;
-}
-
-/* Estilos para los mensajes de error */
-.message-error {
-    color: red;
-    margin-top: 10px;
-}
-
-/* Estilos para el botón de confirmación */
-.confirm-button {
-    margin-left: 10px;
-}
-
-/* Estilos para los input y labels */
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* Estilos para los botones */
-.primary-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.primary-button:hover {
-    background-color: #0056b3;
-}
-
-.secondary-button {
-    background-color: #f8f9fa;
-    color: #212529;
-    border: 1px solid #ced4da;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.secondary-button:hover {
-    background-color: #e2e6ea;
-}
-
-.danger-button {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.danger-button:hover {
-    background-color: #c82333;
-}
-
-    </style> -->
-
 <body>
 
     <!-- ***** Preloader Start ***** -->
@@ -212,17 +119,7 @@ label {
     </div>
 
     
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
-              <p>Copyright © 2023 J&J Rent a car. <br> <a href="contact.php">Contactanos!</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <x-footer></x-footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="/cjcrent/public/vendor/jquery/jquery.min.js"></script>
