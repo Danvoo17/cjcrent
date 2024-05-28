@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cliente</title>
+    <title>Cargo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,38 +61,35 @@
 </head>
 <body>
 <div class="container">
-    <h1>Cliente</h1>
+    <h1>Aseguradora</h1>
     <table border="1">
         <tr>
-            <th>id_cliente</th>
+            <th>id_aseg</th>
             <th>nombre</th>
-            <th>apellido</th>
-            <th>fecha_nac</th>
             <th>telefono</th>
-            <th>cedula</th>
-            <th>licencia</th>
+            <th>email</th>
+            <th>direccion</th>
         </tr>
         <tr>
             <button type="button" href="insetar.php">Insertar</button>
         </tr>
         <?php
         include_once 'Conectar.php';
-        $query = "SELECT * FROM cliente";
+        $query = "SELECT * FROM aseguradora";
         $result = mysqli_query($mysqli, $query);
         $total = mysqli_num_rows($result);
 
         if ($total != 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-                echo "<tr> <td>" . $row['id_cliente'] . "</td>
+                echo "<tr> <td>" . $row['id_aseg'] . "</td>
                 <td>" . $row['nombre'] . "</td>
-                <td>" . $row['apellido'] . "</td>
-                <td>" . $row['fecha_nac'] . "</td>
                 <td>" . $row['telefono'] . "</td>
-                <td>" . $row['cedula'] . "</td>
-                <td>" . $row['licencia'] . "</td>
+                <td>" . $row['email'] . "</td>
+                <td>" . $row['direccion'] . "</td>
+                <td>" . $row['Accion'] . "</td>
                 <td>
-                <button type='button' href='Update.php?rn=". $row['id_cliente']. "'>Editar</button>
-                <button type='button' href='Borrar.php?rn=". $row['id_cliente']. "'>Borrar</button>
+                <button type='button' href='Update.php?rn=". $row['id_aseg']. "'>Editar</button>
+                <button type='button' href='Borrar.php?rn=". $row['id_aseg']. "'>Borrar</button>
               </td> 
               </tr>";
             }

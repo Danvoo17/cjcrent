@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cliente</title>
+    <title>Empleado</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,38 +61,41 @@
 </head>
 <body>
 <div class="container">
-    <h1>Cliente</h1>
+    <h1>Formulario empleado</h1>
     <table border="1">
         <tr>
-            <th>id_cliente</th>
+            <th>id_emp</th>
             <th>nombre</th>
             <th>apellido</th>
-            <th>fecha_nac</th>
             <th>telefono</th>
             <th>cedula</th>
-            <th>licencia</th>
-        </tr>
-        <tr>
-            <button type="button" href="insetar.php">Insertar</button>
+            <th>email</th>
+            <th>direccion</th>
+            <th>saldo</th>
+            <th>id_cargo</th>
+            <th>id_user</th>
         </tr>
         <?php
         include_once 'Conectar.php';
-        $query = "SELECT * FROM cliente";
+        $query = "SELECT * FROM empleado";
         $result = mysqli_query($mysqli, $query);
         $total = mysqli_num_rows($result);
 
         if ($total != 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-                echo "<tr> <td>" . $row['id_cliente'] . "</td>
+                echo "<tr> <td>" . $row['id_emp'] . "</td>
                 <td>" . $row['nombre'] . "</td>
                 <td>" . $row['apellido'] . "</td>
-                <td>" . $row['fecha_nac'] . "</td>
                 <td>" . $row['telefono'] . "</td>
                 <td>" . $row['cedula'] . "</td>
-                <td>" . $row['licencia'] . "</td>
-                <td>
-                <button type='button' href='Update.php?rn=". $row['id_cliente']. "'>Editar</button>
-                <button type='button' href='Borrar.php?rn=". $row['id_cliente']. "'>Borrar</button>
+                <td>" . $row['email'] . "</td>
+                <td>" . $row['saldo'] . "</td>
+                <td>" . $row['id_cargo'] . "</td>
+                <td>" . $row['id_user'] . "</td>
+                <td> <a href='borrar.php?rn=" . $row['id_emp'] . "'>Borrar</a></td> 
+                 <td>
+                <button type='button' href='Update.php?rn=". $row['id_aseg']. "'>Editar</button>
+                <button type='button' href='Borrar.php?rn=". $row['id_aseg']. "'>Borrar</button>
               </td> 
               </tr>";
             }
@@ -101,18 +104,30 @@
     </table>
 
     <form action="Insertar.php" method="post">
-        <input type="text" name="id_aseg" placeholder="ID asegu">
+        <input type="text" name="id_emp" placeholder="ID empleado">
         <input type="text" name="nombre" placeholder="Nombre">
-        <input type="text" name="email" placeholder="email" required>
-        <input type="text" name="direccion" placeholder="direccion" required>
-
+        <input type="text" name="apellido" placeholder="Apellido" required>
+        <input type="number" name="telefono" placeholder="telefono" step="0.01" required>
+        <input type="text" name="cedula" placeholder="cedula">
+        <input type="text" name="email" placeholder="email">
+        <input type="text" name="direccion" placeholder="direccion"required>
+        <input type="number" name="saldo" placeholder="saldo" step="0.01" required>
+        <input type="number" name="id_cargo" placeholder="id_cargo">
+        <input type="number" name="id_user" placeholder="id_user">
           <input type="submit" value="Añadir">
     </form>
 
     <form action="Update.php" method="post">
-    <input type="text" name="id_cargo" placeholder="ID Cargo">
+    <input type="text" name="id_emp" placeholder="ID empleado">
         <input type="text" name="nombre" placeholder="Nombre">
-        <input type="text" name="descripcion" placeholder="Descripcion" required>
+        <input type="text" name="apellido" placeholder="Apellido" required>
+        <input type="number" name="telefono" placeholder="telefono" step="0.01" required>
+        <input type="text" name="cedula" placeholder="cedula">
+        <input type="text" name="email" placeholder="email">
+        <input type="text" name="direccion" placeholder="direccion"required>
+        <input type="number" name="saldo" placeholder="saldo" step="0.01" required>
+        <input type="number" name="id_cargo" placeholder="id_cargo">
+        <input type="number" name="id_user" placeholder="id_user">
         <input type="submit" name="Update" value="Editar">
     </form>
 
