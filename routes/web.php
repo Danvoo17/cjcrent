@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use app\http\controllers\HomeController;
-
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\ClienteController;
 
@@ -12,6 +12,7 @@ use app\models\renta;
 Route::get('/', function () {
     return view('usuario.index');
 })->name('index');
+
 
 /*Route::get('/', function () {
     return view('usuario.index');
@@ -40,7 +41,6 @@ Route::get('/Flota', [VehiculoController::class, 'mostrarFlota'])->name('fleet')
 
 
 
-
 Route::get('/Sobre-nosotros', function () {
     return view('usuario.aboutus');
 })->name('about');
@@ -49,3 +49,8 @@ Route::get('/Sobre-nosotros', function () {
 Route::get('/Contactanos', function () {
     return view('usuario.contact');
 })->name('contact');
+
+
+
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact/send', [ContactController::class, 'sendMessage'])->name('contact.send')->middleware('auth');
