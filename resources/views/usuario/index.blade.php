@@ -136,9 +136,8 @@
             <div class="product-item">
               <a href="fleet2.php"><img src="assets/images/producto7.png" alt=""></a>
               <div class="down-content">
-                <a href="fleet2.php"><h4>Hyundai Sonata</h4></a>
-                <h6><small>por</small> $5,000 <small>semanal</small></h6>
-                <p>Un auto basico, moderno, rapido, comodo, y de bajo consumo.</p>
+                <a href="fleet2.php"><h4>Deportivos</h4></a>
+                <p>Nuestros autos deportivos están diseñados para aquellos que buscan velocidad y estilo. Con motores potentes y un diseño aerodinámico, estos vehículos te brindarán una experiencia de conducción inigualable.</p>
               </div>
             </div>
           </div>
@@ -147,9 +146,8 @@
             <div class="product-item">
               <a href="fleet2.php"><img src="assets/images/producto8.jpg" alt=""></a>
               <div class="down-content">
-                <a href="fleet2.php"><h4>Toyota Rav4</h4></a>
-                <h6><small>por</small> $10,000 <small>semanal</small></h6>
-                <p>calidad-precio, un vehiculo perfecto para viajes largos, y para diario.</p>
+                <a href="fleet2.php"><h4>Sedanes</h4></a>
+                <p>El equilibrio perfecto entre confort y eficiencia. Nuestros sedanes son ideales para viajes de negocios, familias pequeñas o cualquier persona que busque un viaje cómodo y elegante. Con amplio espacio para pasajeros y equipaje, así como características modernas de seguridad y entretenimiento, estos autos garantizan una experiencia de viaje placentera.</p>
               </div>
             </div>
           </div>
@@ -158,9 +156,8 @@
             <div class="product-item">
               <a href="fleet2.php"><img src="assets/images/producto9.jpg" alt=""></a>
               <div class="down-content">
-                <a href="fleet2.php"><h4>Hyundai Accent</h4></a>
-                <h6><small>por</small> $3,000 <small>semanal</small></h6>
-                <p>un vehiculo familiar, barato, comodo, y de bajo consumo. Perfecto para el dia a dia.</p>
+                <a href="fleet2.php"><h4>SUV</h4></a>
+                <p> nuestros SUVs ofrecen espacio, potencia y versatilidad. Equipados con tracción en las cuatro ruedas, son perfectos para cualquier terreno, ya sea para ir a la montaña o un viaje por la ciudad. Disfruta de la comodidad, seguridad y capacidad de carga superior que solo un SUV puede ofrecer.</p>
               </div>
             </div>
           </div>
@@ -178,7 +175,7 @@
           </div>
           <div class="col-md-6">
             <div class="left-content">
-              <p>J&J Rent a car, tal como indica el nombre es un negocio de <a target="_blank" href="https://es.wikipedia.org/wiki/Alquiler_de_autom%C3%B3viles">Alquiler de vehiculos</a> de gran prestigio en republica dominicana, esto por la confiabilidad y calidad de los coches, y por sus buenos precios. Y tambien nos hemos ganado un buen respeto por nuestros valores y la amibilidad de nuestros empleados.</p>
+              <p>CJC Rent a car, tal como indica el nombre es un negocio de <a target="_blank" href="https://es.wikipedia.org/wiki/Alquiler_de_autom%C3%B3viles">Alquiler de vehiculos</a> de gran prestigio en republica dominicana, esto por la confiabilidad y calidad de los coches, y por sus buenos precios. Y tambien nos hemos ganado un buen respeto por nuestros valores y la amibilidad de nuestros empleados.</p>
               <ul class="featured-list">
                 <li><a href="#">Calidad</a></li>
                 <li><a href="#">Buenos precios</a></li>
@@ -197,129 +194,44 @@
       </div>
     </div>
 
-    <div class="services" style="background-image: url(assets/images/other-image-fullscren-1-1920x900.jpg);" >
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>Blogs recientes</h2>
-
-              <a href="blog.html">Leer más <i class="fa fa-angle-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item">
-              <a href="blog1.php" class="services-item-image"><img src="assets/images/producto12.jpg" class="img-fluid" alt=""></a>
-
-              <div class="down-content">
-                <h4><a href="blog1.php">Joven de 16 años roba vehiculo de J&J Rent a Car</a></h4>
-
-                <p style="margin: 0;"> Joseph Cruz &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2022 10:30 &nbsp;&nbsp;|&nbsp;&nbsp; 209</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item">
-              <a href="blog2.php" class="services-item-image"><img src="assets/images/blog-2-370x270.png" class="img-fluid" alt=""></a>
-
-              <div class="down-content">
-                <h4><a href="blog2.php">Nuevo carro en venta, y entrevista con Elon Musk</a></h4>
-
-                <p style="margin: 0;"> Joseph Cruz &nbsp;&nbsp;|&nbsp;&nbsp; 1/06/2023 5:10 &nbsp;&nbsp;|&nbsp;&nbsp; 193</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item">
-              <a href="blog3.php" class="services-item-image"><img src="assets/images/twingo_blog-3-370x270.jpg" class="img-fluid" alt=""></a>
-
-              <div class="down-content">
-                <h4><a href="blog3.php">Twingo brilla mas que shakira</a></h4>
-
-                <p style="margin: 0;"> Joseph Cruz &nbsp;&nbsp;|&nbsp;&nbsp; 1/06/2023 5:10 &nbsp;&nbsp;|&nbsp;&nbsp; 114</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   
 
     <div class="happy-clients">
-      <div class="container">
+    <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>Clientes satisfechos</h2>
-
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Clientes satisfechos</h2>
+                </div>
             </div>
-          </div>
-          <div class="col-md-12">
-            <div class="owl-clients owl-carousel text-center">
-              <div class="service-item">
-                <div class="icon">
-                  <i class="fa fa-user"></i>
-                </div>
-                <div class="down-content">
-                  <h4>Anónimo</h4>
-                  <p class="n-m"><em>Muy pocas veces en mi vida habia estado tan satisfecho con un vehiculo rentado, pero J&J me sorprendió.</em></p>
-                </div>
-              </div>
-              
-              <div class="service-item">
-                <div class="icon">
-                  <i><img src="assets/images/Mujer.jpg" alt=""></i>
-                </div>
-                <div class="down-content">
-                  <h4>Jane Smith</h4>
-                  <p class="n-m"><em>El sitio web es muy agradable y se ve bonito a la vista, pude rentar mi auto por aqui y fué un proceso muy facil.</em></p>
-                </div>
-              </div>
-              
-              <div class="service-item">
-                <div class="icon">
-                  <i><img src="assets/images/Calvo.jpg" alt=""></i>
-                </div>
-                <div class="down-content">
-                  <h4>Antony Davis</h4>
-                  <p class="n-m"><em>Yo renté el vehiculo en persona, un pontiac vibe, fué una experiencia agradable, los trabajadores son muy amigables.</em></p>
-                </div>
-              </div>
-              
-              <div class="service-item">
-                <div class="icon">
-                  <i><img src="assets/images/Luisardo.png" alt=""></i>
-                </div>
-                <div class="down-content">
-                  <h4>Luisardo</h4>
-                  <p class="n-m"><em>Este rent a car se convirtio en mi favorito, simplemente 10/10.</em></p>
-                </div>
-              </div>
-              
-              <div class="service-item">
-                <div class="icon">
-                  <i><img src="assets/images/sagiri.jpg" alt=""></i>
-                </div>
-                <div class="down-content">
-                  <h4>Cris UwU</h4>
-                  <p class="n-m"><em>Me sorprendió lo facil que pude rentar un vehiculo aquí, en otros sitios web se me complicaba y era muy largo el proceso.</em></p>
-                </div>
-              </div>
-              
-              <div class="service-item">
-                <div class="icon">
-                  <i><img src="assets/images/Tortuga.jpg" alt=""></i>
-                </div>
-                <div class="down-content">
-                  <h4>José Hernandez</h4>
-                  <p class="n-m"><em>Los trabajadores caen muy bien, y los vehiculos tienen buena calidad y son confiables, 10/10</em></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            <div class="col-md-12">
+                <div class="owl-clients owl-carousel text-center">
+                    @php
+                    $mensajes = \App\Models\Mensaje::orderBy('created_at', 'desc')->limit(6)->get();
+                    @endphp
+                    @foreach ($mensajes as $mensaje)
+<div class="service-item">
+    <div class="icon">
+        <i class="fa fa-user"></i>
     </div>
+    <div class="down-content">
+        @if ($mensaje->cliente)
+        <h4>{{ $mensaje->cliente->nombre }}</h4>
+        @elseif ($mensaje->usuario)
+        <h4>{{ $mensaje->usuario->name }}</h4>
+        @endif
+        <h5>{{ $mensaje->asunto }}</h5>
+        <p class="n-m"><em>{{ $mensaje->mensaje }}</em></p>
+    </div>
+</div>
+@endforeach
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
     <div class="call-to-action">
