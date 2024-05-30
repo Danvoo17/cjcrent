@@ -83,7 +83,9 @@
         </div>
       </div>
     </div>
-
+    <span>
+                  <a href="#" data-toggle="modal" data-target="#filtro">Filtro</a>
+                </span>
     <div class="products">
       <div class="container">
         <div class="row">
@@ -261,6 +263,35 @@
         </div>
       </div>
     </footer>
+    <!-- Modal -->
+    <!-- Filtro Modal -->
+    
+    <div class="modal fade" id="filtro" tabindex="-1" role="dialog" aria-labelledby="filtroLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="filtroLabel">Filtros</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="filter-button">
+          <button class="btn btn-primary" onclick="filterByBrand('Hyundai')">Hyundai</button>
+          <button class="btn btn-primary" onclick="filterByBrand('Toyota')">Toyota</button>
+          <button class="btn btn-primary" onclick="filterByBrand('Mercedes')">Mercedes</button>
+          <button class="btn btn-primary" onclick="filterByBrand('Honda')">Honda</button>
+          <button class="btn btn-primary" onclick="filterByBrand('Ford')">Ford</button>
+          <button class="btn btn-secondary" onclick="showAll()">Mostrar todos</button>
+          <!-- Puedes agregar más botones para otras marcas si es necesario -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -330,13 +361,41 @@
 
 
     <!-- Bootstrap core JavaScript -->
+    
     <script src="/cjcrent/public/vendor/jquery/jquery.min.js"></script>
     <script src="/cjcrent/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional Scripts -->
     <script src="/cjcrent/public/js/custom.js"></script>
+    
     <script src="/cjcrent/public/js/owl.js"></script>
+
+    <script>
+     function filterByBrand(brand) {
+  var products = document.querySelectorAll('.product-item');
+  products.forEach(function(product) {
+    var productName = product.querySelector('h4').innerText;
+    if (productName.includes(brand)) {
+      product.style.display = 'block'; // Muestra el producto si pertenece a la marca seleccionada
+    } else {
+      product.style.display = 'none'; // Oculta el producto si no pertenece a la marca seleccionada
+    }
+  });
+  $('#filtro').modal('hide'); // Cierra el modal después de aplicar el filtro
+}
+    </script>
+
+    <script>
+       function showAll() {
+  var products = document.querySelectorAll('.product-item');
+  products.forEach(function(product) {
+    product.style.display = 'block'; // Muestra todos los productos nuevamente
+  });
+  $('#filtro').modal('hide'); // Cierra el modal después de mostrar todos los productos
+
+}
+    </script>
   </body>
 
 </html>
