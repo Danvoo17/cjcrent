@@ -128,9 +128,12 @@
                         <p>{{ $vehiculo->estado }}</p>
 
                         <small>
+                            <strong title="Estado"><i class="fa fa-sign-out"></i> {{ $vehiculo->estado }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <strong title="Pasajeros"><i class="fa fa-user"></i> {{ $vehiculo->pasajeros }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong title="Puertas"><i class="fa fa-sign-out"></i> {{ $vehiculo->puertas }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <strong title="Espacio"><i class="fa fa-briefcase"></i> {{ $vehiculo->maletas }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                            <strong title="Traccion"><i class="fa fa-sign-out"></i> {{ $vehiculo->puertas }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong title="Tipo"><i class="fa fa-sign-out"></i> {{ $vehiculo->tipo }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong title="Traccion"><i class="fa fa-sign-out"></i> {{ $vehiculo->traccion }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <strong title="Transmision"><i class="fa fa-cog"></i> {{ $vehiculo->transmision }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <!-- Agrega otras características aquí -->
                         </small>
@@ -148,32 +151,49 @@
 
     <x-footer></x-footer>
 
-    <div class="modal fade" id="filtro" tabindex="-1" role="dialog" aria-labelledby="filtroLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="filtroLabel">Filtros</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="filter-button">
-          <button class="btn btn-primary" onclick="filterByBrand('Hyundai')">Hyundai</button>
-          <button class="btn btn-primary" onclick="filterByBrand('Toyota')">Toyota</button>
-          <button class="btn btn-primary" onclick="filterByBrand('Mercedes')">Mercedes</button>
-          <button class="btn btn-primary" onclick="filterByBrand('Honda')">Honda</button>
-          <button class="btn btn-primary" onclick="filterByBrand('Ford')">Ford</button>
-          <button class="btn btn-secondary" onclick="showAll()">Mostrar todos</button>
-          <!-- Puedes agregar más botones para otras marcas si es necesario -->
+   
+
+    <div class="modal fade" id="filtro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Filtro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="filterForm">
+                        <div class="form-group">
+                            <label for="price-range">Rango de precio:</label>
+                            <input type="number" id="min-price" placeholder="Min" />
+                            <input type="number" id="max-price" placeholder="Max" />
+                        </div>
+                        <div class="form-group">
+                            <label for="transmission">Transmisión:</label>
+                            <select id="transmission">
+                                <option value="">Todos</option>
+                                <option value="A">Automático</option>
+                                <option value="MT">Manual</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="passengers">Pasajeros:</label>
+                            <input type="number" id="passengers" />
+                        </div>
+                        <div class="form-group">
+                            <label for="doors">Puertas:</label>
+                            <input type="number" id="doors" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="applyFilter()">Aplicar</button>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-      </div>
     </div>
-  </div>
-</div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -273,29 +293,37 @@
     <script src="/cjcrent/public/js/owl.js"></script>
 
     <script>
-     function filterByBrand(brand) {
-  var products = document.querySelectorAll('.product-item');
-  products.forEach(function(product) {
-    var productName = product.querySelector('h4').innerText;
-    if (productName.includes(brand)) {
-      product.style.display = 'block'; // Muestra el producto si pertenece a la marca seleccionada
-    } else {
-      product.style.display = 'none'; // Oculta el producto si no pertenece a la marca seleccionada
-    }
-  });
-  $('#filtro').modal('hide'); // Cierra el modal después de aplicar el filtro
-}
-    </script>
+        function applyFilter() {
+            var minPrice = parseFloat(document.getElementById('min-price').value) || 0;
+            var maxPrice = parseFloat(document.getElementById('max-price').value) || Infinity;
+            var transmission = document.getElementById('transmission').value;
+            var passengers = parseInt(document.getElementById('passengers').value) || 0;
+            var doors = parseInt(document.getElementById('doors').value) || 0;
 
-    <script>
-       function showAll() {
-  var products = document.querySelectorAll('.product-item');
-  products.forEach(function(product) {
-    product.style.display = 'block'; // Muestra todos los productos nuevamente
-  });
-  $('#filtro').modal('hide'); // Cierra el modal después de mostrar todos los productos
+            var vehicles = document.getElementsByClassName('product-item');
+            for (var i = 0; i < vehicles.length; i++) {
+                var priceElem = vehicles[i].querySelector('h6');
+                var transElem = vehicles[i].querySelector('strong[title="Transmision"]');
+                var passElem = vehicles[i].querySelector('strong[title="Pasajeros"]');
+                var doorElem = vehicles[i].querySelector('strong[title="Puertas"]');
 
-}
+                var price = priceElem ? parseFloat(priceElem.textContent.replace(/[^\d.]/g, '')) : 0;
+                var trans = transElem ? transElem.textContent.trim() : '';
+                var pass = passElem ? parseInt(passElem.textContent.trim()) : 0;
+                var door = doorElem ? parseInt(doorElem.textContent.trim()) : 0;
+
+                if (price >= minPrice && price <= maxPrice &&
+                    (transmission === "" || trans === transmission) &&
+                    (passengers === 0 || pass === passengers) &&
+                    (doors === 0 || door === doors)) {
+                    vehicles[i].parentElement.style.display = "block";
+                } else {
+                    vehicles[i].parentElement.style.display = "none";
+                }
+            }
+
+            $('#filtro').modal('hide');
+        }
     </script>
   </body>
 
