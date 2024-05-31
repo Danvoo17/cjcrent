@@ -110,7 +110,7 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pantallas:</h6>
-                        <a class="collapse-item" href="/cjcrent/resources/views/administrador/Admin/Cliente/index.php">Cliente</a>
+                        <a class="collapse-item" href="/cjcrent/resources/views/administrador/cliente/index.php">Cliente</a>
                         <a class="collapse-item" href="/cjcrent/resources/views/administrador/Admin/Users/index.php">Usuario</a>
                         <a class="collapse-item" href="/cjcrent/resources/views/administrador/Admin/PHP/Vehiculo/index.php">Vehiculo</a>
                         <a class="collapse-item" href="/cjcrent/resources/views/administrador/Admin/Aseguradora/index.php">aseguradora</a>

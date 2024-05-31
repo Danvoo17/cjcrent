@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('id_vehiculo');
             $table->string('matricula', 12)->unique();
             $table->float('precio');
+            $table->string('año', 4);
             $table->string('color', 20);
             $table->string('estado', 20);
             $table->string('pasajeros', 2);

@@ -50,6 +50,7 @@
                 </li> 
 
                 <li class="nav-item active"><a class="nav-link" href="{{ route('fleet') }}">Flota</a></li>
+                <li class="nav-item active"><a class="nav-link" href="{{ route('ad-cliente') }}">clientes</a></li>
 
                 @auth
 

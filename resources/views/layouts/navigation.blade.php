@@ -22,22 +22,6 @@
                     <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
                         {{ __('Inicio') }}
                     </x-nav-link>
-
-                    <x-nav-link :href="route('fleet')" :active="request()->routeIs('fleet')">
-                        {{ __('Flota') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('team')" :active="request()->routeIs('team')">
-                        {{ __('Equipo') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
-                        {{ __('Sobre nosotros') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
-                        {{ __('Contactanos') }}
-                    </x-nav-link>
                 </div>
             </div>
 

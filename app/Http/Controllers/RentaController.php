@@ -19,7 +19,7 @@ class RentaController extends Controller
          'ho_rec' => 'required|date_format:H:i',
          'fe_dev' => 'required|date',
          'ho_dev' => 'required|date_format:H:i',
-         'cliente_id' => 'required|exists:clientes,id', // Asegúrate de que el cliente exista en la base de datos
+         'cliente_id' => 'required|exists:cliente,id', // Asegúrate de que el cliente exista en la base de datos
          'vehiculo_id' => 'required|exists:vehiculo,id_vehiculo', // Asegúrate de que el vehículo exista en la base de datos
          // Agrega aquí las reglas de validación para los otros campos si es necesario
      ]);
