@@ -16,5 +16,13 @@ class marca extends Model
     protected $fillable = [
         'nombre', 'pais'
     ];
-
+    public function vehiculos()
+    {
+        return $this->hasMany(Vehiculo::class, 'id_modelo', 'id_marca');
+    }
+    public function mostrarMarcas()
+{
+    $marcas = Marca::all();
+    return view('vista', ['marcas' => $marcas]);
+}
 }

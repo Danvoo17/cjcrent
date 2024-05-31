@@ -83,7 +83,9 @@
         </div>
       </div>
     </div>
-
+    <span>
+                  <a href="#" data-toggle="modal" data-target="#filtro">Filtro</a>
+                </span>
     <div class="products">
       <div class="container">
         <div class="row">
@@ -261,6 +263,52 @@
         </div>
       </div>
     </footer>
+    <!-- Modal -->
+    <!-- Filtro Modal -->
+    
+    <div class="modal fade" id="filtro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Filtro</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="filterForm">
+              <div class="form-group">
+                <label for="price-range">Rango de precio:</label>
+                <input type="number" id="min-price" placeholder="Min" />
+                <input type="number" id="max-price" placeholder="Max" />
+              </div>
+              <div class="form-group">
+                <label for="transmission">Transmisión:</label>
+                <select id="transmission">
+                  <option value="">Todos</option>
+                  <option value="AM">Automático</option>
+                  <option value="A">Automático</option>
+                  <option value="M">Manual</option>
+                  <option value="DCT">DCT</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="passengers">Pasajeros:</label>
+                <input type="number" id="passengers" />
+              </div>
+              <div class="form-group">
+                <label for="doors">Puertas:</label>
+                <input type="number" id="doors" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" onclick="applyFilter()">Aplicar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -330,13 +378,45 @@
 
 
     <!-- Bootstrap core JavaScript -->
+    
     <script src="/cjcrent/public/vendor/jquery/jquery.min.js"></script>
     <script src="/cjcrent/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
 
 
     <!-- Additional Scripts -->
     <script src="/cjcrent/public/js/custom.js"></script>
+    
     <script src="/cjcrent/public/js/owl.js"></script>
+
+    <script>
+      function applyFilter() {
+        var minPrice = parseFloat(document.getElementById('min-price').value) || 0;
+        var maxPrice = parseFloat(document.getElementById('max-price').value) || Infinity;
+        var transmission = document.getElementById('transmission').value;
+        var passengers = parseInt(document.getElementById('passengers').value) || 0;
+        var doors = parseInt(document.getElementById('doors').value) || 0;
+
+        var vehicles = document.getElementsByClassName('product-item');
+        for (var i = 0; i < vehicles.length; i++) {
+          var price = parseFloat(vehicles[i].querySelector('h6').textContent.replace(/[^\d.]/g, ''));
+          var trans = vehicles[i].querySelector('strong[title="Transmision"]').textContent.trim();
+          var pass = parseInt(vehicles[i].querySelector('strong[title="Pasajeros"]').textContent.trim());
+          var door = parseInt(vehicles[i].querySelector('strong[title="Puertas"]').textContent.trim());
+
+          if (price >= minPrice && price <= maxPrice && 
+              (transmission === "" || trans === transmission) &&
+              (passengers === 0 || pass === passengers) &&
+              (doors === 0 || door === doors)) {
+            vehicles[i].parentElement.style.display = "block";
+          } else {
+            vehicles[i].parentElement.style.display = "none";
+          }
+        }
+
+        $('#filtro').modal('hide');
+      }
+    </script>
   </body>
 
 </html>

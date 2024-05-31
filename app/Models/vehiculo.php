@@ -28,4 +28,18 @@ class vehiculo extends Model
     {
         return $this->belongsTo(Seguro::class, 'id_seguro');
     }
+    public function marca()
+    {
+        return $this->belongsTo(Marca::class, 'id_modelo', 'id_marca');
+    }
+    public function filtrar(Request $request)
+    {
+        $marcaId = $request->input('marca');
+    
+        // Lógica para filtrar los vehículos por la marca seleccionada
+        $vehiculos = Vehiculo::where('marca_id', $marcaId)->get();
+    
+        // Aquí podrías pasar los vehículos filtrados a una vista para mostrarlos
+        return view('resultado_filtro', ['vehiculos' => $vehiculos]);
+    }
 }
