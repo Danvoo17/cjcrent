@@ -24,6 +24,8 @@ class ContactController extends Controller
     $mensaje->asunto = $request->asunto;
     $mensaje->mensaje = $request->mensaje;
     $mensaje->email = Auth::user()->email; // Obtener el email del usuario autenticado
+    $mensaje->id_user = Auth::user()->id;
+    $mensaje->nombre = Auth::user()->name;
     $mensaje->save();
 
     return redirect('/')->with('success', 'Mensaje enviado exitosamente');

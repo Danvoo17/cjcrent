@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('traccion', 20);
             $table->string('transmision', 10);
             $table->string('motor', 16);
-            $table->text('opciones');
+            $table->text('opciones')->nullable();
             $table->binary('imagen')->nullable();
             $table->foreignid('id_modelo')->references('id_modelo')->on('modelo');
             $table->foreignid('id_seguro')->references('id_seguro')->on('seguro');

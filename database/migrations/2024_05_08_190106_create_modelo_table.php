@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id('id_modelo');
             $table->string('nombre', 20);
             $table->string('trim', 40);
-            $table->string('año', 4);
             $table->foreignid('id_marca')->references('id_marca')->on('marca');
             $table->timestamps();
         });

@@ -13,7 +13,7 @@ use app\models\renta;
 
 
 
-Route::resource('clientes', ClienteController::class);
+
 
 ////////////////////////////////////////
 // Rutas de usuario estandar ///////////
@@ -65,17 +65,17 @@ Route::post('/contact/send', [ContactController::class, 'sendMessage'])->name('c
 //  Rutas de autenticacion de administrador ////////////////////////////
 Route::middleware(['auth', 'admin'])->group(function () {
 
+    Route::resource('clientes', ClienteController::class);
+
     Route::get('/Admin/Dashboard', [AdminController::class, 'dashboard'])->name('ad-dash');
+    Route::get('/Admin/Cliente', [ClienteController::class, 'index'])->name('ad-cliente');
+
+   
     
 });
 
-Route::get('/Cliente', function () {
-    return view('administrador.admin.cliente.index');
-})->name('ad-cliente');
 
-Route::resources([
-    'cliente' => 'App\Http\Controllers\ClienteController',
-    // Puedes agregar más recursos aquí
-]);
+
+
 
 
