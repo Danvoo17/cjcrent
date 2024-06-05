@@ -257,7 +257,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -316,9 +316,9 @@ return [
             'can' => 'manage-blog',
         ],
         [
-            'text' => 'pages',
-            'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
+            'text' => 'Dashboard',
+            'url' => 'dashboard',
+            'icon' => 'fas fa-fw fa-home',
             'label' => 4,
             'label_color' => 'success',
         ],
@@ -335,39 +335,39 @@ return [
         ],
         [
             'text' => 'Tablas',
-            'icon' => 'fas fa-fw fa-share',
+            'icon' => 'fas fa-solid fa-ta',
             'submenu' => [
                 [
                     'text' => 'Usuario',
-                    'url' => 'Admin/Usuario',
+                    'url' => 'users',
                 ],
                 [
                     'text' => 'Cliente',
-                    'url' => 'Admin/Cliente',
+                    'url' => 'clientes',
                 ],
                 [
                     'text' => 'Cargo',
-                    'url' => 'Admin/Cargo',
+                    'url' => 'cargos',
                 ],
                 [
                     'text' => 'Empleado',
-                    'url' => 'Admin/Empleado',
+                    'url' => 'empleados',
                 ],
                 [
                     'text' => 'Marca',
-                    'url' => 'Admin/Marca',
+                    'url' => 'marcas',
                 ],
                 [
                     'text' => 'Modelo',
-                    'url' => 'Admin/Modelo',
+                    'url' => 'modelos',
                 ],
                 [
                     'text' => 'Vehiculo',
-                    'url' => 'Admin/Vehiculo',
+                    'url' => 'vehiculos',
                 ],
                 [
                     'text' => 'Proveedor',
-                    'url' => 'Admin/Proveedor',
+                    'url' => 'proveedors',
                 ],
                 [
                     'text' => 'level_one',
@@ -392,10 +392,6 @@ return [
                             ],
                         ],
                     ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
                 ],
             ],
         ],

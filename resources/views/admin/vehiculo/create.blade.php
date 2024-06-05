@@ -5,7 +5,7 @@
     <h4 class="mt-4 text-dark">Cargando</h4>
 @stop
 
-@section('title', 'Dashboard')
+@section('title', 'CJC - Admin')
 
 @section('content_header')
     <h1>Crear vehiculo</h1>

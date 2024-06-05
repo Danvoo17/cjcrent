@@ -71,25 +71,15 @@ Route::post('/contact/send', [ContactController::class, 'sendMessage'])->name('c
 //  Rutas de autenticacion de administrador ////////////////////////////
 Route::middleware(['auth', 'admin'])->group(function () {
 
-    Route::resource('clientes', ClienteController::class);
+    Route::get('dashboard', [AdminController::class, 'dashboard'])->name('ad-dash');
     Route::resource('users', UserController::class);
-    Route::resource('proveedors', ProveedorController::class);
+    Route::resource('clientes', ClienteController::class);
     Route::resource('cargos', CargoController::class);
-    Route::resource('vehiculos', VehiculoController::class);
     Route::resource('empleados', EmpleadoController::class);
     Route::resource('marcas', MarcaController::class);
     Route::resource('modelos', ModeloController::class);
-
-    Route::get('/Admin/Dashboard', [AdminController::class, 'dashboard'])->name('ad-dash');
-    Route::get('/Admin/Usuario', [UserController::class, 'index'])->name('ad-usuario');
-    Route::get('/Admin/Cliente', [ClienteController::class, 'index'])->name('ad-cliente');
-    Route::get('/Admin/Proveedor', [ProveedorController::class, 'index'])->name('ad-proveedor');
-    Route::get('/Admin/Cargo', [CargoController::class, 'index'])->name('ad-cargo');
-    Route::get('/Admin/Vehiculo', [VehiculoController::class, 'index'])->name('ad-vehiculo');
-    Route::get('/Admin/Empleado', [EmpleadoController::class, 'index'])->name('ad-empleado');
-    Route::get('/Admin/Marca', [MarcaController::class, 'index'])->name('ad-marca');
-    Route::get('/Admin/Modelo', [ModeloController::class, 'index'])->name('ad-modelo');
-
+    Route::resource('vehiculos', VehiculoController::class);
+    Route::resource('proveedors', ProveedorController::class);
 });
 
 

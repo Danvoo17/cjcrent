@@ -5,7 +5,7 @@
     <h4 class="mt-4 text-dark">Cargando</h4>
 @stop
 
-@section('title', 'Dashboard')
+@section('title', 'CJC - Admin')
 
 @section('content_header')
     <h1>Mostrar vehiculo</h1>
@@ -88,6 +88,9 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Id Modelo:</strong>
                             {{ $vehiculo->id_modelo }}
+                            ({{ $vehiculo->modelo->marca->nombre }}
+                            {{ $vehiculo->modelo->nombre }}
+                            {{ $vehiculo->modelo->trim }})
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Id Seguro:</strong>

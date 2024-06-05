@@ -54,9 +54,13 @@
             <label for="tipo" class="form-label">{{ __('Tipo') }}</label>
             <select name="tipo" class="form-control @error('tipo') is-invalid @enderror" id="tipo">
                 <option value="" disabled selected>{{ __('Seleccione un tipo de vehiculo') }}</option>
-                <option value="Deportivo" {{ old('tipo', $vehiculo?->tipo) == 'deportivo' ? 'selected' : '' }}>{{ __('deportivo') }}</option>
-                <option value="Sedán" {{ old('tipo', $vehiculo?->tipo) == 'sedán' ? 'selected' : '' }}>{{ __('sedán') }}</option>
+                <option value="sedan" {{ old('tipo', $vehiculo?->tipo) == 'sedan' ? 'selected' : '' }}>{{ __('sedan') }}</option>
                 <option value="SUV" {{ old('tipo', $vehiculo?->tipo) == 'SUV' ? 'selected' : '' }}>{{ __('SUV') }}</option>
+                <option value="compacto" {{ old('tipo', $vehiculo?->tipo) == 'compacto' ? 'selected' : '' }}>{{ __('compacto') }}</option>
+                <option value="hatchback" {{ old('tipo', $vehiculo?->tipo) == 'hatchback' ? 'selected' : '' }}>{{ __('hatchback') }}</option>
+                <option value="coupe" {{ old('tipo', $vehiculo?->tipo) == 'coupe' ? 'selected' : '' }}>{{ __('coupe') }}</option>
+                <option value="deportivo" {{ old('tipo', $vehiculo?->tipo) == 'deportivo' ? 'selected' : '' }}>{{ __('deportivo') }}</option>
+                <option value="convertible" {{ old('tipo', $vehiculo?->tipo) == 'convertible' ? 'selected' : '' }}>{{ __('convertible') }}</option>
             </select>
             {!! $errors->first('tipo', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
@@ -67,6 +71,8 @@
                 <option value="AWD" {{ old('traccion', $vehiculo?->traccion) == 'AWD' ? 'selected' : '' }}>{{ __('AWD') }}</option>
                 <option value="FWD" {{ old('traccion', $vehiculo?->traccion) == 'FWD' ? 'selected' : '' }}>{{ __('FWD') }}</option>
                 <option value="RWD" {{ old('traccion', $vehiculo?->traccion) == 'RWD' ? 'selected' : '' }}>{{ __('RWD') }}</option>
+                <option value="4X4" {{ old('traccion', $vehiculo?->traccion) == '4X4' ? 'selected' : '' }}>{{ __('4X4') }}</option>
+                <option value="4WD" {{ old('traccion', $vehiculo?->traccion) == '4WD' ? 'selected' : '' }}>{{ __('4WD') }}</option>
             </select>
             {!! $errors->first('traccion', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
@@ -77,6 +83,8 @@
                 <option value="A" {{ old('transmision', $vehiculo?->transmision) == 'A' ? 'selected' : '' }}>{{ __('A') }}</option>
                 <option value="MT" {{ old('transmision', $vehiculo?->transmision) == 'MT' ? 'selected' : '' }}>{{ __('MT') }}</option>
                 <option value="DCT" {{ old('transmision', $vehiculo?->transmision) == 'DCT' ? 'selected' : '' }}>{{ __('DCT') }}</option>
+                <option value="CVT" {{ old('transmision', $vehiculo?->transmision) == 'CVT' ? 'selected' : '' }}>{{ __('CVT') }}</option>
+                <option value="SMT" {{ old('transmision', $vehiculo?->transmision) == 'SMT' ? 'selected' : '' }}>{{ __('SMT') }}</option>
             </select>
             {!! $errors->first('transmision', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
