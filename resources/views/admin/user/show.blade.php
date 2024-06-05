@@ -37,6 +37,14 @@
                             <strong>Rol:</strong>
                             {{ $user->rol }}
                         </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Creado:</strong>
+                            {{ $user->created_at }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Actualizado:</strong>
+                            {{ $user->updated_at }}
+                        </div>
 
                     </div>
                 </div>

@@ -342,6 +342,10 @@ return [
                     'url' => 'Admin/Usuario',
                 ],
                 [
+                    'text' => 'Cliente',
+                    'url' => 'Admin/Cliente',
+                ],
+                [
                     'text' => 'Proveedor',
                     'url' => 'Admin/Proveedor',
                 ],

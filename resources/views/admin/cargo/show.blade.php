@@ -10,11 +10,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-                        <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Cargo</span>
-                        </div>
+
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('cargos.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('cargos.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
@@ -31,6 +29,14 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Descripcion:</strong>
                             {{ $cargo->descripcion }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Creado:</strong>
+                            {{ $cargo->created_at }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Actualizado:</strong>
+                            {{ $cargo->updated_at }}
                         </div>
 
                     </div>

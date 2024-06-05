@@ -1,20 +1,25 @@
-@extends('layouts.ogapp')
+@extends('adminlte::page')
 
-@section('template_title')
-    {{ $cliente->name ?? __('Show') . " " . __('Cliente') }}
-@endsection
+@section('preloader')
+    <i class="fas fa-4x fa-spin fa-spinner text-secondary"></i>
+    <h4 class="mt-4 text-dark">Cargando</h4>
+@stop
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Ver cliente</h1>
+@stop
 
 @section('content')
-    <section class="content container-fluid">
+<section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-                        <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Cliente</span>
-                        </div>
+
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('clientes.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('clientes.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
@@ -52,10 +57,27 @@
                             <strong>Id User:</strong>
                             {{ $cliente->id_user }}
                         </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Creado:</strong>
+                            {{ $cliente->created_at }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Actualizado:</strong>
+                            {{ $cliente->updated_at }}
+                        </div>
 
                     </div>
                 </div>
             </div>
         </div>
     </section>
-@endsection
+@stop
+
+@section('css')
+    {{-- Add here extra stylesheets --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+@stop
+
+@section('js')
+    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+@stop

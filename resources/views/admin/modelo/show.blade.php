@@ -10,11 +10,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-                        <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Modelo</span>
-                        </div>
+
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('modelos.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('modelos.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
@@ -35,6 +33,14 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Id Marca:</strong>
                             {{ $modelo->id_marca }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Creado:</strong>
+                            {{ $modelo->created_at }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Actualizado:</strong>
+                            {{ $modelo->updated_at }}
                         </div>
 
                     </div>

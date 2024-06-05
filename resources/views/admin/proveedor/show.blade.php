@@ -19,7 +19,7 @@
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
 
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('proveedors.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('proveedors.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
@@ -52,6 +52,14 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Tipo:</strong>
                             {{ $proveedor->tipo }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Creado:</strong>
+                            {{ $proveedor->created_at }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Actualizado:</strong>
+                            {{ $proveedor->updated_at }}
                         </div>
 
                     </div>
