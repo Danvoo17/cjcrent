@@ -2,44 +2,121 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class vehiculo extends Model
+/**
+ * Class Vehiculo
+ *
+ * @property $id_vehiculo
+ * @property $matricula
+ * @property $precio
+ * @property $año
+ * @property $color
+ * @property $estado
+ * @property $pasajeros
+ * @property $puertas
+ * @property $maletas
+ * @property $tipo
+ * @property $traccion
+ * @property $transmision
+ * @property $motor
+ * @property $opciones
+ * @property $imagen
+ * @property $id_modelo
+ * @property $id_seguro
+ * @property $created_at
+ * @property $updated_at
+ *
+ * @property Modelo $modelo
+ * @property Seguro $seguro
+ * @property GastosGenerale[] $gastosGenerales
+ * @property Incidente[] $incidentes
+ * @property MantenimientoPreventivo[] $mantenimientoPreventivos
+ * @property Rentum[] $rentas
+ * @property Reparacione[] $reparaciones
+ * @property VehiculoPedido[] $vehiculoPedidos
+ * @package App
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
+class Vehiculo extends Model
 {
-    use HasFactory;
+    
 
-    protected $table = 'vehiculo';
+    protected $perPage = 20;
 
-    protected $primaryKey = 'id_vehiculo';
+    /**
+     * Attributes that should be mass-assignable.
+     *
+     * @var array
+     */
 
-    protected $fillable = [
-        'matricula', 'precio', 'color', 'estado', 'traccion', 'transmision', 'motor', 'pasajeros', 'maletas', 'opciones', 'tipo', 'id_modelo', 'id_seguro', 'imagen'
-    ];
+     
+    protected $fillable = ['id_vehiculo', 'matricula', 'precio', 'año', 'color', 'estado', 'pasajeros', 'puertas', 'maletas', 'tipo', 'traccion', 'transmision', 'motor', 'opciones', 'imagen', 'id_modelo', 'id_seguro'];
 
-    // Relación con el modelo
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function modelo()
     {
-        return $this->belongsTo(Modelo::class, 'id_modelo');
+        return $this->belongsTo(\App\Models\Modelo::class, 'id_modelo', 'id_modelo');
     }
-
-    // Relación con el seguro
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function seguro()
     {
-        return $this->belongsTo(Seguro::class, 'id_seguro');
+        return $this->belongsTo(\App\Models\Seguro::class, 'id_seguro', 'id_seguro');
     }
-    public function marca()
-    {
-        return $this->belongsTo(Marca::class, 'id_modelo', 'id_marca');
-    }
-    public function filtrar(Request $request)
-    {
-        $marcaId = $request->input('marca');
     
-        // Lógica para filtrar los vehículos por la marca seleccionada
-        $vehiculos = Vehiculo::where('marca_id', $marcaId)->get();
-    
-        // Aquí podrías pasar los vehículos filtrados a una vista para mostrarlos
-        return view('resultado_filtro', ['vehiculos' => $vehiculos]);
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function gastosGenerales()
+    {
+        return $this->hasMany(\App\Models\GastosGenerale::class, 'id_vehiculo', 'id_vehiculo');
     }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function incidentes()
+    {
+        return $this->hasMany(\App\Models\Incidente::class, 'id_vehiculo', 'id_vehiculo');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function mantenimientoPreventivos()
+    {
+        return $this->hasMany(\App\Models\MantenimientoPreventivo::class, 'id_vehiculo', 'id_vehiculo');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function rentas()
+    {
+        return $this->hasMany(\App\Models\Rentum::class, 'id_vehiculo', 'id_vehiculo');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reparaciones()
+    {
+        return $this->hasMany(\App\Models\Reparacione::class, 'id_vehiculo', 'id_vehiculo');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function vehiculoPedidos()
+    {
+        return $this->hasMany(\App\Models\VehiculoPedido::class, 'id_vehiculo', 'id_vehiculo');
+    }
+    
+
 }
