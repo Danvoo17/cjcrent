@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vehiculo', function (Blueprint $table) {
+        Schema::create('vehiculos', function (Blueprint $table) {
             $table->id('id_vehiculo');
             $table->string('matricula', 12)->unique();
             $table->float('precio');

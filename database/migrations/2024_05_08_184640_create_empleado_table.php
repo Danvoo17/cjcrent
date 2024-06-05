@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('email', 40);
             $table->string('direccion', 70);
             $table->float('saldo');
-            $table->foreignid('id_cargo')->references('id_cargo')->on('cargo');
+            $table->foreignid('id_cargo')->references('id_cargo')->on('cargos');
             $table->foreignid('id_user')->references('id')->on('users');
             $table->timestamps();
         });

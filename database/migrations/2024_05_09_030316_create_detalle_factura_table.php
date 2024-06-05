@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('detalle_factura', function (Blueprint $table) {
             $table->foreignid('cod_factura')->references('cod_factura')->on('factura');
-            $table->foreignid('id_cliente')->references('id_cliente')->on('cliente');
+            $table->foreignid('id_cliente')->references('id_cliente')->on('clientes');
             $table->timestamps();
         });
     }

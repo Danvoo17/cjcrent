@@ -8,6 +8,10 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CargoController;
+use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\MarcaController;
+use App\Http\Controllers\ModeloController;
 
 use app\models\renta;
 
@@ -66,9 +70,19 @@ Route::post('/contact/send', [ContactController::class, 'sendMessage'])->name('c
 Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::resource('clientes', ClienteController::class);
+    Route::resource('cargos', CargoController::class);
+    Route::resource('vehiculos', VehiculoController::class);
+    Route::resource('empleados', EmpleadoController::class);
+    Route::resource('marcas', MarcaController::class);
+    Route::resource('modelos', ModeloController::class);
 
     Route::get('/Admin/Dashboard', [AdminController::class, 'dashboard'])->name('ad-dash');
     Route::get('/Admin/Cliente', [ClienteController::class, 'index'])->name('ad-cliente');
+    Route::get('/Admin/Cargo', [CargoController::class, 'index'])->name('ad-cargo');
+    Route::get('/Admin/Vehiculo', [VehiculoController::class, 'index'])->name('ad-vehiculo');
+    Route::get('/Admin/Empleado', [EmpleadoController::class, 'index'])->name('ad-empleado');
+    Route::get('/Admin/Marca', [MarcaController::class, 'index'])->name('ad-marca');
+    Route::get('/Admin/Modelo', [ModeloController::class, 'index'])->name('ad-modelo');
 
    
     

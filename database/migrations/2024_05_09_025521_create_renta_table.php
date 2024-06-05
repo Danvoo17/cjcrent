@@ -21,8 +21,8 @@ return new class extends Migration
             $table->time('hora_devuelta');
             $table->float('costo');
             $table->string('estado', 12);
-            $table->foreignid('id_vehiculo')->references('id_vehiculo')->on('vehiculo');
-            $table->foreignid('id_cliente')->references('id_cliente')->on('cliente');
+            $table->foreignid('id_vehiculo')->references('id_vehiculo')->on('vehiculos');
+            $table->foreignid('id_cliente')->references('id_cliente')->on('clientes');
             $table->timestamps();
         });
     }

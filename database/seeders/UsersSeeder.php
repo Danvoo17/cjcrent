@@ -98,7 +98,7 @@ class UsersSeeder extends Seeder
         ];
 
         DB::table('users')->insert($users);
-        DB::table('cliente')->insert($clientes);
+        DB::table('clientes')->insert($clientes);
 
     }
 }
