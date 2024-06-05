@@ -334,12 +334,16 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text' => 'multilevel',
+            'text' => 'Tablas',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url' => '#',
+                    'text' => 'Usuario',
+                    'url' => 'Admin/Usuario',
+                ],
+                [
+                    'text' => 'Proveedor',
+                    'url' => 'Admin/Proveedor',
                 ],
                 [
                     'text' => 'level_one',
