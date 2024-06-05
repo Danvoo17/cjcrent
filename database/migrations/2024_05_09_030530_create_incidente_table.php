@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date('fecha');
             $table->time('hora');
             $table->foreignid('id_vehiculo')->references('id_vehiculo')->on('vehiculo');
-            $table->foreignid('id_cliente')->references('id_cliente')->on('cliente');
+            $table->foreignid('id_cliente')->references('id_cliente')->on('clientes');
             $table->timestamps();
         });
     }

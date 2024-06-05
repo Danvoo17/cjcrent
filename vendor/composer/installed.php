@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'a31586cd48b8e90b688909e9635458592f663483',
+        'reference' => 'c0c68ab6a44c7bf10e76e0d0722dfa2b6333cd1a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -182,7 +182,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../ibex/crud-generator',
             'aliases' => array(),
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'illuminate/auth' => array(
             'dev_requirement' => false,
@@ -418,7 +418,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'a31586cd48b8e90b688909e9635458592f663483',
+            'reference' => 'c0c68ab6a44c7bf10e76e0d0722dfa2b6333cd1a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

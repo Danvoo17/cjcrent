@@ -8,6 +8,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AseguradoraController;
 
 use app\models\renta;
 
@@ -66,9 +67,13 @@ Route::post('/contact/send', [ContactController::class, 'sendMessage'])->name('c
 Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::resource('clientes', ClienteController::class);
+    Route::resource('aseguradoras', AseguradoraController::class);
+    Route::resource('seguros', SeguroController::class);
 
     Route::get('/Admin/Dashboard', [AdminController::class, 'dashboard'])->name('ad-dash');
     Route::get('/Admin/Cliente', [ClienteController::class, 'index'])->name('ad-cliente');
+    Route::get('/Admin/aseguradoras', [AseguradoraController::class, 'index'])->name('ad-aseguradoras');
+    Route::get('/Admin/seguro', [SeguroController::class, 'index'])->name('ad-seguro');
 
    
     
