@@ -28,7 +28,11 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="estado" class="form-label">{{ __('Estado') }}</label>
-            <input type="text" name="estado" class="form-control @error('estado') is-invalid @enderror" value="{{ old('estado', $vehiculo?->estado) }}" id="estado" placeholder="Estado">
+            <select name="estado" class="form-control @error('estado') is-invalid @enderror" id="estado">
+                <option value="" disabled selected>{{ __('Seleccione un estado') }}</option>
+                <option value="disponible" {{ old('estado', $vehiculo?->estado) == 'disponible' ? 'selected' : '' }}>{{ __('disponible') }}</option>
+                <option value="ocupado" {{ old('estado', $vehiculo?->estado) == 'ocupado' ? 'selected' : '' }}>{{ __('ocupado') }}</option>
+            </select>
             {!! $errors->first('estado', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
@@ -48,17 +52,32 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="tipo" class="form-label">{{ __('Tipo') }}</label>
-            <input type="text" name="tipo" class="form-control @error('tipo') is-invalid @enderror" value="{{ old('tipo', $vehiculo?->tipo) }}" id="tipo" placeholder="Tipo">
+            <select name="tipo" class="form-control @error('tipo') is-invalid @enderror" id="tipo">
+                <option value="" disabled selected>{{ __('Seleccione un tipo de vehiculo') }}</option>
+                <option value="Deportivo" {{ old('tipo', $vehiculo?->tipo) == 'deportivo' ? 'selected' : '' }}>{{ __('deportivo') }}</option>
+                <option value="Sedán" {{ old('tipo', $vehiculo?->tipo) == 'sedán' ? 'selected' : '' }}>{{ __('sedán') }}</option>
+                <option value="SUV" {{ old('tipo', $vehiculo?->tipo) == 'SUV' ? 'selected' : '' }}>{{ __('SUV') }}</option>
+            </select>
             {!! $errors->first('tipo', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
             <label for="traccion" class="form-label">{{ __('Traccion') }}</label>
-            <input type="text" name="traccion" class="form-control @error('traccion') is-invalid @enderror" value="{{ old('traccion', $vehiculo?->traccion) }}" id="traccion" placeholder="Traccion">
+            <select name="traccion" class="form-control @error('traccion') is-invalid @enderror" id="traccion">
+                <option value="" disabled selected>{{ __('Seleccione una traccion') }}</option>
+                <option value="AWD" {{ old('traccion', $vehiculo?->traccion) == 'AWD' ? 'selected' : '' }}>{{ __('AWD') }}</option>
+                <option value="FWD" {{ old('traccion', $vehiculo?->traccion) == 'FWD' ? 'selected' : '' }}>{{ __('FWD') }}</option>
+                <option value="RWD" {{ old('traccion', $vehiculo?->traccion) == 'RWD' ? 'selected' : '' }}>{{ __('RWD') }}</option>
+            </select>
             {!! $errors->first('traccion', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
             <label for="transmision" class="form-label">{{ __('Transmision') }}</label>
-            <input type="text" name="transmision" class="form-control @error('transmision') is-invalid @enderror" value="{{ old('transmision', $vehiculo?->transmision) }}" id="transmision" placeholder="Transmision">
+            <select name="transmision" class="form-control @error('transmision') is-invalid @enderror" id="transmision">
+                <option value="" disabled selected>{{ __('Seleccione un transmision') }}</option>
+                <option value="A" {{ old('transmision', $vehiculo?->transmision) == 'A' ? 'selected' : '' }}>{{ __('A') }}</option>
+                <option value="MT" {{ old('transmision', $vehiculo?->transmision) == 'MT' ? 'selected' : '' }}>{{ __('MT') }}</option>
+                <option value="DCT" {{ old('transmision', $vehiculo?->transmision) == 'DCT' ? 'selected' : '' }}>{{ __('DCT') }}</option>
+            </select>
             {!! $errors->first('transmision', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">

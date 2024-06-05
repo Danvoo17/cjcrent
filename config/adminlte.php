@@ -346,6 +346,26 @@ return [
                     'url' => 'Admin/Cliente',
                 ],
                 [
+                    'text' => 'Cargo',
+                    'url' => 'Admin/Cargo',
+                ],
+                [
+                    'text' => 'Empleado',
+                    'url' => 'Admin/Empleado',
+                ],
+                [
+                    'text' => 'Marca',
+                    'url' => 'Admin/Marca',
+                ],
+                [
+                    'text' => 'Modelo',
+                    'url' => 'Admin/Modelo',
+                ],
+                [
+                    'text' => 'Vehiculo',
+                    'url' => 'Admin/Vehiculo',
+                ],
+                [
                     'text' => 'Proveedor',
                     'url' => 'Admin/Proveedor',
                 ],
