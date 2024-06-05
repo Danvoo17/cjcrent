@@ -57,7 +57,6 @@
 										<th>Transmision</th>
 										<th>Motor</th>
 										<th>Opciones</th>
-										<th>Imagen</th>
 										<th>Id Modelo</th>
 										<th>Id Seguro</th>
 
@@ -83,7 +82,6 @@
 											<td>{{ $vehiculo->transmision }}</td>
 											<td>{{ $vehiculo->motor }}</td>
 											<td>{{ $vehiculo->opciones }}</td>
-											<td>{{ $vehiculo->imagen }}</td>
 											<td>{{ $vehiculo->id_modelo }}</td>
 											<td>{{ $vehiculo->id_seguro }}</td>
 
