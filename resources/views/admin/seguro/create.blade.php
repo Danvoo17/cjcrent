@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.ogapp')
 
 @section('template_title')
     {{ __('Create') }} Seguro
@@ -17,7 +17,7 @@
                         <form method="POST" action="{{ route('seguros.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('seguro.form')
+                            @include('admin.seguro.form')
 
                         </form>
                     </div>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.ogapp')
 
 @section('template_title')
     {{ __('Update') }} Seguro
@@ -14,11 +14,11 @@
                         <span class="card-title">{{ __('Update') }} Seguro</span>
                     </div>
                     <div class="card-body bg-white">
-                        <form method="POST" action="{{ route('seguros.update', $seguro->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('seguros.update', $seguro->id_seguro) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
-                            @include('seguro.form')
+                            @include('admin.seguro.form')
 
                         </form>
                     </div>

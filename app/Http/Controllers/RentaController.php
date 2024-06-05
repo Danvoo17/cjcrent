@@ -2,57 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\renta;
-use Illuminate\Http\Request;
+use App\Models\Renta;
+use App\Http\Requests\RentaRequest;
 
+/**
+ * Class RentaController
+ * @package App\Http\Controllers
+ */
 class RentaController extends Controller
 {
-
-    // Método para procesar el formulario de alquiler
-    public function rentar(Request $request)
-    {
-     // Validar los datos del formulario
-     $request->validate([
-         'ub_rec' => 'required|string',
-         'ub_dev' => 'required|string',
-         'fe_rec' => 'required|date',
-         'ho_rec' => 'required|date_format:H:i',
-         'fe_dev' => 'required|date',
-         'ho_dev' => 'required|date_format:H:i',
-         'cliente_id' => 'required|exists:cliente,id', // Asegúrate de que el cliente exista en la base de datos
-         'vehiculo_id' => 'required|exists:vehiculo,id_vehiculo', // Asegúrate de que el vehículo exista en la base de datos
-         // Agrega aquí las reglas de validación para los otros campos si es necesario
-     ]);
-
-     // Calcular el costo del alquiler (esto es solo un ejemplo, debes implementar tu propia lógica)
-     $costo = 100.00; // Ejemplo: costo base de $100
-
-     // Crear una nueva renta con los datos del formulario
-     Renta::create([
-         'ub_recogida' => $request->ub_rec,
-         'ub_devuelta' => $request->ub_dev,
-         'fecha_recogida' => $request->fe_rec,
-         'hora_recogida' => $request->ho_rec,
-         'fecha_devuelta' => $request->fe_dev,
-         'hora_devuelta' => $request->ho_dev,
-         'costo' => $costo,
-         'estado' => 'Pendiente', // Por ejemplo, el estado inicial puede ser pendiente
-         'cliente_id_cliente' => $request->cliente_id,
-         'vehiculo_id_vehiculo' => $request->vehiculo_id,
-         // Agrega aquí los otros campos del modelo si es necesario
-     ]);
-
-     // Redireccionar o retornar una respuesta
-     return redirect()->back()->with('success', '¡El vehículo ha sido alquilado exitosamente!');
- }
-
-
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $rentas = Renta::paginate();
+
+        return view('admin.renta.index', compact('rentas'))
+            ->with('i', (request()->input('page', 1) - 1) * $rentas->perPage());
     }
 
     /**
@@ -60,46 +27,57 @@ class RentaController extends Controller
      */
     public function create()
     {
-        //
+        $renta = new Renta();
+        return view('admin.renta.create', compact('renta'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(RentaRequest $request)
     {
-        //
+        Renta::create($request->validated());
+
+        return redirect()->route('rentas.index')
+            ->with('success', 'Renta created successfully.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(renta $renta)
+    public function show($id)
     {
-        //
+        $renta = Renta::find($id);
+
+        return view('admin.renta.show', compact('renta'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(renta $renta)
+    public function edit($id)
     {
-        //
+        $renta = Renta::find($id);
+
+        return view('admin.renta.edit', compact('renta'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, renta $renta)
+    public function update(RentaRequest $request, Renta $renta)
     {
-        //
+        $renta->update($request->validated());
+
+        return redirect()->route('rentas.index')
+            ->with('success', 'Renta updated successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(renta $renta)
+    public function destroy($id)
     {
-        //
+        Renta::find($id)->delete();
+
+        return redirect()->route('rentas.index')
+            ->with('success', 'Renta deleted successfully');
     }
 }

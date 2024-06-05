@@ -18,7 +18,7 @@ class UserController extends Controller
     {
         $users = User::paginate();
 
-        return view('user.index', compact('users'))
+        return view('admin.user.index', compact('users'))
             ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
     }
 
@@ -28,7 +28,7 @@ class UserController extends Controller
     public function create()
     {
         $user = new User();
-        return view('user.create', compact('user'));
+        return view('admin.user.create', compact('user'));
     }
 
     /**
@@ -49,7 +49,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return view('user.show', compact('user'));
+        return view('admin.user.show', compact('user'));
     }
 
     /**
@@ -59,7 +59,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return view('user.edit', compact('user'));
+        return view('admin.user.edit', compact('user'));
     }
 
     /**

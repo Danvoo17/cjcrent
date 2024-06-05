@@ -2,13 +2,23 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use app\http\controllers\HomeController;
-
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CargoController;
+use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\MarcaController;
+use App\Http\Controllers\ModeloController;
 use App\Http\Controllers\AseguradoraController;
+use App\Http\Controllers\SeguroController;
+use App\Http\Controllers\rentaController;
+use App\Http\Controllers\FacturaController;
+use App\Http\Controllers\IncidenteController;
+use App\Http\Controllers\MantenimientoController;
+use App\Http\Controllers\ReparacioneController;
 
 use app\models\renta;
 
@@ -67,16 +77,23 @@ Route::post('/contact/send', [ContactController::class, 'sendMessage'])->name('c
 Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::resource('clientes', ClienteController::class);
+    Route::resource('users', UserController::class);
+    Route::resource('proveedors', ProveedorController::class);
+    Route::resource('cargos', CargoController::class);
+    Route::resource('vehiculos', VehiculoController::class);
+    Route::resource('empleados', EmpleadoController::class);
+    Route::resource('marcas', MarcaController::class);
+    Route::resource('modelos', ModeloController::class);
     Route::resource('aseguradoras', AseguradoraController::class);
     Route::resource('seguros', SeguroController::class);
-
-    Route::get('/Admin/Dashboard', [AdminController::class, 'dashboard'])->name('ad-dash');
-    Route::get('/Admin/Cliente', [ClienteController::class, 'index'])->name('ad-cliente');
-    Route::get('/Admin/aseguradoras', [AseguradoraController::class, 'index'])->name('ad-aseguradoras');
-    Route::get('/Admin/seguro', [SeguroController::class, 'index'])->name('ad-seguro');
+    Route::resource('rentas', rentaController::class);
+    Route::resource('facturas', FacturaController::class);
+    Route::resource('incidentes', IncidenteController::class);
+    Route::resource('mantenimiento', MantenimientoController::class);
+    Route::resource('reparaciones', ReparacioneController::class);
 
    
-    
+
 });
 
 

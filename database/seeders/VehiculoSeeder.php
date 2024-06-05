@@ -342,6 +342,6 @@ class VehiculoSeeder extends Seeder
 
         DB::table('marca')->insert($marcas);
         DB::table('modelo')->insert($modelos);
-        DB::table('vehiculo')->insert($vehiculos);
+        DB::table('vehiculos')->insert($vehiculos);
     }
 }

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.ogapp')
 
 @section('template_title')
     {{ $seguro->name ?? __('Show') . " " . __('Seguro') }}
