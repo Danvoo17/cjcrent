@@ -19,6 +19,97 @@
     <link rel="stylesheet" href="/cjcrent/public/css/style.css">
     <link rel="stylesheet" href="/cjcrent/public/css/owl.css">
 
+    <style>
+        /* Estilos para el modal de filtro */
+        #filtro .modal-dialog {
+            max-width: 600px;
+        }
+
+        #filtro .modal-content {
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #filtro .modal-header {
+            border-bottom: none;
+        }
+
+        #filtro .modal-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #filtro .close {
+            font-size: 24px;
+        }
+
+        #filtro .form-group {
+            margin-bottom: 15px;
+        }
+
+        #filtro label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #filtro input[type="number"],
+        #filtro input[type="text"],
+        #filtro select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        #filtro button.btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        #filtro button.btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para los elementos de los vehículos */
+
+        .filte-button {
+           
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 20px auto;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .filte-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .filte-button:focus {
+            outline: none;
+        }
+
+        /* Centrado del botón en la página */
+        
+    </style>
+
 </head>
 
 <body>
@@ -109,9 +200,9 @@
             </div>
         </div>
     </div>
-    <span>
-        <a href="#" data-toggle="modal" data-target="#filtro">Filtro</a>
-    </span>
+    <div class="center-button">
+        <button class="filte-button" data-toggle="modal" data-target="#filtro">Filtro</button>
+    </div>
     <div class="products">
         <div class="container">
             <div class="row">
@@ -130,7 +221,7 @@
                         <small>
                             <strong title="Pasajeros"><i class="fa fa-user"></i> {{ $vehiculo->pasajeros }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <strong title="Puertas"><i class="fa fa-sign-out"></i> {{ $vehiculo->puertas }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                            <strong title="Espacio"><i class="fa fa-briefcase"></i> {{ $vehiculo->maletas }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong title="maletas"><i class="fa fa-briefcase"></i> {{ $vehiculo->maletas }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <strong title="Traccion"><i class="fa fa-cogs"></i> {{ $vehiculo->traccion }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <strong title="Transmision"><i class="fa fa-cog"></i> {{ $vehiculo->transmision }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <!-- Agrega otras características aquí -->
@@ -186,11 +277,39 @@
                             <label for="doors">Puertas:</label>
                             <input type="number" id="doors" />
                         </div>
+                        <div class="form-group">
+                            <label for="year">Año:</label>
+                            <input type="number" id="year" />
+                        </div>
+                        <div class="form-group">
+                            <label for="maletas">Maletas:</label>
+                            <input type="number" id="maletas" />
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo">Tipo:</label>
+                            <select id="type">
+                                <option value="">Todos</option>
+                                <option value="deportivo">Deportivo</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="compacto">Compacto</option>
+                                <option value="SUV">SUV</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="traccion">Tracción:</label>
+                            <select id="traccion">
+                                <option value="">Todos</option>
+                                <option value="RWD">RWD</option>
+                                <option value="FWD">FWD</option>
+                                <option value="AWD">AWD</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="opciones">Opciones:</label>
+                            <input type="text" id="opciones" />
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="applyFilter()">Aplicar filtro</button>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" onclick="applyFilter()">Aplicar</button>
                 </div>
             </div>
         </div>
@@ -292,68 +411,54 @@
     <script src="/cjcrent/public/js/owl.js"></script>
 
     <script>
-        function applyFilter() {
-            var minPrice = parseFloat(document.getElementById('min-price').value) || 0;
-            var maxPrice = parseFloat(document.getElementById('max-price').value) || Infinity;
-            var transmission = document.getElementById('transmission').value;
-            var passengers = parseInt(document.getElementById('passengers').value) || 0;
-            var doors = parseInt(document.getElementById('doors').value) || 0;
+       function applyFilter() {
+    var minPrice = parseFloat(document.getElementById('min-price').value) || 0;
+    var maxPrice = parseFloat(document.getElementById('max-price').value) || Infinity;
+    var transmission = document.getElementById('transmission').value;
+    var passengers = parseInt(document.getElementById('passengers').value) || 0;
+    var doors = parseInt(document.getElementById('doors').value) || 0;
+    var year = parseInt(document.getElementById('year').value) || 0;
+    var maletas = parseInt(document.getElementById('maletas').value) || 0;
+    var type = document.getElementById('type').value;
+    var traccion = document.getElementById('traccion').value.trim();
+    var opciones = document.getElementById('opciones').value.trim();
 
-            var vehicles = document.getElementsByClassName('product-item');
-            for (var i = 0; i < vehicles.length; i++) {
-                var priceElem = vehicles[i].querySelector('h6');
-                var transElem = vehicles[i].querySelector('strong[title="Transmision"]');
-                var passElem = vehicles[i].querySelector('strong[title="Pasajeros"]');
-                var doorElem = vehicles[i].querySelector('strong[title="Puertas"]');
+    var vehicles = document.getElementsByClassName('product-item');
+    for (var i = 0; i < vehicles.length; i++) {
+        var priceElem = vehicles[i].querySelector('h6');
+        var transElem = vehicles[i].querySelector('strong[title="Transmision"]');
+        var passElem = vehicles[i].querySelector('strong[title="Pasajeros"]');
+        var doorElem = vehicles[i].querySelector('strong[title="Puertas"]');
+        var maletasElem = vehicles[i].querySelector('strong[title="maletas"]'); // Correct title attribute
+        var tipoElem = vehicles[i].querySelector('strong[title="Tipo"]');
+        var traccionElem = vehicles[i].querySelector('strong[title="Traccion"]');
+        var opcionesElem = vehicles[i].querySelector('strong[title="Opciones"]');
 
-                var price = priceElem ? parseFloat(priceElem.textContent.replace(/[^\d.]/g, '')) : 0;
-                var trans = transElem ? transElem.textContent.trim() : '';
-                var pass = passElem ? parseInt(passElem.textContent.trim()) : 0;
-                var door = doorElem ? parseInt(doorElem.textContent.trim()) : 0;
+        var price = priceElem ? parseFloat(priceElem.textContent.replace(/[^\d.]/g, '')) : 0;
+        var trans = transElem ? transElem.textContent.trim() : '';
+        var pass = passElem ? parseInt(passElem.textContent.trim()) : 0;
+        var door = doorElem ? parseInt(doorElem.textContent.trim()) : 0;
+        var maletasVeh = maletasElem ? parseInt(maletasElem.textContent.trim()) : 0; // Correct element and parsing
+        var tipoVeh = tipoElem ? tipoElem.textContent.trim() : '';
+        var traccionVeh = traccionElem ? traccionElem.textContent.trim() : '';
+        var opcionesVeh = opcionesElem ? opcionesElem.textContent.trim() : '';
 
-                if (price >= minPrice && price <= maxPrice &&
-                    (transmission === "" || trans === transmission) &&
-                    (passengers === 0 || pass === passengers) &&
-                    (doors === 0 || door === doors)) {
-                    vehicles[i].parentElement.style.display = "block";
-                } else {
-                    vehicles[i].parentElement.style.display = "none";
-                }
-            }
-
-            $('#filtro').modal('hide');
+        if (price >= minPrice && price <= maxPrice &&
+            (transmission === "" || trans === transmission) &&
+            (passengers === 0 || pass === passengers) &&
+            (doors === 0 || door === doors) &&
+            (maletas === 0 || maletasVeh === maletas) && // Corrected comparison for maletas
+            (type === "" || tipoVeh === type) &&
+            (traccion === "" || traccionVeh === traccion) &&
+            (opciones === "" || opcionesVeh.includes(opciones))) {
+            vehicles[i].parentElement.style.display = "block";
+        } else {
+            vehicles[i].parentElement.style.display = "none";
         }
-        function applyFilter() {
-            var minPrice = parseFloat(document.getElementById('min-price').value) || 0;
-            var maxPrice = parseFloat(document.getElementById('max-price').value) || Infinity;
-            var transmission = document.getElementById('transmission').value;
-            var passengers = parseInt(document.getElementById('passengers').value) || 0;
-            var doors = parseInt(document.getElementById('doors').value) || 0;
+    }
 
-            var vehicles = document.getElementsByClassName('product-item');
-            for (var i = 0; i < vehicles.length; i++) {
-                var priceElem = vehicles[i].querySelector('h6');
-                var transElem = vehicles[i].querySelector('strong[title="Transmision"]');
-                var passElem = vehicles[i].querySelector('strong[title="Pasajeros"]');
-                var doorElem = vehicles[i].querySelector('strong[title="Puertas"]');
-
-                var price = priceElem ? parseFloat(priceElem.textContent.replace(/[^\d.]/g, '')) : 0;
-                var trans = transElem ? transElem.textContent.trim() : '';
-                var pass = passElem ? parseInt(passElem.textContent.trim()) : 0;
-                var door = doorElem ? parseInt(doorElem.textContent.trim()) : 0;
-
-                if (price >= minPrice && price <= maxPrice &&
-                    (transmission === "" || trans === transmission) &&
-                    (passengers === 0 || pass === passengers) &&
-                    (doors === 0 || door === doors)) {
-                    vehicles[i].parentElement.style.display = "block";
-                } else {
-                    vehicles[i].parentElement.style.display = "none";
-                }
-            }
-
-            $('#filtro').modal('hide');
-        }
+    $('#filtro').modal('hide');
+}
     </script>
 </body>
 
