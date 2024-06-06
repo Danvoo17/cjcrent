@@ -128,13 +128,13 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>Ofertas</h2>
-              <a href="fleet.php">Ver más <i class="fa fa-angle-right"></i></a>
+              <h2>Nuestra flota</h2>
+              <a href="{{ route('fleet') }}">Ver más <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="fleet2.php"><img src="assets/images/producto7.png" alt=""></a>
+              <a href="fleet2.php"><img src="/cjcrent/public/images/main/camaro.png" alt=""></a>
               <div class="down-content">
                 <a href="fleet2.php"><h4>Deportivos</h4></a>
                 <p>Nuestros autos deportivos están diseñados para aquellos que buscan velocidad y estilo. Con motores potentes y un diseño aerodinámico, estos vehículos te brindarán una experiencia de conducción inigualable.</p>
@@ -144,17 +144,17 @@
 
           <div class="col-md-4">
             <div class="product-item">
-              <a href="fleet2.php"><img src="assets/images/producto8.jpg" alt=""></a>
+              <a href="fleet2.php"><img src="/cjcrent/public/images/main/mbcls.png" alt=""></a>
               <div class="down-content">
                 <a href="fleet2.php"><h4>Sedanes</h4></a>
-                <p>El equilibrio perfecto entre confort y eficiencia. Nuestros sedanes son ideales para viajes de negocios, familias pequeñas o cualquier persona que busque un viaje cómodo y elegante. Con amplio espacio para pasajeros y equipaje, así como características modernas de seguridad y entretenimiento, estos autos garantizan una experiencia de viaje placentera.</p>
+                <p>El equilibrio perfecto entre confort y eficiencia. Nuestros sedanes son ideales para viajes de negocios, familias pequeñas o cualquier persona que busque un viaje cómodo y elegante, asi tambien con amplio espacio para pasajeros y equipaje.</p>
               </div>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="product-item">
-              <a href="fleet2.php"><img src="assets/images/producto9.jpg" alt=""></a>
+              <a href="fleet2.php"><img src="/cjcrent/public/images/main/lexuslx.png" alt=""></a>
               <div class="down-content">
                 <a href="fleet2.php"><h4>SUV</h4></a>
                 <p> nuestros SUVs ofrecen espacio, potencia y versatilidad. Equipados con tracción en las cuatro ruedas, son perfectos para cualquier terreno, ya sea para ir a la montaña o un viaje por la ciudad. Disfruta de la comodidad, seguridad y capacidad de carga superior que solo un SUV puede ofrecer.</p>
@@ -182,7 +182,7 @@
                 <li><a href="#">Amabilidad</a></li>
                 <li><a href="#">confiabilidad</a></li>
               </ul>
-              <a href="about-us.html" class="filled-button">Leer más</a>
+              <a href="{{ route('about') }}" class="filled-button">Leer más</a>
             </div>
           </div>
           <div class="col-md-6">
@@ -193,8 +193,6 @@
         </div>
       </div>
     </div>
-
-   
 
     <div class="happy-clients">
     <div class="container">
@@ -245,7 +243,7 @@
                   <p>Si haz tenido algun inconveniente o tienes quejas, puedes contactarnos.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 text-right">
-                  <a href="contact.php" class="filled-button">Contactanos</a>
+                  <a href="{{ route('contact') }}" class="filled-button">Contactanos</a>
                 </div>
               </div>
             </div>
