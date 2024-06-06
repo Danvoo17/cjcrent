@@ -50,7 +50,6 @@
                 </li> 
 
                 <li class="nav-item active"><a class="nav-link" href="{{ route('fleet') }}">Flota</a></li>
-                <li class="nav-item active"><a class="nav-link" href="{{ route('ad-cliente') }}">clientes</a></li>
 
                 @auth
 
@@ -95,51 +94,6 @@
           </div>
         </div>
       </nav>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="{{ route('index') }}"><h2>CJC <em>Rent a Car</em></h2></a>
-                <button id="resbut" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('index') }}">Inicio
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item active"><a class="nav-link" href="{{ route('fleet') }}">Flota</a></li>
-                        @auth
-                        <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contactanos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">Sobre Nosotros</a></li>
-                        <!-- perfil de usuario -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                {{ Auth::user()->name }}
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('profile.edit') }}">Perfil</a>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <a class="dropdown-item" :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();" style="cursor:pointer">Cerrar sesión</a>
-                                </form>
-                            </div>
-                        </li>
-                        @else
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Más</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('contact') }}">Contactanos</a>
-                                <a class="dropdown-item" href="{{ route('about') }}">Sobre nosotros</a>
-                            </div>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Inicia sesión</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}" style="cursor: pointer">Registrate</a></li>
-                        @endauth
-                    </ul>
-                </div>
-            </div>
-        </nav>
     </header>
 
     <!-- Page Content -->
@@ -174,12 +128,10 @@
                             <p>{{ $vehiculo->estado }}</p>
 
                         <small>
-                            <strong title="Estado"><i class="fa fa-sign-out"></i> {{ $vehiculo->estado }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <strong title="Pasajeros"><i class="fa fa-user"></i> {{ $vehiculo->pasajeros }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <strong title="Puertas"><i class="fa fa-sign-out"></i> {{ $vehiculo->puertas }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <strong title="Espacio"><i class="fa fa-briefcase"></i> {{ $vehiculo->maletas }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                            <strong title="Tipo"><i class="fa fa-sign-out"></i> {{ $vehiculo->tipo }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                            <strong title="Traccion"><i class="fa fa-sign-out"></i> {{ $vehiculo->traccion }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong title="Traccion"><i class="fa fa-cogs"></i> {{ $vehiculo->traccion }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <strong title="Transmision"><i class="fa fa-cog"></i> {{ $vehiculo->transmision }}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
                             <!-- Agrega otras características aquí -->
                         </small>
@@ -219,8 +171,11 @@
                             <label for="transmission">Transmisión:</label>
                             <select id="transmission">
                                 <option value="">Todos</option>
-                                <option value="A">Automático</option>
-                                <option value="MT">Manual</option>
+                                <option value="A">A</option>
+                                <option value="MT">MT</option>
+                                <option value="DCT">DCT</option>
+                                <option value="CVT">CVT</option>
+                                <option value="SMT">SMT</option>
                             </select>
                         </div>
                         <div class="form-group">
