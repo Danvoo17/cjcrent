@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>Reparaciones</h1>
+    <h1>Mensaje</h1>
 @stop
 
 @section('content')
@@ -24,7 +24,7 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('reparaciones.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('mensajes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Crear nuevo') }}
                                 </a>
                               </div>
@@ -43,32 +43,32 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Id</th>
-										<th>Descripcion</th>
-										<th>Fecha</th>
-										<th>Costo</th>
-										<th>Id Vehiculo</th>
-										<th>Id Emp</th>
+                                        <th>Id</th>
+										<th>Nombre</th>
+										<th>Email</th>
+										<th>Asunto</th>
+										<th>Mensaje</th>
+										<th>Id User</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($reparaciones as $reparacione)
+                                    @foreach ($mensajes as $mensaje)
                                         <tr>
                                             <td><strong>{{ ++$i }}</strong></td>
                                             
-											<td>{{ $reparacione->id_reparacion }}</td>
-											<td>{{ $reparacione->descripcion }}</td>
-											<td>{{ $reparacione->fecha }}</td>
-											<td>{{ $reparacione->costo }}</td>
-											<td>{{ $reparacione->id_vehiculo }}</td>
-											<td>{{ $reparacione->id_emp }}</td>
+                                            <td>{{ $mensaje->id }}</td>
+											<td>{{ $mensaje->nombre }}</td>
+											<td>{{ $mensaje->email }}</td>
+											<td>{{ $mensaje->asunto }}</td>
+											<td>{{ $mensaje->mensaje }}</td>
+											<td>{{ $mensaje->id_user }}</td>
 
                                             <td>
-                                                <form action="{{ route('reparaciones.destroy',$reparacione->id_reparacion) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('reparaciones.show',$reparacione->id_reparacion) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('reparaciones.edit',$reparacione->id_reparacion) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Ediar') }}</a>
+                                                <form action="{{ route('mensajes.destroy',$mensaje->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('mensajes.show',$mensaje->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('mensajes.edit',$mensaje->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $reparaciones->links() !!}
+                {!! $mensajes->links() !!}
             </div>
         </div>
     </div>

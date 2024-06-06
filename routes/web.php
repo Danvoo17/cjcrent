@@ -21,6 +21,7 @@ use App\Http\Controllers\FacturaController;
 use App\Http\Controllers\IncidenteController;
 use App\Http\Controllers\MantenimientoController;
 use App\Http\Controllers\ReparacioneController;
+use App\Http\Controllers\MensajeController;
 
 use app\models\renta;
 
@@ -96,6 +97,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('proveedors', ProveedorController::class);
     Route::resource('pedidos', PedidoController::class);
     Route::resource('gastosLocals', GastosLocalController::class);
+    Route::resource('mensajes', MensajeController::class);
 });
 
 

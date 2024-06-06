@@ -20,12 +20,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Seguro') }}
+                                {{ __('') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('seguros.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear nuevo') }}
                                 </a>
                               </div>
                         </div>
@@ -43,7 +43,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Id Seguro</th>
+										<th>Id</th>
 										<th>Num Poliza</th>
 										<th>Tipo</th>
 										<th>Descripcion</th>
@@ -58,7 +58,7 @@
                                 <tbody>
                                     @foreach ($seguros as $seguro)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td><strong>{{ ++$i }}</strong></td>
                                             
 											<td>{{ $seguro->id_seguro }}</td>
 											<td>{{ $seguro->num_poliza }}</td>
@@ -71,11 +71,11 @@
 
                                             <td>
                                                 <form action="{{ route('seguros.destroy',$seguro->id_seguro) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('seguros.show',$seguro->id_seguro) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('seguros.edit',$seguro->id_seguro) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('seguros.show',$seguro->id_seguro) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('seguros.edit',$seguro->id_seguro) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -97,5 +97,5 @@
 @stop
 
 @section('js')
-    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+   
 @stop

@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>crear</h1>
+    <h1>Crear mantenimiento</h1>
 @stop
 
 @section('content')
@@ -18,10 +18,10 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Mantenimiento</span>
+                        <a class="btn btn-primary btn-sm" href="{{ route('mantenimientos.index') }}"> {{ __('Atras') }}</a>
                     </div>
                     <div class="card-body bg-white">
-                        <form method="POST" action="{{ route('mantenimiento.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('mantenimientos.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('admin.mantenimiento.form')
@@ -40,5 +40,5 @@
 @stop
 
 @section('js')
-    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+    
 @stop

@@ -32,8 +32,11 @@ class Mantenimiento extends Model
      *
      * @var array
      */
+
     protected $table = 'mantenimiento';
+
     protected $primaryKey = 'id_mantenimiento';
+
     protected $fillable = ['id_mantenimiento', 'tipo', 'descripcion', 'fecha', 'costo', 'id_vehiculo'];
 
 

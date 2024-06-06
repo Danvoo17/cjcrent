@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Renta</h1>
 @stop
 
 @section('content')
@@ -20,12 +20,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Renta') }}
+                                {{ __('') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('rentas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear new') }}
                                 </a>
                               </div>
                         </div>
@@ -43,7 +43,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Id Renta</th>
+										<th>Id</th>
 										<th>Ub Recogida</th>
 										<th>Ub Devuelta</th>
 										<th>Fecha Recogida</th>
@@ -61,7 +61,7 @@
                                 <tbody>
                                     @foreach ($rentas as $renta)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td><strong>{{ ++$i }}</strong></td>
                                             
 											<td>{{ $renta->id_renta }}</td>
 											<td>{{ $renta->ub_recogida }}</td>
@@ -77,11 +77,11 @@
 
                                             <td>
                                                 <form action="{{ route('rentas.destroy',$renta->id_renta) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('rentas.show',$renta->id_renta) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('rentas.edit',$renta->id_renta) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('rentas.show',$renta->id_renta) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('rentas.edit',$renta->id_renta) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -103,5 +103,5 @@
 @stop
 
 @section('js')
-    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+    
 @stop

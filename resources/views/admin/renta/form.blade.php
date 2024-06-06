@@ -18,22 +18,22 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="fecha_recogida" class="form-label">{{ __('Fecha Recogida') }}</label>
-            <input type="text" name="fecha_recogida" class="form-control @error('fecha_recogida') is-invalid @enderror" value="{{ old('fecha_recogida', $renta?->fecha_recogida) }}" id="fecha_recogida" placeholder="Fecha Recogida">
+            <input type="date" name="fecha_recogida" class="form-control @error('fecha_recogida') is-invalid @enderror" value="{{ old('fecha_recogida', $renta?->fecha_recogida) }}" id="fecha_recogida" placeholder="Fecha Recogida">
             {!! $errors->first('fecha_recogida', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
             <label for="hora_recogida" class="form-label">{{ __('Hora Recogida') }}</label>
-            <input type="text" name="hora_recogida" class="form-control @error('hora_recogida') is-invalid @enderror" value="{{ old('hora_recogida', $renta?->hora_recogida) }}" id="hora_recogida" placeholder="Hora Recogida">
+            <input type="time" name="hora_recogida" class="form-control @error('hora_recogida') is-invalid @enderror" value="{{ old('hora_recogida', $renta?->hora_recogida) }}" id="hora_recogida" placeholder="Hora Recogida">
             {!! $errors->first('hora_recogida', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
             <label for="fecha_devuelta" class="form-label">{{ __('Fecha Devuelta') }}</label>
-            <input type="text" name="fecha_devuelta" class="form-control @error('fecha_devuelta') is-invalid @enderror" value="{{ old('fecha_devuelta', $renta?->fecha_devuelta) }}" id="fecha_devuelta" placeholder="Fecha Devuelta">
+            <input type="date" name="fecha_devuelta" class="form-control @error('fecha_devuelta') is-invalid @enderror" value="{{ old('fecha_devuelta', $renta?->fecha_devuelta) }}" id="fecha_devuelta" placeholder="Fecha Devuelta">
             {!! $errors->first('fecha_devuelta', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
             <label for="hora_devuelta" class="form-label">{{ __('Hora Devuelta') }}</label>
-            <input type="text" name="hora_devuelta" class="form-control @error('hora_devuelta') is-invalid @enderror" value="{{ old('hora_devuelta', $renta?->hora_devuelta) }}" id="hora_devuelta" placeholder="Hora Devuelta">
+            <input type="time" name="hora_devuelta" class="form-control @error('hora_devuelta') is-invalid @enderror" value="{{ old('hora_devuelta', $renta?->hora_devuelta) }}" id="hora_devuelta" placeholder="Hora Devuelta">
             {!! $errors->first('hora_devuelta', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
@@ -59,6 +59,6 @@
 
     </div>
     <div class="col-md-12 mt20 mt-2">
-        <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+        <button type="submit" class="btn btn-primary">{{ __('Guardar') }}</button>
     </div>
 </div>

@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>Ver facturas</h1>
+    <h1>Ver mensaje</h1>
 @stop
 
 @section('content')
@@ -19,51 +19,40 @@
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
 
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('facturas.index') }}"> {{ __('Atras') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('mensajes.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
                     <div class="card-body bg-white">
                         
                         <div class="form-group mb-2 mb20">
-                            <strong>Cod Factura:</strong>
-                            {{ $factura->cod_factura }}
+                            <strong>Nombre:</strong>
+                            {{ $mensaje->nombre }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Metodo Pago:</strong>
-                            {{ $factura->metodo_pago }}
+                            <strong>Email:</strong>
+                            {{ $mensaje->email }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Fecha:</strong>
-                            {{ $factura->fecha }}
+                            <strong>Asunto:</strong>
+                            {{ $mensaje->asunto }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Descripcion:</strong>
-                            {{ $factura->descripcion }}
+                            <strong>Mensaje:</strong>
+                            {{ $mensaje->mensaje }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Itbis:</strong>
-                            {{ $factura->itbis }}
-                        </div>
-                        <div class="form-group mb-2 mb20">
-                            <strong>Descuentos:</strong>
-                            {{ $factura->descuentos }}
-                        </div>
-                        <div class="form-group mb-2 mb20">
-                            <strong>Monto Total:</strong>
-                            {{ $factura->monto_total }}
-                        </div>
-                        <div class="form-group mb-2 mb20">
-                            <strong>Id Renta:</strong>
-                            {{ $factura->id_renta }}
+                            <strong>Id User:</strong>
+                            {{ $mensaje->id_user }}
+                            ({{ $mensaje->user->name }})
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Creado:</strong>
-                            {{ $factura->created_at }}
+                            {{ $mensaje->created_at }}
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Actualizado:</strong>
-                            {{ $factura->updated_at }}
+                            {{ $mensaje->updated_at }}
                         </div>
 
                     </div>

@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>Crear reparacion</h1>
+    <h1>Crear mensaje</h1>
 @stop
 
 @section('content')
@@ -18,13 +18,13 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <a class="btn btn-primary btn-sm" href="{{ route('reparaciones.index') }}"> {{ __('Atras') }}</a>
+                        <a class="btn btn-primary btn-sm" href="{{ route('mensajes.index') }}"> {{ __('Atras') }}</a>
                     </div>
                     <div class="card-body bg-white">
-                        <form method="POST" action="{{ route('reparaciones.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('mensajes.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('admin.reparacione.form')
+                            @include('admin.mensaje.form')
 
                         </form>
                     </div>
@@ -40,5 +40,5 @@
 @stop
 
 @section('js')
-
+    
 @stop

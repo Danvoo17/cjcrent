@@ -95,6 +95,8 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Id Seguro:</strong>
                             {{ $vehiculo->id_seguro }}
+                            ({{ $vehiculo->seguro->tipo }},
+                            {{ $vehiculo->seguro->aseguradora->nombre }})
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Creado:</strong>

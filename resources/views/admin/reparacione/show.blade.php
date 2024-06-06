@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>ver</h1>
+    <h1>Ver reparacion</h1>
 @stop
 
 @section('content')
@@ -17,11 +17,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-                        <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Reparacione</span>
-                        </div>
+
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('reparaciones.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('reparaciones.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
@@ -46,10 +44,23 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Id Vehiculo:</strong>
                             {{ $reparacione->id_vehiculo }}
+                            ({{ $reparacione->vehiculo->modelo->marca->nombre }}
+                            {{ $reparacione->vehiculo->modelo->nombre }}
+                            {{ $reparacione->vehiculo->modelo->trim }})
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Id Emp:</strong>
                             {{ $reparacione->id_emp }}
+                            ({{ $reparacione->empleado->nombre }}
+                            {{ $reparacione->empleado->apellido }})
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Creado:</strong>
+                            {{ $reparacione->created_at }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Actualizado:</strong>
+                            {{ $reparacione->updated_at }}
                         </div>
 
                     </div>
@@ -65,5 +76,5 @@
 @stop
 
 @section('js')
-    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+    
 @stop

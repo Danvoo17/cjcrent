@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('factura', function (Blueprint $table) {
             $table->id('cod_factura');
             $table->string('metodo_pago', 8);
-            $table->datetime('fecha');
+            $table->datetime('fecha')->default(now());
             $table->text('descripcion');
             $table->float('itbis');
             $table->float('descuentos');

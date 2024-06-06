@@ -65,6 +65,11 @@
 
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{ route('profile.edit') }}">Perfil</a>
+
+                    <!-- Verificar si el usuario es admin -->
+                    @if (Auth::user()->rol == 'admin')
+                        <a class="dropdown-item" href="{{ route('ad-dash') }}">Dashboard</a>
+                    @endif
                     
                     <form method="POST" action="{{ route('logout') }}">
                       @csrf

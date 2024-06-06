@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Crear aseguradora</h1>
 @stop
 
 @section('content')
@@ -18,7 +18,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Aseguradora</span>
+                        <a class="btn btn-primary btn-sm" href="{{ route('aseguradoras.index') }}"> {{ __('Atras') }}</a>
                     </div>
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('aseguradoras.store') }}"  role="form" enctype="multipart/form-data">

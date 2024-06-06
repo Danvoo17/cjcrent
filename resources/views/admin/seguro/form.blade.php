@@ -23,12 +23,12 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="fecha_inicio" class="form-label">{{ __('Fecha Inicio') }}</label>
-            <input type="text" name="fecha_inicio" class="form-control @error('fecha_inicio') is-invalid @enderror" value="{{ old('fecha_inicio', $seguro?->fecha_inicio) }}" id="fecha_inicio" placeholder="Fecha Inicio">
+            <input type="date" name="fecha_inicio" class="form-control @error('fecha_inicio') is-invalid @enderror" value="{{ old('fecha_inicio', $seguro?->fecha_inicio) }}" id="fecha_inicio" placeholder="Fecha Inicio">
             {!! $errors->first('fecha_inicio', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
             <label for="fecha_fin" class="form-label">{{ __('Fecha Fin') }}</label>
-            <input type="text" name="fecha_fin" class="form-control @error('fecha_fin') is-invalid @enderror" value="{{ old('fecha_fin', $seguro?->fecha_fin) }}" id="fecha_fin" placeholder="Fecha Fin">
+            <input type="date" name="fecha_fin" class="form-control @error('fecha_fin') is-invalid @enderror" value="{{ old('fecha_fin', $seguro?->fecha_fin) }}" id="fecha_fin" placeholder="Fecha Fin">
             {!! $errors->first('fecha_fin', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
@@ -44,6 +44,6 @@
 
     </div>
     <div class="col-md-12 mt20 mt-2">
-        <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+        <button type="submit" class="btn btn-primary">{{ __('Guardar') }}</button>
     </div>
 </div>

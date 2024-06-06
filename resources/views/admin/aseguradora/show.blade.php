@@ -17,11 +17,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-                        <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Aseguradora</span>
-                        </div>
+
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('aseguradoras.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('aseguradoras.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
@@ -46,6 +44,14 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Direccion:</strong>
                             {{ $aseguradora->direccion }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Creado:</strong>
+                            {{ $aseguradora->created_at }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Actualizado:</strong>
+                            {{ $aseguradora->updated_at }}
                         </div>
 
                     </div>

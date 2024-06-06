@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>mantenimiento</h1>
+    <h1>Mantenimiento</h1>
 @stop
 
 @section('content')
@@ -20,12 +20,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Mantenimiento') }}
+                                {{ __('') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('mantenimiento.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                <a href="{{ route('mantenimientos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                  {{ __('Crear nuevo') }}
                                 </a>
                               </div>
                         </div>
@@ -43,7 +43,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Id Mantenimiento</th>
+										<th>Id</th>
 										<th>Tipo</th>
 										<th>Descripcion</th>
 										<th>Fecha</th>
@@ -56,7 +56,7 @@
                                 <tbody>
                                     @foreach ($mantenimientos as $mantenimiento)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td><strong>{{ ++$i }}</strong></td>
                                             
 											<td>{{ $mantenimiento->id_mantenimiento }}</td>
 											<td>{{ $mantenimiento->tipo }}</td>
@@ -66,12 +66,12 @@
 											<td>{{ $mantenimiento->id_vehiculo }}</td>
 
                                             <td>
-                                                <form action="{{ route('mantenimiento.destroy',$mantenimiento->id_mantenimiento) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('mantenimiento.show',$mantenimiento->id_mantenimiento) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('mantenimiento.edit',$mantenimiento->id_mantenimiento) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                <form action="{{ route('mantenimientos.destroy',$mantenimiento->id_mantenimiento) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('mantenimientos.show',$mantenimiento->id_mantenimiento) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('mantenimientos.edit',$mantenimiento->id_mantenimiento) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -93,5 +93,5 @@
 @stop
 
 @section('js')
-    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+    
 @stop

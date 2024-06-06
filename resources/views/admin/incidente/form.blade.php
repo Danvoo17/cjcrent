@@ -13,12 +13,12 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="fecha" class="form-label">{{ __('Fecha') }}</label>
-            <input type="text" name="fecha" class="form-control @error('fecha') is-invalid @enderror" value="{{ old('fecha', $incidente?->fecha) }}" id="fecha" placeholder="Fecha">
+            <input type="date" name="fecha" class="form-control @error('fecha') is-invalid @enderror" value="{{ old('fecha', $incidente?->fecha) }}" id="fecha" placeholder="Fecha">
             {!! $errors->first('fecha', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
             <label for="hora" class="form-label">{{ __('Hora') }}</label>
-            <input type="text" name="hora" class="form-control @error('hora') is-invalid @enderror" value="{{ old('hora', $incidente?->hora) }}" id="hora" placeholder="Hora">
+            <input type="time" name="hora" class="form-control @error('hora') is-invalid @enderror" value="{{ old('hora', $incidente?->hora) }}" id="hora" placeholder="Hora">
             {!! $errors->first('hora', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
@@ -34,6 +34,6 @@
 
     </div>
     <div class="col-md-12 mt20 mt-2">
-        <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+        <button type="submit" class="btn btn-primary">{{ __('Guardar') }}</button>
     </div>
 </div>

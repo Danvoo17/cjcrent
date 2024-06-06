@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class MantenimientoPreventivoRequest extends FormRequest
+class MensajeRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,12 +22,11 @@ class MantenimientoPreventivoRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'id_mantenimiento' => 'required',
-			'tipo' => 'required|string',
-			'descripcion' => 'required|string',
-			'fecha' => 'required',
-			'costo' => 'required',
-			'id_vehiculo' => 'required',
+			'nombre' => 'required|string',
+			'email' => 'required|string',
+			'asunto' => 'required|string',
+			'mensaje' => 'required|string',
+			'id_user' => 'required',
         ];
     }
 }

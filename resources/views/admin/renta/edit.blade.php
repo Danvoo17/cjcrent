@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Editar renta</h1>
 @stop
 
 @section('content')
@@ -18,7 +18,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Update') }} Renta</span>
+                        <a class="btn btn-primary btn-sm" href="{{ route('rentas.index') }}"> {{ __('Atras') }}</a>
                     </div>
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('rentas.update', $renta->id_renta) }}"  role="form" enctype="multipart/form-data">
@@ -41,5 +41,5 @@
 @stop
 
 @section('js')
-    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+    
 @stop

@@ -406,8 +406,13 @@ return [
                     'url' => 'gastosLocals',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Mensaje',
+                    'url' => 'mensajes',
+                ],
+                [
+                    'text' => 'Laravel control',
                     'url' => '#',
+                    'icon_color' => 'blue',
                     'submenu' => [
                         [
                             'text' => 'level_two',
@@ -418,7 +423,7 @@ return [
                             'url' => '#',
                             'submenu' => [
                                 [
-                                    'text' => 'level_three',
+                                    'text' => 'Failed jobs',
                                     'url' => '#',
                                 ],
                                 [
@@ -431,22 +436,13 @@ return [
                 ],
             ],
         ],
-        ['header' => 'labels'],
+        ['header' => 'Pagina'],
         [
-            'text' => 'important',
+            'text' => 'Volver a principal',
             'icon_color' => 'red',
-            'url' => '#',
+            'url' => '/',
         ],
-        [
-            'text' => 'warning',
-            'icon_color' => 'yellow',
-            'url' => '#',
-        ],
-        [
-            'text' => 'information',
-            'icon_color' => 'cyan',
-            'url' => '#',
-        ],
+        
     ],
 
     /*

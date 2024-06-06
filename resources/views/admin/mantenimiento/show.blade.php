@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>ver</h1>
+    <h1>Ver mantenimiento</h1>
 @stop
 
 @section('content')
@@ -17,11 +17,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-                        <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Mantenimiento</span>
-                        </div>
+
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('mantenimiento.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('mantenimientos.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
@@ -50,6 +48,17 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Id Vehiculo:</strong>
                             {{ $mantenimiento->id_vehiculo }}
+                            ({{ $mantenimiento->vehiculo->modelo->marca->nombre }}
+                            {{ $mantenimiento->vehiculo->modelo->nombre }}
+                            {{ $mantenimiento->vehiculo->modelo->trim }})
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Creado:</strong>
+                            {{ $mantenimiento->created_at }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Actualizado:</strong>
+                            {{ $mantenimiento->updated_at }}
                         </div>
 
                     </div>
@@ -65,5 +74,5 @@
 @stop
 
 @section('js')
-    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+    
 @stop

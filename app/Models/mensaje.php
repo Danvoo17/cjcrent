@@ -2,30 +2,46 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Mensaje
+ *
+ * @property $id
+ * @property $nombre
+ * @property $email
+ * @property $asunto
+ * @property $mensaje
+ * @property $id_user
+ * @property $created_at
+ * @property $updated_at
+ *
+ * @property User $user
+ * @package App
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
 class Mensaje extends Model
 {
-    use HasFactory;
+    
 
-    protected $table = 'mensajes';
+    protected $perPage = 20;
 
-    protected $fillable = [
-        'asunto',
-        'mensaje',
-        'id_cliente',
-        'email',
-    ];
+    /**
+     * Attributes that should be mass-assignable.
+     *
+     * @var array
+     */
 
-    public function cliente()
+    protected $fillable = ['nombre', 'email', 'asunto', 'mensaje', 'id_user'];
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
     {
-        return $this->belongsTo(Cliente::class, 'id_cliente', 'id_cliente');
+        return $this->belongsTo(\App\Models\User::class, 'id_user', 'id');
     }
+    
 
-    public function usuario()
-    {
-        return $this->belongsTo(User::class, 'email', 'email');
-    }
 }
-

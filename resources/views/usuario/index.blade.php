@@ -36,19 +36,19 @@
 
     <!-- Header -->
     <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="{{ route('index') }}"><h2>CJC <em>Rent a Car</em></h2></a>
-          <button id="resbut" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="{{ route('index') }}"><h2>CJC <em>Rent a Car</em></h2></a>
+        <button id="resbut" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ route('index') }}">Inicio
                       <span class="sr-only">(current)</span>
                     </a>
-                </li> 
+                </li>
 
                 <li class="nav-item"><a class="nav-link" href="{{ route('fleet') }}">Flota</a></li>
 
@@ -66,10 +66,15 @@
 
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{ route('profile.edit') }}">Perfil</a>
-                    
+
+                    <!-- Verificar si el usuario es admin -->
+                    @if (Auth::user()->rol == 'admin')
+                        <a class="dropdown-item" href="{{ route('ad-dash') }}">Dashboard</a>
+                    @endif
+
                     <form method="POST" action="{{ route('logout') }}">
                       @csrf
-                        <a class="dropdown-item" :href="route('logout')" 
+                        <a class="dropdown-item" :href="route('logout')"
                           onclick="event.preventDefault();
                           this.closest('form').submit();" style="cursor:pointer">Cerrar sesión
                         </a>
@@ -80,7 +85,7 @@
 
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Más</a>
-                  
+
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{ route('contact') }}">Contactanos</a>
                     <a class="dropdown-item" href="{{ route('about') }}">Sobre nosotros</a>
@@ -92,9 +97,9 @@
                   <li class="nav-item"><a class="nav-link" href="{{ route('register') }}" style="cursor: pointer">Registrate</a></li>
                 @endauth
             </ul>
-          </div>
         </div>
-      </nav>
+    </div>
+</nav>
     </header>
 
     <!-- Page Content -->
@@ -156,7 +161,7 @@
             <div class="product-item">
               <a href="fleet2.php"><img src="/cjcrent/public/images/main/lexuslx.png" alt=""></a>
               <div class="down-content">
-                <a href="fleet2.php"><h4>SUV</h4></a>
+                <a href="fleet2.php"><h4>SUV's</h4></a>
                 <p> nuestros SUVs ofrecen espacio, potencia y versatilidad. Equipados con tracción en las cuatro ruedas, son perfectos para cualquier terreno, ya sea para ir a la montaña o un viaje por la ciudad. Disfruta de la comodidad, seguridad y capacidad de carga superior que solo un SUV puede ofrecer.</p>
               </div>
             </div>
@@ -199,7 +204,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Clientes satisfechos</h2>
+                    <h2>Comentarios de clientes</h2>
                 </div>
             </div>
             <div class="col-md-12">

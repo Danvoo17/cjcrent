@@ -33,7 +33,9 @@ class Incidente extends Model
      * @var array
      */
     protected $table = 'incidente';
+
     protected $primaryKey = 'id_incidente';
+    
     protected $fillable = ['id_incidente', 'descripcion', 'fecha', 'hora', 'id_vehiculo', 'id_cliente'];
 
 

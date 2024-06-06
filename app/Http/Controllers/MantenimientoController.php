@@ -38,7 +38,7 @@ class MantenimientoController extends Controller
     {
         Mantenimiento::create($request->validated());
 
-        return redirect()->route('mantenimiento.index')
+        return redirect()->route('mantenimientos.index')
             ->with('success', 'Mantenimiento created successfully.');
     }
 
@@ -69,7 +69,7 @@ class MantenimientoController extends Controller
     {
         $mantenimiento->update($request->validated());
 
-        return redirect()->route('mantenimiento.index')
+        return redirect()->route('mantenimientos.index')
             ->with('success', 'Mantenimiento updated successfully');
     }
 
@@ -77,7 +77,7 @@ class MantenimientoController extends Controller
     {
         Mantenimiento::find($id)->delete();
 
-        return redirect()->route('mantenimiento.index')
+        return redirect()->route('mantenimientos.index')
             ->with('success', 'Mantenimiento deleted successfully');
     }
 }
