@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>Marca</h1>
+    <h1>Pedido</h1>
 @stop
 
 @section('content')
@@ -24,7 +24,7 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('marcas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('pedidos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Crear nuevo') }}
                                 </a>
                               </div>
@@ -43,26 +43,32 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Id</th>
-										<th>Nombre</th>
-										<th>Pais</th>
+										<th>Id Pedido</th>
+										<th>Descripcion</th>
+										<th>Cantidad</th>
+										<th>Fecha</th>
+										<th>Costo</th>
+										<th>Id Proveedor</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($marcas as $marca)
+                                    @foreach ($pedidos as $pedido)
                                         <tr>
                                             <td><strong>{{ ++$i }}</strong></td>
                                             
-											<td>{{ $marca->id_marca }}</td>
-											<td>{{ $marca->nombre }}</td>
-											<td>{{ $marca->pais }}</td>
+											<td>{{ $pedido->id_pedido }}</td>
+											<td>{{ $pedido->descripcion }}</td>
+											<td>{{ $pedido->cantidad }}</td>
+											<td>{{ $pedido->fecha }}</td>
+											<td>{{ $pedido->costo }}</td>
+											<td>{{ $pedido->id_proveedor }}</td>
 
                                             <td>
-                                                <form action="{{ route('marcas.destroy',$marca->id_marca) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('marcas.show',$marca->id_marca) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('marcas.edit',$marca->id_marca) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
+                                                <form action="{{ route('pedidos.destroy',$pedido->id_pedido) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('pedidos.show',$pedido->id_pedido) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('pedidos.edit',$pedido->id_pedido) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
@@ -75,7 +81,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $marcas->links() !!}
+                {!! $pedidos->links() !!}
             </div>
         </div>
     </div>

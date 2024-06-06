@@ -60,10 +60,12 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Id Cargo:</strong>
                             {{ $empleado->id_cargo }}
+                            ({{ $empleado->cargo->nombre }})
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Id User:</strong>
                             {{ $empleado->id_user }}
+                            ({{ $empleado->user->name }})
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Creado:</strong>

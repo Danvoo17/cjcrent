@@ -54,7 +54,7 @@
                                 <tbody>
                                     @foreach ($modelos as $modelo)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td><strong>{{ ++$i }}</strong></td>
                                             
 											<td>{{ $modelo->id_modelo }}</td>
 											<td>{{ $modelo->nombre }}</td>

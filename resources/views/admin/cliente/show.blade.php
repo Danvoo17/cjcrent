@@ -56,6 +56,7 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Id User:</strong>
                             {{ $cliente->id_user }}
+                            ({{ $cliente->user->name }})
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Creado:</strong>

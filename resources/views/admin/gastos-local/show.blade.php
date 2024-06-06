@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>Ver usuario</h1>
+    <h1>Ver gasto</h1>
 @stop
 
 @section('content')
@@ -19,44 +19,37 @@
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
 
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('users.index') }}"> {{ __('Atras') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('gastosLocals.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
                     <div class="card-body bg-white">
                         
                         <div class="form-group mb-2 mb20">
-                            <strong>Nombre:</strong>
-                            {{ $user->name }}
+                            <strong>Id Gasto:</strong>
+                            {{ $gastosLocal->id_gasto }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Email:</strong>
-                            {{ $user->email }}
+                            <strong>Descripcion:</strong>
+                            {{ $gastosLocal->descripcion }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Verificacion de email:</strong>
-                            {{ $user->email_verified_at }}
+                            <strong>Fecha:</strong>
+                            {{ $gastosLocal->fecha }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Clave:</strong>
-                            {{ $user->password }} <strong>(encriptado)</strong>
-                        </div>
-                        <div class="form-group mb-2 mb20">
-                            <strong>Rol:</strong>
-                            {{ $user->rol }}
-                        </div>
-                        <div class="form-group mb-2 mb20">
-                            <strong>Remember token:</strong>
-                            {{ $user->remember_token }}
+                            <strong>Costo:</strong>
+                            {{ $gastosLocal->costo }}
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Creado:</strong>
-                            {{ $user->created_at }}
+                            {{ $gastosLocal->created_at }}
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Actualizado:</strong>
-                            {{ $user->updated_at }}
+                            {{ $gastosLocal->updated_at }}
                         </div>
+                        
 
                     </div>
                 </div>

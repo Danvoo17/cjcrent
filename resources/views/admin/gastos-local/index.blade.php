@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>Marca</h1>
+    <h1>Gastos del local</h1>
 @stop
 
 @section('content')
@@ -24,7 +24,7 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('marcas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('gastosLocals.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Crear nuevo') }}
                                 </a>
                               </div>
@@ -44,25 +44,27 @@
                                         <th>No</th>
                                         
 										<th>Id</th>
-										<th>Nombre</th>
-										<th>Pais</th>
+										<th>Descripcion</th>
+										<th>Fecha</th>
+										<th>Costo</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($marcas as $marca)
+                                    @foreach ($gastosLocals as $gastosLocal)
                                         <tr>
                                             <td><strong>{{ ++$i }}</strong></td>
                                             
-											<td>{{ $marca->id_marca }}</td>
-											<td>{{ $marca->nombre }}</td>
-											<td>{{ $marca->pais }}</td>
+											<td>{{ $gastosLocal->id_gasto }}</td>
+											<td>{{ $gastosLocal->descripcion }}</td>
+											<td>{{ $gastosLocal->fecha }}</td>
+											<td>{{ $gastosLocal->costo }}</td>
 
                                             <td>
-                                                <form action="{{ route('marcas.destroy',$marca->id_marca) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('marcas.show',$marca->id_marca) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('marcas.edit',$marca->id_marca) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
+                                                <form action="{{ route('gastosLocals.destroy',$gastosLocal->id_gasto) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('gastosLocals.show',$gastosLocal->id_gasto) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('gastosLocals.edit',$gastosLocal->id_gasto) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
@@ -75,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $marcas->links() !!}
+                {!! $gastosLocals->links() !!}
             </div>
         </div>
     </div>
@@ -87,5 +89,5 @@
 @stop
 
 @section('js')
-    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+    
 @stop

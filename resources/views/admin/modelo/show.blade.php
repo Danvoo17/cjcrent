@@ -40,6 +40,7 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Id Marca:</strong>
                             {{ $modelo->id_marca }}
+                            ({{ $modelo->marca->nombre }})
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Creado:</strong>

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('id_proveedor');
             $table->string('nombre', 30);
             $table->string('email', 40);
-            $table->string('telefono', 15);
+            $table->string('telefono', 21);
             $table->string('direccion', 70);
             $table->string('codigo_postal', 10);
             $table->string('tipo', 20);

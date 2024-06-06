@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('gastos_local', function (Blueprint $table) {
-            $table->id('id_gastloc');
+            $table->id('id_gasto');
             $table->text('descripcion');
             $table->date('fecha');
             $table->float('costo');

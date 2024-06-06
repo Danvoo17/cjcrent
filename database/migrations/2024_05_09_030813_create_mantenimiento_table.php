@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mantenimiento_preventivo', function (Blueprint $table) {
+        Schema::create('mantenimiento', function (Blueprint $table) {
             $table->id('id_mantenimiento');
             $table->string('tipo', 30);
             $table->text('descripcion');
             $table->date('fecha');
             $table->float('costo');
-            $table->foreignid('id_vehiculo')->references('id_vehiculo')->on('vehiculo');
+            $table->foreignid('id_vehiculo')->references('id_vehiculo')->on('vehiculos');
             $table->timestamps();
         });
     }

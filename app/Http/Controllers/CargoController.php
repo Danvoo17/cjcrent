@@ -39,7 +39,7 @@ class CargoController extends Controller
         Cargo::create($request->validated());
 
         return redirect()->route('cargos.index')
-            ->with('success', 'Cargo created successfully.');
+            ->with('success', 'Cargo creado con exito');
     }
 
     /**
@@ -70,7 +70,7 @@ class CargoController extends Controller
         $cargo->update($request->validated());
 
         return redirect()->route('cargos.index')
-            ->with('success', 'Cargo updated successfully');
+            ->with('success', 'Cargo editado con exito');
     }
 
     public function destroy($id)
@@ -78,6 +78,6 @@ class CargoController extends Controller
         Cargo::find($id)->delete();
 
         return redirect()->route('cargos.index')
-            ->with('success', 'Cargo deleted successfully');
+            ->with('success', 'Cargo eliminado con exito');
     }
 }

@@ -39,7 +39,7 @@ class ProveedorController extends Controller
         Proveedor::create($request->validated());
 
         return redirect()->route('proveedors.index')
-            ->with('success', 'Proveedor created successfully.');
+            ->with('success', 'Proveedor creado con exito');
     }
 
     /**
@@ -70,7 +70,7 @@ class ProveedorController extends Controller
         $proveedor->update($request->validated());
 
         return redirect()->route('proveedors.index')
-            ->with('success', 'Proveedor updated successfully');
+            ->with('success', 'Proveedor editado con exito');
     }
 
     public function destroy($id)
@@ -78,6 +78,6 @@ class ProveedorController extends Controller
         Proveedor::find($id)->delete();
 
         return redirect()->route('proveedors.index')
-            ->with('success', 'Proveedor deleted successfully');
+            ->with('success', 'Proveedor eliminado con exito');
     }
 }
