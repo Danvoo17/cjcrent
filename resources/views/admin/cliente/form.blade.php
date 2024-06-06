@@ -18,7 +18,7 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="fecha_nac" class="form-label">{{ __('Fecha Nac') }}</label>
-            <input type="text" name="fecha_nac" class="form-control @error('fecha_nac') is-invalid @enderror" value="{{ old('fecha_nac', $cliente?->fecha_nac) }}" id="fecha_nac" placeholder="Fecha Nac">
+            <input type="date" name="fecha_nac" class="form-control @error('fecha_nac') is-invalid @enderror" value="{{ old('fecha_nac', $cliente?->fecha_nac) }}" id="fecha_nac" placeholder="Fecha Nac">
             {!! $errors->first('fecha_nac', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">

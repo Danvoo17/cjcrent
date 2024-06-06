@@ -34,6 +34,9 @@ class Seguro extends Model
      *
      * @var array
      */
+
+     protected $table = 'seguro';
+
     protected $primaryKey = 'id_seguro';
     
     protected $fillable = ['id_seguro', 'num_poliza', 'tipo', 'descripcion', 'fecha_inicio', 'fecha_fin', 'costo', 'id_aseg'];

@@ -8,7 +8,7 @@
 @section('title', 'CJC - Admin')
 
 @section('content_header')
-    <h1>Ver usuario</h1>
+    <h1>Ver pedido</h1>
 @stop
 
 @section('content')
@@ -19,43 +19,44 @@
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
 
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('users.index') }}"> {{ __('Atras') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('pedidos.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
                     <div class="card-body bg-white">
                         
                         <div class="form-group mb-2 mb20">
-                            <strong>Nombre:</strong>
-                            {{ $user->name }}
+                            <strong>Id Pedido:</strong>
+                            {{ $pedido->id_pedido }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Email:</strong>
-                            {{ $user->email }}
+                            <strong>Descripcion:</strong>
+                            {{ $pedido->descripcion }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Verificacion de email:</strong>
-                            {{ $user->email_verified_at }}
+                            <strong>Cantidad:</strong>
+                            {{ $pedido->cantidad }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Clave:</strong>
-                            {{ $user->password }} <strong>(encriptado)</strong>
+                            <strong>Fecha:</strong>
+                            {{ $pedido->fecha }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Rol:</strong>
-                            {{ $user->rol }}
+                            <strong>Costo:</strong>
+                            {{ $pedido->costo }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Remember token:</strong>
-                            {{ $user->remember_token }}
+                            <strong>Id Proveedor:</strong>
+                            {{ $pedido->id_proveedor }}
+                            ({{ $pedido->proveedor->nombre }})
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Creado:</strong>
-                            {{ $user->created_at }}
+                            {{ $pedido->created_at }}
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Actualizado:</strong>
-                            {{ $user->updated_at }}
+                            {{ $pedido->updated_at }}
                         </div>
 
                     </div>

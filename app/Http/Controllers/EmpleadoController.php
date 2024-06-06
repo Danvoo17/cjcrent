@@ -39,7 +39,7 @@ class EmpleadoController extends Controller
         Empleado::create($request->validated());
 
         return redirect()->route('empleados.index')
-            ->with('success', 'Empleado created successfully.');
+            ->with('success', 'Empleado creado con exito');
     }
 
     /**
@@ -70,7 +70,7 @@ class EmpleadoController extends Controller
         $empleado->update($request->validated());
 
         return redirect()->route('empleados.index')
-            ->with('success', 'Empleado updated successfully');
+            ->with('success', 'Empleado editado con exito');
     }
 
     public function destroy($id)
@@ -78,6 +78,6 @@ class EmpleadoController extends Controller
         Empleado::find($id)->delete();
 
         return redirect()->route('empleados.index')
-            ->with('success', 'Empleado deleted successfully');
+            ->with('success', 'Empleado eliminado con exito');
     }
 }

@@ -38,7 +38,10 @@ class Renta extends Model
      *
      * @var array
      */
+    protected $table = 'renta';
+
     protected $primaryKey = 'id_renta';
+    
     protected $fillable = ['id_renta', 'ub_recogida', 'ub_devuelta', 'fecha_recogida', 'hora_recogida', 'fecha_devuelta', 'hora_devuelta', 'costo', 'estado', 'id_vehiculo', 'id_cliente'];
 
 

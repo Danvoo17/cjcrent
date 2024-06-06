@@ -42,7 +42,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+                                        <th>Id</th>
 										<th>Nombre</th>
 										<th>Email</th>
 										<th>Rol</th>
@@ -53,8 +53,8 @@
                                 <tbody>
                                     @foreach ($users as $user)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
-                                            
+                                            <td><strong>{{ ++$i }}</strong></td>
+                                            <td>{{ $user->id }}</td>
 											<td>{{ $user->name }}</td>
 											<td>{{ $user->email }}</td>
 											<td>{{ $user->rol }}</td>

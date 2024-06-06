@@ -31,6 +31,8 @@ class Aseguradora extends Model
      * @var array
      */
 
+    protected $table = 'aseguradora';
+
     protected $primaryKey = 'id_aseg';
 
     protected $fillable = ['id_aseg', 'nombre', 'telefono', 'email', 'direccion'];

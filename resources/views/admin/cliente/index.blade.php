@@ -54,7 +54,7 @@
                                 <tbody>
                                     @foreach($clientes as $cliente)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td><strong>{{ ++$i }}</strong></td>
                                             <td>{{ $cliente->id_cliente }}</td>
                                             <td>{{ $cliente->nombre }}</td>
                                             <td>{{ $cliente->apellido }}</td>

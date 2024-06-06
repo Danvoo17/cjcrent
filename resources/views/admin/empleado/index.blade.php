@@ -60,7 +60,7 @@
                                 <tbody>
                                     @foreach ($empleados as $empleado)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td><strong>{{ ++$i }}</strong></td>
                                             
 											<td>{{ $empleado->id_emp }}</td>
 											<td>{{ $empleado->nombre }}</td>

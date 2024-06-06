@@ -12,6 +12,8 @@ use App\Http\Controllers\CargoController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\ModeloController;
+use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\GastosLocalController;
 use App\Http\Controllers\AseguradoraController;
 use App\Http\Controllers\SeguroController;
 use App\Http\Controllers\rentaController;
@@ -88,10 +90,12 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('rentas', rentaController::class);
     Route::resource('facturas', FacturaController::class);
     Route::resource('incidentes', IncidenteController::class);
-    Route::resource('mantenimiento', MantenimientoController::class);
+    Route::resource('mantenimientos', MantenimientoController::class);
     Route::resource('reparaciones', ReparacioneController::class);
     Route::resource('vehiculos', VehiculoController::class);
     Route::resource('proveedors', ProveedorController::class);
+    Route::resource('pedidos', PedidoController::class);
+    Route::resource('gastosLocals', GastosLocalController::class);
 });
 
 

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nombre', 40);
             $table->string('apellido', 40);
             $table->string('telefono', 12);
-            $table->string('cedula', 12);
+            $table->string('cedula', 14);
             $table->string('email', 40);
             $table->string('direccion', 70);
             $table->float('saldo');

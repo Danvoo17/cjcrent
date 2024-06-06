@@ -66,7 +66,7 @@
                                 <tbody>
                                     @foreach ($vehiculos as $vehiculo)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td><strong>{{ ++$i }}</strong></td>
                                             
 											<td>{{ $vehiculo->id_vehiculo }}</td>
 											<td>{{ $vehiculo->matricula }}</td>
