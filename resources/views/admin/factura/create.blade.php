@@ -1,11 +1,18 @@
-@extends('layouts.ogapp')
+@extends('adminlte::page')
 
-@section('template_title')
-    {{ __('Create') }} Factura
-@endsection
+@section('preloader')
+    <i class="fas fa-4x fa-spin fa-spinner text-secondary"></i>
+    <h4 class="mt-4 text-dark">Cargando</h4>
+@stop
+
+@section('title', 'CJC - Admin')
+
+@section('content_header')
+    <h1>crear</h1>
+@stop
 
 @section('content')
-    <section class="content container-fluid">
+<section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
 
@@ -25,4 +32,13 @@
             </div>
         </div>
     </section>
-@endsection
+@stop
+
+@section('css')
+    {{-- Add here extra stylesheets --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+@stop
+
+@section('js')
+    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+@stop
