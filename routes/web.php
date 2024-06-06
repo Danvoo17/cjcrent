@@ -41,6 +41,7 @@ Route::get('/', function () {
 })->name('index');
 
 
+
 // Flota //////////////////////
 Route::post('/Flota', function () {
     return request(message);
@@ -81,6 +82,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('vehiculos', VehiculoController::class);
     Route::resource('proveedors', ProveedorController::class);
 });
+
+
 
 
 

@@ -172,12 +172,14 @@ class ComposerStaticInit770913ec8a19087fe9c571d1083921b4
         'C' => 
         array (
             'Cron\\' => 5,
+            'ConsoleTVs\\Charts\\' => 18,
             'Carbon\\Doctrine\\' => 16,
             'Carbon\\' => 7,
         ),
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+            'Balping\\JsonRaw\\' => 16,
         ),
         'A' => 
         array (
@@ -527,6 +529,10 @@ class ComposerStaticInit770913ec8a19087fe9c571d1083921b4
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'ConsoleTVs\\Charts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/consoletvs/charts/src',
+        ),
         'Carbon\\Doctrine\\' => 
         array (
             0 => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine',
@@ -538,6 +544,10 @@ class ComposerStaticInit770913ec8a19087fe9c571d1083921b4
         'Brick\\Math\\' => 
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
+        ),
+        'Balping\\JsonRaw\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/balping/json-raw-encoder/src',
         ),
         'App\\' => 
         array (
@@ -560,12 +570,15 @@ class ComposerStaticInit770913ec8a19087fe9c571d1083921b4
         'App\\Http\\Controllers\\Auth\\PasswordResetLinkController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/PasswordResetLinkController.php',
         'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
+        'App\\Http\\Controllers\\CargoController' => __DIR__ . '/../..' . '/app/Http/Controllers/CargoController.php',
         'App\\Http\\Controllers\\ClienteController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClienteController.php',
         'App\\Http\\Controllers\\ContactController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContactController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\EmpleadoController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmpleadoController.php',
         'App\\Http\\Controllers\\MarcaController' => __DIR__ . '/../..' . '/app/Http/Controllers/MarcaController.php',
         'App\\Http\\Controllers\\ModeloController' => __DIR__ . '/../..' . '/app/Http/Controllers/ModeloController.php',
         'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
+        'App\\Http\\Controllers\\ProveedorController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProveedorController.php',
         'App\\Http\\Controllers\\RentaController' => __DIR__ . '/../..' . '/app/Http/Controllers/RentaController.php',
         'App\\Http\\Controllers\\SeguroController' => __DIR__ . '/../..' . '/app/Http/Controllers/SeguroController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
@@ -582,16 +595,22 @@ class ComposerStaticInit770913ec8a19087fe9c571d1083921b4
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
+        'App\\Http\\Requests\\CargoRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CargoRequest.php',
         'App\\Http\\Requests\\ClienteRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ClienteRequest.php',
+        'App\\Http\\Requests\\EmpleadoRequest' => __DIR__ . '/../..' . '/app/Http/Requests/EmpleadoRequest.php',
+        'App\\Http\\Requests\\MarcaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/MarcaRequest.php',
+        'App\\Http\\Requests\\ModeloRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ModeloRequest.php',
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
+        'App\\Http\\Requests\\ProveedorRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProveedorRequest.php',
         'App\\Http\\Requests\\UserRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UserRequest.php',
+        'App\\Http\\Requests\\VehiculoRequest' => __DIR__ . '/../..' . '/app/Http/Requests/VehiculoRequest.php',
+        'App\\Models\\Cargo' => __DIR__ . '/../..' . '/app/Models/Cargo.php',
+        'App\\Models\\Empleado' => __DIR__ . '/../..' . '/app/Models/Empleado.php',
+        'App\\Models\\Proveedor' => __DIR__ . '/../..' . '/app/Models/Proveedor.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\aseguradora' => __DIR__ . '/../..' . '/app/Models/aseguradora.php',
-        'App\\Models\\marca' => __DIR__ . '/../..' . '/app/Models/marca.php',
-        'App\\Models\\modelo' => __DIR__ . '/../..' . '/app/Models/modelo.php',
         'App\\Models\\renta' => __DIR__ . '/../..' . '/app/Models/renta.php',
         'App\\Models\\seguro' => __DIR__ . '/../..' . '/app/Models/seguro.php',
-        'App\\Models\\vehiculo' => __DIR__ . '/../..' . '/app/Models/vehiculo.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -600,6 +619,9 @@ class ComposerStaticInit770913ec8a19087fe9c571d1083921b4
         'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
         'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'Balping\\JsonRaw\\Encoder' => __DIR__ . '/..' . '/balping/json-raw-encoder/src/Encoder.php',
+        'Balping\\JsonRaw\\Raw' => __DIR__ . '/..' . '/balping/json-raw-encoder/src/Raw.php',
+        'Balping\\JsonRaw\\Replacer' => __DIR__ . '/..' . '/balping/json-raw-encoder/src/Replacer.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
@@ -699,6 +721,34 @@ class ComposerStaticInit770913ec8a19087fe9c571d1083921b4
         'Carbon\\TranslatorImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/TranslatorImmutable.php',
         'Carbon\\TranslatorStrongTypeInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/TranslatorStrongTypeInterface.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'ConsoleTVs\\Charts\\ChartsServiceProvider' => __DIR__ . '/..' . '/consoletvs/charts/src/ChartsServiceProvider.php',
+        'ConsoleTVs\\Charts\\Classes\\BaseChart' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/BaseChart.php',
+        'ConsoleTVs\\Charts\\Classes\\C3\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/C3/Chart.php',
+        'ConsoleTVs\\Charts\\Classes\\C3\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/C3/Dataset.php',
+        'ConsoleTVs\\Charts\\Classes\\Chartjs\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/Chartjs/Chart.php',
+        'ConsoleTVs\\Charts\\Classes\\Chartjs\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/Chartjs/Dataset.php',
+        'ConsoleTVs\\Charts\\Classes\\DatasetClass' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/DatasetClass.php',
+        'ConsoleTVs\\Charts\\Classes\\Echarts\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/Echarts/Chart.php',
+        'ConsoleTVs\\Charts\\Classes\\Echarts\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/Echarts/Dataset.php',
+        'ConsoleTVs\\Charts\\Classes\\Frappe\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/Frappe/Chart.php',
+        'ConsoleTVs\\Charts\\Classes\\Frappe\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/Frappe/Dataset.php',
+        'ConsoleTVs\\Charts\\Classes\\Fusioncharts\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/Fusioncharts/Chart.php',
+        'ConsoleTVs\\Charts\\Classes\\Fusioncharts\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/Fusioncharts/Dataset.php',
+        'ConsoleTVs\\Charts\\Classes\\Highcharts\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/Highcharts/Chart.php',
+        'ConsoleTVs\\Charts\\Classes\\Highcharts\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Classes/Highcharts/Dataset.php',
+        'ConsoleTVs\\Charts\\Commands\\ChartsCommand' => __DIR__ . '/..' . '/consoletvs/charts/src/Commands/ChartsCommand.php',
+        'ConsoleTVs\\Charts\\Features\\C3\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/C3/Chart.php',
+        'ConsoleTVs\\Charts\\Features\\C3\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/C3/Dataset.php',
+        'ConsoleTVs\\Charts\\Features\\Chartjs\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/Chartjs/Chart.php',
+        'ConsoleTVs\\Charts\\Features\\Chartjs\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/Chartjs/Dataset.php',
+        'ConsoleTVs\\Charts\\Features\\Echarts\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/Echarts/Chart.php',
+        'ConsoleTVs\\Charts\\Features\\Echarts\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/Echarts/Dataset.php',
+        'ConsoleTVs\\Charts\\Features\\Frappe\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/Frappe/Chart.php',
+        'ConsoleTVs\\Charts\\Features\\Frappe\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/Frappe/Dataset.php',
+        'ConsoleTVs\\Charts\\Features\\Fusioncharts\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/Fusioncharts/Chart.php',
+        'ConsoleTVs\\Charts\\Features\\Fusioncharts\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/Fusioncharts/Dataset.php',
+        'ConsoleTVs\\Charts\\Features\\Highcharts\\Chart' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/Highcharts/Chart.php',
+        'ConsoleTVs\\Charts\\Features\\Highcharts\\Dataset' => __DIR__ . '/..' . '/consoletvs/charts/src/Features/Highcharts/Dataset.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
