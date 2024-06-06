@@ -236,6 +236,9 @@
                                 <a href="#" data-toggle="modal" data-target="#exampleModal">Rentar</a>
                             </span>
                         </div>
+                        <span>
+                                <button class="btn btn-primary ver-mas-btn" data-toggle="modal" data-target="#examplModal{{ $vehiculo->id }}">Ver más</button>
+                            </span>
                     </div>
                 </div>
                 @endforeach
@@ -319,6 +322,41 @@
             </div>
         </div>
     </div>
+
+<!-- modal ver mas --> 
+<div class="modal fade" id="examplModal{{ $vehiculo->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModaLabel{{ $vehiculo->id }}" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel{{ $vehiculo->id }}">Detalles del Vehículo</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Información detallada del vehículo -->
+                                <h4>{{ $vehiculo->modelo->marca->nombre }} {{ $vehiculo->modelo->nombre }}</h4>
+                                <p>Precio: RD$ {{ $vehiculo->precio }} semanal</p>
+                                <p>Estado: {{ $vehiculo->estado }}</p>
+                                <p>Año: {{ $vehiculo->anio }}</p>
+                                <p>Color: {{ $vehiculo->color }}</p>
+                                <p>Pasajeros: {{ $vehiculo->pasajeros }}</p>
+                                <p>Puertas: {{ $vehiculo->puertas }}</p>
+                                <p>Maletas: {{ $vehiculo->maletas }}</p>
+                                <p>Tipo: {{ $vehiculo->tipo }}</p>
+                                <p>Tracción: {{ $vehiculo->traccion }}</p>
+                                <p>Transmisión: {{ $vehiculo->transmision }}</p>
+                                <p>Motor: {{ $vehiculo->motor }}</p>
+                                <p>Opciones: {{ $vehiculo->opciones }}</p>
+                                <!-- Agregar más detalles según sea necesario -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin del Modal -->
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

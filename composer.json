@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "consoletvs/charts": "^6.7",
         "guzzlehttp/guzzle": "^7.2",
         "ibex/crud-generator": "^1.6",
         "jeroennoten/laravel-adminlte": "^3.11",
