@@ -1,4 +1,4 @@
-@ext@extends('adminlte::page')
+@extends('adminlte::page')
 
 @section('preloader')
     <i class="fas fa-4x fa-spin fa-spinner text-secondary"></i>
