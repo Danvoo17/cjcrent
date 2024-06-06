@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
             $table->float('costo');
-            $table->foreignid('id_aseg')->references('id_aseg')->on('aseguradora');
+            $table->foreignid('id_aseg')->references('id_aseg')->on('aseguradoras');
             $table->timestamps();
         });
     }
