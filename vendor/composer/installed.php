@@ -200,7 +200,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../ibex/crud-generator',
             'aliases' => array(),
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'illuminate/auth' => array(
             'dev_requirement' => false,

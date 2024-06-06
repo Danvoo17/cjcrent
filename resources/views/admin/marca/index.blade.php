@@ -53,7 +53,7 @@
                                 <tbody>
                                     @foreach ($marcas as $marca)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td><strong>{{ ++$i }}</strong></td>
                                             
 											<td>{{ $marca->id_marca }}</td>
 											<td>{{ $marca->nombre }}</td>

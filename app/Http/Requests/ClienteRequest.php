@@ -22,13 +22,14 @@ class ClienteRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'id_cliente' => 'required',
-			'nombre' => 'required|string',
-			'apellido' => 'required|string',
-			'telefono' => 'required|string',
-			'cedula' => 'string',
-			'licencia' => 'required|string',
-			'id_user' => 'required',
+            'id_cliente' => ['required', 'string'],
+            'nombre' => ['required', 'string', 'max:255'],
+            'apellido' => ['required', 'string', 'max:255'],
+            'fecha_nac' => ['required', 'date'],
+            'telefono' => ['required', 'string', 'max:255'],
+            'cedula' => ['required', 'string', 'max:255'],
+            'licencia' => ['required', 'string', 'max:255'],
+            'id_user' => ['required', 'integer'],
         ];
     }
 }

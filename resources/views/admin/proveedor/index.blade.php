@@ -57,7 +57,7 @@
                                 <tbody>
                                     @foreach ($proveedors as $proveedor)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td><strong>{{ ++$i }}</strong></td>
                                             
 											<td>{{ $proveedor->id_proveedor }}</td>
 											<td>{{ $proveedor->nombre }}</td>

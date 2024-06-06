@@ -53,7 +53,7 @@
                                 <tbody>
                                     @foreach ($cargos as $cargo)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td><strong>{{ ++$i }}</strong></td>
                                             
 											<td>{{ $cargo->id_cargo }}</td>
 											<td>{{ $cargo->nombre }}</td>

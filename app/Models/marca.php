@@ -29,6 +29,7 @@ class Marca extends Model
      * @var array
      */
     protected $primaryKey = 'id_marca';
+    
     protected $table = 'marca';
 
     protected $fillable = ['id_marca', 'nombre', 'pais'];

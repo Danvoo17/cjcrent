@@ -14,7 +14,7 @@ use App\Http\Controllers\CargoController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\ModeloController;
-
+use App\Http\Controllers\EstadisticasController;
 use app\models\renta;
 
 
@@ -72,7 +72,7 @@ Route::post('/contact/send', [ContactController::class, 'sendMessage'])->name('c
 //  Rutas de autenticacion de administrador ////////////////////////////
 Route::middleware(['auth', 'admin'])->group(function () {
 
-    Route::get('dashboard', [AdminController::class, 'dashboard'])->name('ad-dash');
+    Route::get('dashboard', [AdminController::class, 'index'])->name('ad-dash');
     Route::resource('users', UserController::class);
     Route::resource('clientes', ClienteController::class);
     Route::resource('cargos', CargoController::class);

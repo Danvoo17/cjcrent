@@ -16,7 +16,7 @@ return new class extends Migration
             $table->text('descripcion');
             $table->date('fecha');
             $table->float('costo');
-            $table->foreignid('id_vehiculo')->references('id_vehiculo')->on('vehiculo');
+            $table->foreignid('id_vehiculo')->references('id_vehiculo')->on('vehiculos');
             $table->foreignid('id_emp')->references('id_emp')->on('empleado');
             $table->timestamps();
         });

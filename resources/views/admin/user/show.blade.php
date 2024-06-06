@@ -34,12 +34,20 @@
                             {{ $user->email }}
                         </div>
                         <div class="form-group mb-2 mb20">
+                            <strong>Verificacion de email:</strong>
+                            {{ $user->email_verified_at }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
                             <strong>Clave:</strong>
                             {{ $user->password }} <strong>(encriptado)</strong>
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Rol:</strong>
                             {{ $user->rol }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Remember token:</strong>
+                            {{ $user->remember_token }}
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Creado:</strong>

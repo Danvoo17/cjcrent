@@ -38,7 +38,7 @@ class SeguroSeeder extends Seeder
             ],
         ];
 
-        DB::table('aseguradora')->insert($aseguradoras);
+        DB::table('aseguradoras')->insert($aseguradoras);
         DB::table('seguro')->insert($seguros);
     }
 }

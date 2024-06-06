@@ -39,7 +39,7 @@ class ModeloController extends Controller
         Modelo::create($request->validated());
 
         return redirect()->route('modelos.index')
-            ->with('success', 'Modelo created successfully.');
+            ->with('success', 'Modelo creado con exito');
     }
 
     /**
@@ -70,7 +70,7 @@ class ModeloController extends Controller
         $modelo->update($request->validated());
 
         return redirect()->route('modelos.index')
-            ->with('success', 'Modelo updated successfully');
+            ->with('success', 'Modelo editado con exito');
     }
 
     public function destroy($id)
@@ -78,6 +78,6 @@ class ModeloController extends Controller
         Modelo::find($id)->delete();
 
         return redirect()->route('modelos.index')
-            ->with('success', 'Modelo deleted successfully');
+            ->with('success', 'Modelo eliminado con exito');
     }
 }

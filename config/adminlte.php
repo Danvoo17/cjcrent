@@ -335,7 +335,7 @@ return [
         ],
         [
             'text' => 'Tablas',
-            'icon' => 'fas fa-solid fa-ta',
+            'icon' => 'fas fa-solid fa-table',
             'submenu' => [
                 [
                     'text' => 'Usuario',
@@ -362,12 +362,48 @@ return [
                     'url' => 'modelos',
                 ],
                 [
+                    'text' => 'Aseguradora',
+                    'url' => 'aseguradoras',
+                ],
+                [
+                    'text' => 'Seguro',
+                    'url' => 'seguros',
+                ],
+                [
                     'text' => 'Vehiculo',
                     'url' => 'vehiculos',
                 ],
                 [
+                    'text' => 'Renta',
+                    'url' => 'rentas',
+                ],
+                [
+                    'text' => 'Factura',
+                    'url' => 'facturas',
+                ],
+                [
+                    'text' => 'Incidente',
+                    'url' => 'incidentes',
+                ],
+                [
+                    'text' => 'Mantenimiento',
+                    'url' => 'mantenimientos',
+                ],
+                [
+                    'text' => 'Reparaciones',
+                    'url' => 'reparaciones',
+                ],
+                [
                     'text' => 'Proveedor',
                     'url' => 'proveedors',
+                ],
+                [
+                    'text' => 'Pedido',
+                    'url' => 'pedidos',
+                ],
+                [
+                    'text' => 'Gastos local',
+                    'url' => 'gastosLocals',
                 ],
                 [
                     'text' => 'level_one',

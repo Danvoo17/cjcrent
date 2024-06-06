@@ -8809,7 +8809,6 @@
         "fakerphp/faker",
         "filp/whoops",
         "hamcrest/hamcrest-php",
-        "ibex/crud-generator",
         "laravel/pint",
         "laravel/sail",
         "mockery/mockery",
