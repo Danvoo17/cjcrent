@@ -14,10 +14,10 @@
         <div class="form-group mb-2 mb20">
             <label for="rol" class="form-label">{{ __('Rol') }}</label>
             <select name="rol" class="form-control @error('rol') is-invalid @enderror" id="rol">
-        <option value="" disabled selected>{{ __('Seleccione un rol') }}</option>
-        <option value="admin" {{ old('rol', $user?->rol) == 'admin' ? 'selected' : '' }}>{{ __('admin') }}</option>
-        <option value="user" {{ old('rol', $user?->rol) == 'user' ? 'selected' : '' }}>{{ __('user') }}</option>
-    </select>
+                <option value="" disabled selected>{{ __('Seleccione un rol') }}</option>
+                <option value="admin" {{ old('rol', $user?->rol) == 'admin' ? 'selected' : '' }}>{{ __('admin') }}</option>
+                <option value="user" {{ old('rol', $user?->rol) == 'user' ? 'selected' : '' }}>{{ __('user') }}</option>
+             </select>
             {!! $errors->first('rol', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
 

@@ -76,11 +76,10 @@ Route::post('/contact/send', [ContactController::class, 'sendMessage'])->name('c
 //  Rutas de autenticacion de administrador ////////////////////////////
 Route::middleware(['auth', 'admin'])->group(function () {
 
-    Route::resource('clientes', ClienteController::class);
+    Route::get('dashboard', [AdminController::class, 'dashboard'])->name('ad-dash');
     Route::resource('users', UserController::class);
-    Route::resource('proveedors', ProveedorController::class);
+    Route::resource('clientes', ClienteController::class);
     Route::resource('cargos', CargoController::class);
-    Route::resource('vehiculos', VehiculoController::class);
     Route::resource('empleados', EmpleadoController::class);
     Route::resource('marcas', MarcaController::class);
     Route::resource('modelos', ModeloController::class);
@@ -91,9 +90,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('incidentes', IncidenteController::class);
     Route::resource('mantenimiento', MantenimientoController::class);
     Route::resource('reparaciones', ReparacioneController::class);
-
-   
-
+    Route::resource('vehiculos', VehiculoController::class);
+    Route::resource('proveedors', ProveedorController::class);
 });
 
 

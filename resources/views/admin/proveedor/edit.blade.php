@@ -5,7 +5,7 @@
     <h4 class="mt-4 text-dark">Cargando</h4>
 @stop
 
-@section('title', 'Dashboard')
+@section('title', 'CJC - Admin')
 
 @section('content_header')
     <h1>Editar proveedor</h1>
@@ -18,7 +18,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                    <a class="btn btn-primary btn-sm" href="{{ route('proveedors.index') }}"> {{ __('Back') }}</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('proveedors.index') }}"> {{ __('Atras') }}</a>
                     </div>
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('proveedors.update', $proveedor->id_proveedor) }}"  role="form" enctype="multipart/form-data">

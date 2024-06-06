@@ -33,7 +33,11 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="tipo" class="form-label">{{ __('Tipo') }}</label>
-            <input type="text" name="tipo" class="form-control @error('tipo') is-invalid @enderror" value="{{ old('tipo', $proveedor?->tipo) }}" id="tipo" placeholder="Tipo">
+            <select name="tipo" class="form-control @error('tipo') is-invalid @enderror" id="tipo">
+                                    <option value="" disabled selected>{{ __('Seleccione un tipo') }}</option>
+                                    <option value="nacional" {{ old('tipo', $proveedor?->tipo) == 'Tipo 1' ? 'nacional' : '' }}>{{ __('nacional') }}</option>
+                                    <option value="internacional" {{ old('tipo', $proveedor?->tipo) == 'Tipo 2' ? 'internacional' : '' }}>{{ __('internacional') }}</option>
+                                </select>
             {!! $errors->first('tipo', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
 

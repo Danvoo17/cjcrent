@@ -49,8 +49,7 @@ class Vehiculo extends Model
      *
      * @var array
      */
-
-     
+    protected $primaryKey = 'id_vehiculo'; 
     protected $fillable = ['id_vehiculo', 'matricula', 'precio', 'año', 'color', 'estado', 'pasajeros', 'puertas', 'maletas', 'tipo', 'traccion', 'transmision', 'motor', 'opciones', 'imagen', 'id_modelo', 'id_seguro'];
 
 

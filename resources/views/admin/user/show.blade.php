@@ -5,7 +5,7 @@
     <h4 class="mt-4 text-dark">Cargando</h4>
 @stop
 
-@section('title', 'Dashboard')
+@section('title', 'CJC - Admin')
 
 @section('content_header')
     <h1>Ver usuario</h1>
@@ -34,8 +34,20 @@
                             {{ $user->email }}
                         </div>
                         <div class="form-group mb-2 mb20">
+                            <strong>Clave:</strong>
+                            {{ $user->password }} <strong>(encriptado)</strong>
+                        </div>
+                        <div class="form-group mb-2 mb20">
                             <strong>Rol:</strong>
                             {{ $user->rol }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Creado:</strong>
+                            {{ $user->created_at }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Actualizado:</strong>
+                            {{ $user->updated_at }}
                         </div>
 
                     </div>
