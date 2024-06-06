@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property $id
  * @property $nombre
+ * @property $fecha
  * @property $email
  * @property $asunto
  * @property $mensaje
@@ -32,7 +33,7 @@ class Mensaje extends Model
      * @var array
      */
 
-    protected $fillable = ['nombre', 'email', 'asunto', 'mensaje', 'id_user'];
+    protected $fillable = ['nombre', 'fecha', 'email', 'asunto', 'mensaje', 'id_user'];
 
 
     /**

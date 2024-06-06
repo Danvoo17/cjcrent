@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('mensajes', function (Blueprint $table) {
             $table->id('id');
-            $table->string('nombre', 30);
+            $table->string('nombre', 30)->unique();
+            $table->date('fecha')->default(now());
             $table->string('email', 40);
             $table->string('asunto', 40);
             $table->text('mensaje');

@@ -213,20 +213,19 @@
                     $mensajes = \App\Models\Mensaje::orderBy('created_at', 'desc')->limit(6)->get();
                     @endphp
                     @foreach ($mensajes as $mensaje)
-<div class="service-item">
-    <div class="icon">
-        <i class="fa fa-user"></i>
-    </div>
-    <div class="down-content">
-        @if ($mensaje->cliente)
-        <h4>{{ $mensaje->cliente->nombre }}</h4>
-        @elseif ($mensaje->usuario)
-        <h4>{{ $mensaje->usuario->name }}</h4>
-        @endif
-        <h5>{{ $mensaje->asunto }}</h5>
-        <p class="n-m"><em>{{ $mensaje->mensaje }}</em></p>
-    </div>
-</div>
+                 <div class="service-item">
+                     <div class="icon">
+                         <i class="fa fa-user"></i>
+                     </div>
+                     <div class="down-content">
+                         <h4>{{ $mensaje->user->name }}</h4>
+                         
+                         <h5>{{ $mensaje->asunto }}</h5>
+                         <p class="n-m"><em>{{ $mensaje->mensaje }}</em></p>
+                         <br>
+                         <p><strong>{{ $mensaje->fecha }}</strong></p>
+                     </div>
+                 </div>
 @endforeach
 
                 </div>

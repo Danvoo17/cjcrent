@@ -7,6 +7,11 @@
             {!! $errors->first('nombre', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
+            <label for="fecha" class="form-label">{{ __('Fecha') }}</label>
+            <input type="text" name="fecha" class="form-control @error('fecha') is-invalid @enderror" value="{{ old('fecha', $mensaje?->fecha) }}" id="fecha" placeholder="Fecha">
+            {!! $errors->first('fecha', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+        </div>
+        <div class="form-group mb-2 mb20">
             <label for="email" class="form-label">{{ __('Email') }}</label>
             <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email', $mensaje?->email) }}" id="email" placeholder="Email">
             {!! $errors->first('email', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}

@@ -415,23 +415,10 @@ return [
                     'icon_color' => 'blue',
                     'submenu' => [
                         [
-                            'text' => 'level_two',
-                            'url' => '#',
+                            'text' => 'Failed jobs',
+                            'url' => 'failedJobs',
                         ],
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Failed jobs',
-                                    'url' => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                            ],
-                        ],
+                        
                     ],
                 ],
             ],

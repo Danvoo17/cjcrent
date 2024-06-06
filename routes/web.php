@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\ClienteController;
@@ -22,6 +24,8 @@ use App\Http\Controllers\IncidenteController;
 use App\Http\Controllers\MantenimientoController;
 use App\Http\Controllers\ReparacioneController;
 use App\Http\Controllers\MensajeController;
+use App\Http\Controllers\FailedJobController;
+use App\Http\Controllers\ProclienteController;
 
 use app\models\renta;
 
@@ -39,6 +43,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
+    
+    
 });
 
 require __DIR__.'/auth.php';
@@ -98,6 +105,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('pedidos', PedidoController::class);
     Route::resource('gastosLocals', GastosLocalController::class);
     Route::resource('mensajes', MensajeController::class);
+    Route::resource('failedJobs', FailedJobController::class);
 });
 
 

@@ -45,6 +45,7 @@
                                         
                                         <th>Id</th>
 										<th>Nombre</th>
+                                        <th>fecha</th>
 										<th>Email</th>
 										<th>Asunto</th>
 										<th>Mensaje</th>
@@ -60,6 +61,7 @@
                                             
                                             <td>{{ $mensaje->id }}</td>
 											<td>{{ $mensaje->nombre }}</td>
+                                            <td>{{ $mensaje->fecha }}</td>
 											<td>{{ $mensaje->email }}</td>
 											<td>{{ $mensaje->asunto }}</td>
 											<td>{{ $mensaje->mensaje }}</td>

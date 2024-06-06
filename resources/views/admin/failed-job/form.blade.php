@@ -2,6 +2,11 @@
     <div class="col-md-12">
         
         <div class="form-group mb-2 mb20">
+            <label for="id" class="form-label">{{ __('id') }}</label>
+            <input type="text" name="id" class="form-control @error('id') is-invalid @enderror" value="{{ old('id', $failedJob?->uuid) }}" id="id" placeholder="Id">
+            {!! $errors->first('id', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+        </div>
+        <div class="form-group mb-2 mb20">
             <label for="uuid" class="form-label">{{ __('Uuid') }}</label>
             <input type="text" name="uuid" class="form-control @error('uuid') is-invalid @enderror" value="{{ old('uuid', $failedJob?->uuid) }}" id="uuid" placeholder="Uuid">
             {!! $errors->first('uuid', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
@@ -34,6 +39,6 @@
 
     </div>
     <div class="col-md-12 mt20 mt-2">
-        <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+        <button type="submit" class="btn btn-primary">{{ __('Guardar') }}</button>
     </div>
 </div>

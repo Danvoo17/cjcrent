@@ -1,20 +1,25 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-@section('template_title')
-    {{ $failedJob->name ?? __('Show') . " " . __('Failed Job') }}
-@endsection
+@section('preloader')
+    <i class="fas fa-4x fa-spin fa-spinner text-secondary"></i>
+    <h4 class="mt-4 text-dark">Cargando</h4>
+@stop
+
+@section('title', 'CJC - Admin')
+
+@section('content_header')
+    <h1>Ver</h1>
+@stop
 
 @section('content')
-    <section class="content container-fluid">
+<section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-                        <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Failed Job</span>
-                        </div>
+
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('failed-jobs.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('failedJobs.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
@@ -50,4 +55,13 @@
             </div>
         </div>
     </section>
-@endsection
+@stop
+
+@section('css')
+    {{-- Add here extra stylesheets --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+@stop
+
+@section('js')
+    
+@stop

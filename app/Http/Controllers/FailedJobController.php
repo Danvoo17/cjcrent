@@ -18,7 +18,7 @@ class FailedJobController extends Controller
     {
         $failedJobs = FailedJob::paginate();
 
-        return view('failed-job.index', compact('failedJobs'))
+        return view('admin.failed-job.index', compact('failedJobs'))
             ->with('i', (request()->input('page', 1) - 1) * $failedJobs->perPage());
     }
 
@@ -28,7 +28,7 @@ class FailedJobController extends Controller
     public function create()
     {
         $failedJob = new FailedJob();
-        return view('failed-job.create', compact('failedJob'));
+        return view('admin.failed-job.create', compact('failedJob'));
     }
 
     /**
@@ -38,8 +38,8 @@ class FailedJobController extends Controller
     {
         FailedJob::create($request->validated());
 
-        return redirect()->route('failed-jobs.index')
-            ->with('success', 'FailedJob created successfully.');
+        return redirect()->route('failedJobs.index')
+            ->with('success', 'Creado exitosamente');
     }
 
     /**
@@ -49,7 +49,7 @@ class FailedJobController extends Controller
     {
         $failedJob = FailedJob::find($id);
 
-        return view('failed-job.show', compact('failedJob'));
+        return view('admin.failed-job.show', compact('failedJob'));
     }
 
     /**
@@ -59,7 +59,7 @@ class FailedJobController extends Controller
     {
         $failedJob = FailedJob::find($id);
 
-        return view('failed-job.edit', compact('failedJob'));
+        return view('admin.failed-job.edit', compact('failedJob'));
     }
 
     /**
@@ -69,15 +69,15 @@ class FailedJobController extends Controller
     {
         $failedJob->update($request->validated());
 
-        return redirect()->route('failed-jobs.index')
-            ->with('success', 'FailedJob updated successfully');
+        return redirect()->route('failedJobs.index')
+            ->with('success', 'Editado exitosamente');
     }
 
     public function destroy($id)
     {
         FailedJob::find($id)->delete();
 
-        return redirect()->route('failed-jobs.index')
-            ->with('success', 'FailedJob deleted successfully');
+        return redirect()->route('failedJobs.index')
+            ->with('success', 'Eliminado exitosamente');
     }
 }

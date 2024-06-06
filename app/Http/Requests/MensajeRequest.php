@@ -23,6 +23,7 @@ class MensajeRequest extends FormRequest
     {
         return [
 			'nombre' => 'required|string',
+            'fecha' => 'required',
 			'email' => 'required|string',
 			'asunto' => 'required|string',
 			'mensaje' => 'required|string',

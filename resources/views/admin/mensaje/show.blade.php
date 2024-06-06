@@ -30,6 +30,10 @@
                             {{ $mensaje->nombre }}
                         </div>
                         <div class="form-group mb-2 mb20">
+                            <strong>Fecha:</strong>
+                            {{ $mensaje->fecha }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
                             <strong>Email:</strong>
                             {{ $mensaje->email }}
                         </div>
