@@ -97,9 +97,16 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('vehiculos', VehiculoController::class);
     Route::resource('proveedors', ProveedorController::class);
     Route::resource('pedidos', PedidoController::class);
+    Route::resource('rentas', RentaController::class);
+    Route::resource('reparaciones', ReparacioneController::class);
     Route::resource('gastosLocals', GastosLocalController::class);
     Route::resource('mensajes', MensajeController::class);
     Route::resource('failedJobs', FailedJobController::class);
+    Route::resource('aseguradoras', AseguradoraController::class);
+    Route::resource('seguros', SeguroController::class);
+    Route::resource('facturas', FacturaController::class);
+    Route::resource('incidentes', IncidenteController::class);
+    Route::resource('mantenimientos', MantenimientoController::class);
 });
 
 

@@ -139,9 +139,9 @@
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="fleet2.php"><img src="/cjcrent/public/images/main/camaro.png" alt=""></a>
+              <a href="{{ route('fleet') }}"><img src="/cjcrent/public/images/main/camaro.png" alt=""></a>
               <div class="down-content">
-                <a href="fleet2.php"><h4>Deportivos</h4></a>
+                <a href="{{ route('fleet') }}"><h4>Deportivos</h4></a>
                 <p>Nuestros autos deportivos están diseñados para aquellos que buscan velocidad y estilo. Con motores potentes y un diseño aerodinámico, estos vehículos te brindarán una experiencia de conducción inigualable.</p>
               </div>
             </div>
@@ -149,9 +149,9 @@
 
           <div class="col-md-4">
             <div class="product-item">
-              <a href="fleet2.php"><img src="/cjcrent/public/images/main/mbcls.png" alt=""></a>
+              <a href="{{ route('fleet') }}"><img src="/cjcrent/public/images/main/mbcls.png" alt=""></a>
               <div class="down-content">
-                <a href="fleet2.php"><h4>Sedanes</h4></a>
+                <a href="{{ route('fleet') }}"><h4>Sedanes</h4></a>
                 <p>El equilibrio perfecto entre confort y eficiencia. Nuestros sedanes son ideales para viajes de negocios, familias pequeñas o cualquier persona que busque un viaje cómodo y elegante, asi tambien con amplio espacio para pasajeros y equipaje.</p>
               </div>
             </div>
@@ -159,9 +159,9 @@
 
           <div class="col-md-4">
             <div class="product-item">
-              <a href="fleet2.php"><img src="/cjcrent/public/images/main/lexuslx.png" alt=""></a>
+              <a href="{{ route('fleet') }}"><img src="/cjcrent/public/images/main/lexuslx.png" alt=""></a>
               <div class="down-content">
-                <a href="fleet2.php"><h4>SUV's</h4></a>
+                <a href="{{ route('fleet') }}"><h4>SUV's</h4></a>
                 <p> nuestros SUVs ofrecen espacio, potencia y versatilidad. Equipados con tracción en las cuatro ruedas, son perfectos para cualquier terreno, ya sea para ir a la montaña o un viaje por la ciudad. Disfruta de la comodidad, seguridad y capacidad de carga superior que solo un SUV puede ofrecer.</p>
               </div>
             </div>

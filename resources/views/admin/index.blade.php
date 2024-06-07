@@ -50,10 +50,10 @@
 @stop
 
 @section('js')
-<<<<<<< HEAD
+
     
 @stop
-=======
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
     var gananciasData = {!! isset($gananciasPorMes) ? json_encode($gananciasPorMes) : '[]' !!};
@@ -104,5 +104,4 @@
     }
 </script>
 
-@stop
->>>>>>> 7632a3b8d148860bec23309995137750ffefaa4f
+

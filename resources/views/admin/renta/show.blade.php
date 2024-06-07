@@ -71,8 +71,8 @@
                         <div class="form-group mb-2 mb20">
                             <strong>Id Cliente:</strong>
                             {{ $renta->id_cliente }}
-                            ({{ $renta->clientes->nombre }}
-                            {{ $renta->clientes->apellido }})
+                            ({{ $renta->cliente->nombre }}
+                            {{ $renta->cliente->apellido }})
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Creado:</strong>
